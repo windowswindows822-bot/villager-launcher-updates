@@ -1,363 +1,484 @@
 import tkinter as tk
-from tkinter import messagebox, colorchooser
-import json, os, sys, tempfile, subprocess, shutil, time, re
+from tkinter import messagebox, filedialog, colorchooser
+import json, os, sys, tempfile, subprocess, shutil, time, zipfile
 from urllib.request import urlopen, Request
 from urllib.error import URLError
 
-CURRENT_VERSION = "1.4.0"
+CURRENT_VERSION = "1.5.0"
 BASE_URL = "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main"
 VERSION_URL = BASE_URL + "/version.json"
 LAUNCHER_URL = BASE_URL + "/launcher.py"
-COMMITS_URL = "https://api.github.com/repos/windowswindows822-bot/villager-launcher-updates/commits?path=launcher.py&per_page=30"
+COMMITS_URL = "https://api.github.com/repos/windowswindows822-bot/villager-launcher-updates/commits?path=launcher.py&per_page=50"
 APP_DIR = os.path.join(os.environ.get("APPDATA", tempfile.gettempdir()), "VillagerLauncher")
 SETTINGS_FILE = os.path.join(APP_DIR, "settings.json")
-
-THEMES = {
-    "Villager Green":{"bg":"#101810","panel":"#182418","fg":"#FFFFFF","muted":"#AFC3AF","accent":"#55AA55","button":"#2D442D","icons":{"mods":"🧩","profile":"👤","launcher":"🧑‍🌾"}},
-    "Midnight":{"bg":"#0B1020","panel":"#141B31","fg":"#FFFFFF","muted":"#AAB6D3","accent":"#667EEA","button":"#29365B","icons":{"mods":"🔷","profile":"👤","launcher":"🌙"}},
-    "Sky":{"bg":"#DCEFF8","panel":"#F7FCFF","fg":"#173042","muted":"#5C7180","accent":"#3A91C9","button":"#C7E0ED","icons":{"mods":"☁️","profile":"👤","launcher":"☀️"}},
-    "Nether":{"bg":"#180C0C","panel":"#2A1212","fg":"#FFFFFF","muted":"#D0A8A8","accent":"#C84B4B","button":"#542626","icons":{"mods":"🔥","profile":"👤","launcher":"💀"}},
-    "Ocean":{"bg":"#071820","panel":"#0D2833","fg":"#FFFFFF","muted":"#9FC5D0","accent":"#38A7C7","button":"#1B4655","icons":{"mods":"🌊","profile":"👤","launcher":"🐟"}}
-}
-
-DEFAULT_SETTINGS = {
-    "theme":"Villager Green",
-    "start_page":"Home",
-    "show_release_notes":True,
-    "confirm_updates":True,
-    "check_updates_on_button_only":True,
-    "keep_launcher_open":False,
-    "remember_window":True,
-    "window_width":1100,
-    "window_height":700,
-    "minecraft_path":"",
-    "java_path":"",
-    "use_custom_java":False,
-    "show_advanced":False,
-    "diagnostic_logging":False
-}
-settings = dict(DEFAULT_SETTINGS)
-custom_theme = None
-current_theme_name = "Villager Green"
+PROFILES_FILE = os.path.join(APP_DIR, "profiles.json")
 
 FONT = "Segoe UI Variable"
 FALLBACK_FONT = "Segoe UI"
 
+THEMES = {
+    "Villager Green": {"bg":"#101810","panel":"#182418","card":"#203020","fg":"#FFFFFF","muted":"#AFC3AF","accent":"#62C462","button":"#2D442D","danger":"#B94A48"},
+    "Midnight": {"bg":"#0A0E18","panel":"#121827","card":"#1A2338","fg":"#FFFFFF","muted":"#AAB6D3","accent":"#7188FF","button":"#29365B","danger":"#D05B5B"},
+    "Sky": {"bg":"#DCEFF8","panel":"#F7FCFF","card":"#EAF5FA","fg":"#173042","muted":"#5C7180","accent":"#3A91C9","button":"#C7E0ED","danger":"#B64E4E"},
+    "Nether": {"bg":"#180C0C","panel":"#2A1212","card":"#391919","fg":"#FFFFFF","muted":"#D0A8A8","accent":"#E05A5A","button":"#542626","danger":"#FF8A70"},
+    "Ocean": {"bg":"#071820","panel":"#0D2833","card":"#123743","fg":"#FFFFFF","muted":"#9FC5D0","accent":"#38A7C7","button":"#1B4655","danger":"#D45D67"}
+}
+DEFAULT_SETTINGS = {
+    "theme":"Villager Green", "remember_window":True, "window_width":1120, "window_height":720,
+    "minecraft_path":"", "java_path":"", "ui_scale":1.0, "show_release_notes":True,
+    "confirm_updates":True, "keep_launcher_open":False, "diagnostic_logging":False,
+    "start_page":"Home"
+}
+settings = dict(DEFAULT_SETTINGS)
+current_theme_name = "Villager Green"
+custom_theme = None
+profiles = []
+selected_profile = None
+
+root = None
+content = None
+status = None
+
+
+def load_json(path, default):
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        return data
+    except (OSError, json.JSONDecodeError):
+        return default
+
+
 def load_settings():
     global settings, current_theme_name, custom_theme
-    try:
-        with open(SETTINGS_FILE,"r",encoding="utf-8") as f:
-            data=json.load(f)
-        if isinstance(data,dict): settings.update({k:v for k,v in data.items() if k in DEFAULT_SETTINGS})
-        if data.get("theme") in THEMES: current_theme_name=data["theme"]
-        if data.get("theme")=="Custom" and isinstance(data.get("custom_theme"),dict):
-            custom_theme=data["custom_theme"]; current_theme_name="Custom"
-    except (OSError,json.JSONDecodeError):
-        pass
+    data = load_json(SETTINGS_FILE, {})
+    if isinstance(data, dict):
+        for key in DEFAULT_SETTINGS:
+            if key in data:
+                settings[key] = data[key]
+        if data.get("theme") in THEMES:
+            current_theme_name = data["theme"]
+        elif data.get("theme") == "Custom" and isinstance(data.get("custom_theme"), dict):
+            custom_theme = data["custom_theme"]
+            current_theme_name = "Custom"
+
 
 def save_settings():
     try:
-        os.makedirs(APP_DIR,exist_ok=True)
-        data=dict(settings); data["theme"]=current_theme_name
-        if current_theme_name=="Custom" and custom_theme: data["custom_theme"]=custom_theme
-        with open(SETTINGS_FILE,"w",encoding="utf-8") as f: json.dump(data,f,indent=2)
+        os.makedirs(APP_DIR, exist_ok=True)
+        data = dict(settings)
+        data["theme"] = current_theme_name
+        if current_theme_name == "Custom" and custom_theme:
+            data["custom_theme"] = custom_theme
+        with open(SETTINGS_FILE, "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=2)
     except OSError:
         pass
 
-def get_theme():
-    return custom_theme if current_theme_name=="Custom" and custom_theme else THEMES[current_theme_name]
 
-def github_request(url,timeout=10):
-    req=Request(url+("&" if "?" in url else "?")+"t="+str(time.time_ns()),headers={"User-Agent":"Villager-Launcher"})
-    return urlopen(req,timeout=timeout)
+def load_profiles():
+    global profiles
+    data = load_json(PROFILES_FILE, [])
+    profiles = data if isinstance(data, list) else []
+    if not profiles:
+        profiles.append({"name":"Default", "version":"", "loader":"Vanilla", "description":"Your first Villager Launcher profile.", "pfile":""})
+        save_profiles()
 
-def get_latest_info():
-    with github_request(VERSION_URL,5) as r: data=json.loads(r.read().decode("utf-8"))
-    if not isinstance(data,dict) or not data.get("version"): raise ValueError("Version information is missing.")
+
+def save_profiles():
+    try:
+        os.makedirs(APP_DIR, exist_ok=True)
+        with open(PROFILES_FILE, "w", encoding="utf-8") as f:
+            json.dump(profiles, f, indent=2)
+    except OSError:
+        pass
+
+
+def theme():
+    if current_theme_name == "Custom" and custom_theme:
+        return custom_theme
+    return THEMES.get(current_theme_name, THEMES["Villager Green"])
+
+
+def github_request(url, timeout=10):
+    request = Request(url + ("&" if "?" in url else "?") + "t=" + str(time.time_ns()), headers={"User-Agent":"Villager-Launcher"})
+    return urlopen(request, timeout=timeout)
+
+
+def latest_info():
+    with github_request(VERSION_URL, 5) as response:
+        data = json.loads(response.read().decode("utf-8"))
+    if not isinstance(data, dict) or not data.get("version"):
+        raise ValueError("Version information is missing.")
     return data
 
-def download_url(url,filename):
-    with github_request(url,15) as r: data=r.read()
-    if not data: raise ValueError("Downloaded file is empty.")
-    path=os.path.join(tempfile.gettempdir(),filename)
-    with open(path,"wb") as f: f.write(data)
+
+def download_url(url, filename):
+    with github_request(url, 15) as response:
+        data = response.read()
+    if not data:
+        raise ValueError("Downloaded file is empty.")
+    path = os.path.join(tempfile.gettempdir(), filename)
+    with open(path, "wb") as f:
+        f.write(data)
     return path
 
-def download_update(): return download_url(LAUNCHER_URL,"villager_launcher_update.py")
 
 def finish_update_from_temp(target):
-    source=os.path.abspath(sys.argv[0]); target=os.path.abspath(target); time.sleep(2)
+    source = os.path.abspath(sys.argv[0])
+    target = os.path.abspath(target)
+    time.sleep(2)
     for _ in range(30):
         try:
-            shutil.copy2(source,target)
-            subprocess.Popen([sys.executable,target],close_fds=True)
+            shutil.copy2(source, target)
+            subprocess.Popen([sys.executable, target], close_fds=True)
             try: os.remove(source)
             except OSError: pass
             return
-        except OSError: time.sleep(1)
-    try: messagebox.showerror("Update Error","Windows could not replace the old launcher file.")
+        except OSError:
+            time.sleep(1)
+    try: messagebox.showerror("Update Error", "Windows could not replace the old launcher file.")
     except tk.TclError: pass
 
+
 def install_update(path):
-    current=os.path.abspath(sys.argv[0])
-    subprocess.Popen([sys.executable,path,"--install-update",current],creationflags=subprocess.CREATE_NO_WINDOW,close_fds=True)
+    current = os.path.abspath(sys.argv[0])
+    subprocess.Popen([sys.executable, path, "--install-update", current], creationflags=subprocess.CREATE_NO_WINDOW, close_fds=True)
     root.destroy()
 
-def release_text(info):
-    notes=info.get("notes",{})
-    if not isinstance(notes,dict): return str(notes)
-    parts=[]
-    for key in ("Added","Changed","Removed","Fixed"):
-        items=notes.get(key,[])
-        if isinstance(items,str): items=[items]
-        if items: parts.append(key.upper()+"\n"+"\n".join("• "+str(x) for x in items))
-    return "\n\n".join(parts) or "No changes listed."
 
 def check_for_updates():
-    status.configure(text="Checking for updates..."); update_button.configure(state="disabled"); root.update_idletasks()
     try:
-        info=get_latest_info(); latest=info["version"]
-        if latest==CURRENT_VERSION:
-            status.configure(text="Up to date")
-            messagebox.showinfo("Updates",f"Villager Launcher is up to date!\n\nInstalled version: {CURRENT_VERSION}\nServer version: {latest}")
+        status.config(text="Checking for updates...")
+        info = latest_info()
+        newest = str(info["version"])
+        if newest == CURRENT_VERSION:
+            status.config(text="Up to date")
+            messagebox.showinfo("Updates", f"Villager Launcher is up to date!\n\nInstalled: {CURRENT_VERSION}\nServer: {newest}")
             return
-        status.configure(text=f"Update found: {latest}"); root.update_idletasks(); path=download_update()
-        if (not settings.get("confirm_updates")) or messagebox.askyesno("Update Available",f"Version {latest} is available!\n\nInstalled version: {CURRENT_VERSION}\nServer version: {latest}\n\nWHAT'S NEW\n{release_text(info)}\n\nInstall the update now?"):
-            install_update(path)
-        else: status.configure(text="Update canceled")
-    except (URLError,TimeoutError) as e:
-        status.configure(text="Update failed"); messagebox.showerror("Update Error",f"Could not connect to the update server.\n\n{e}")
+        path = download_url(LAUNCHER_URL, "villager_launcher_update.py")
+        notes = release_text(info)
+        if settings.get("confirm_updates", True):
+            if not messagebox.askyesno("Update Available", f"Version {newest} is available.\n\nWHAT'S NEW\n{notes}\n\nInstall now?"):
+                status.config(text="Update canceled")
+                return
+        install_update(path)
     except Exception as e:
-        status.configure(text="Update failed"); messagebox.showerror("Update Error",f"Something went wrong.\n\n{e}")
-    finally:
-        try:
-            if root.winfo_exists() and update_button.winfo_exists(): update_button.configure(state="normal")
-        except tk.TclError: pass
+        status.config(text="Update failed")
+        messagebox.showerror("Update Error", str(e))
 
-def repair_and_restart():
+
+def release_text(info):
+    notes = info.get("notes", {})
+    if not isinstance(notes, dict): return str(notes)
+    parts = []
+    for key in ("Added", "Changed", "Removed", "Fixed"):
+        items = notes.get(key, [])
+        if isinstance(items, str): items = [items]
+        if items: parts.append(key.upper() + "\n" + "\n".join("• " + str(x) for x in items))
+    return "\n\n".join(parts) or "No changes listed."
+
+
+def minecraft_dir():
+    custom = settings.get("minecraft_path", "")
+    if custom and os.path.isdir(custom): return custom
+    app = os.environ.get("APPDATA")
+    return os.path.join(app, ".minecraft") if app else None
+
+
+def choose_minecraft_dir():
+    path = filedialog.askdirectory(title="Choose your Minecraft folder")
+    if path:
+        settings["minecraft_path"] = path
+        save_settings()
+        render_settings()
+
+
+def choose_java():
+    path = filedialog.askopenfilename(title="Choose Java executable", filetypes=[("Java executable", "java.exe"), ("All files", "*.*")])
+    if path:
+        settings["java_path"] = path
+        save_settings()
+        render_settings()
+
+
+def installed_versions():
+    base = minecraft_dir()
+    folder = os.path.join(base, "versions") if base else ""
+    if not os.path.isdir(folder): return []
+    try: return sorted([x for x in os.listdir(folder) if os.path.isdir(os.path.join(folder, x))], reverse=True)
+    except OSError: return []
+
+
+def open_folder(path):
+    if os.path.isdir(path):
+        os.startfile(path)
+    else:
+        messagebox.showerror("Folder not found", "That folder does not exist yet.")
+
+
+def play_selected():
+    mc = minecraft_dir()
+    if not mc or not os.path.isdir(mc):
+        messagebox.showerror("Minecraft Required", "You need to buy and own an original Minecraft installation before Villager Launcher can use Minecraft.")
+        root.destroy()
+        return
+    messagebox.showinfo("Minecraft", "Minecraft installation detected.\n\nLaunch integration will be enabled in a future release.")
+
+
+def clear_content():
+    for widget in content.winfo_children(): widget.destroy()
+
+
+def label(parent, text, size=10, bold=False, fg=None):
+    t = theme(); return tk.Label(parent, text=text, font=(FONT, size, "bold" if bold else "normal"), bg=t["panel"], fg=fg or t["fg"])
+
+
+def button(parent, text, command, accent=False, width=None):
+    t = theme(); return tk.Button(parent, text=text, command=command, font=(FONT, 10, "bold"), relief="flat", bd=0, bg=t["accent"] if accent else t["button"], fg="#FFFFFF" if accent else t["fg"], activebackground=t["accent"], activeforeground="#FFFFFF", padx=16, pady=9, cursor="hand2", width=width)
+
+
+def card(parent):
+    return tk.Frame(parent, bg=theme()["card"], bd=0, highlightthickness=0)
+
+
+def home():
+    clear_content(); t = theme()
+    label(content, "Ready to meet your wishes?", 28, True).pack(anchor="w", pady=(0, 4))
+    label(content, "Your Galaxy, Your Way.", 13, False, t["muted"]).pack(anchor="w", pady=(0, 22))
+    p = selected_profile or profiles[0]
+    c = card(content); c.pack(fill="x", pady=5)
+    inner = tk.Frame(c, bg=t["card"]); inner.pack(fill="x", padx=24, pady=22)
+    pfp = load_pfp(p, 82)
+    if pfp:
+        w = tk.Label(inner, image=pfp, bg=t["card"]); w.image=pfp; w.pack(side="left", padx=(0,20))
+    else:
+        tk.Label(inner, text="👤", font=(FONT, 40), bg=t["card"], fg=t["fg"]).pack(side="left", padx=(0,20))
+    info = tk.Frame(inner, bg=t["card"]); info.pack(side="left", fill="x", expand=True)
+    tk.Label(info, text=p.get("name","Profile"), font=(FONT,18,"bold"), bg=t["card"], fg=t["fg"]).pack(anchor="w")
+    tk.Label(info, text=(p.get("version") or "No version selected") + "  •  " + p.get("loader","Vanilla"), font=(FONT,10), bg=t["card"], fg=t["muted"]).pack(anchor="w", pady=4)
+    button(inner, "PLAY", play_selected, True).pack(side="right")
+    stats = tk.Frame(content, bg=t["panel"]); stats.pack(fill="x", pady=18)
+    for title, value in (("Profiles", str(len(profiles))), ("Versions", str(len(installed_versions()))), ("Mods", str(len(mod_files())))):
+        c = card(stats); c.pack(side="left", fill="both", expand=True, padx=5)
+        tk.Label(c, text=value, font=(FONT,22,"bold"), bg=t["card"], fg=t["accent"]).pack(pady=(14,0))
+        tk.Label(c, text=title, font=(FONT,9), bg=t["card"], fg=t["muted"]).pack(pady=(0,14))
+
+
+def load_pfp(profile, size):
+    path = profile.get("pfile", "")
+    if not path or not os.path.isfile(path): return None
     try:
-        status.configure(text="Checking launcher updater..."); update_button.configure(state="disabled"); repair_button.configure(state="disabled"); root.update_idletasks()
-        latest=get_latest_info()["version"]; path=download_update()
-        status.configure(text=f"Updater check passed • restarting with {latest}..."); root.update_idletasks(); time.sleep(1); install_update(path)
-    except Exception as e:
-        status.configure(text="Repair check failed"); messagebox.showerror("Repair Error",f"Villager Launcher could not repair itself.\n\n{e}")
-        try: repair_button.configure(state="normal"); update_button.configure(state="normal")
-        except tk.TclError: pass
+        image = tk.PhotoImage(file=path)
+        factor = max(1, int(max(image.width(), image.height()) / size))
+        if factor > 1: image = image.subsample(factor, factor)
+        return image
+    except tk.TclError:
+        return None
 
-def show_release_notes():
-    try: info=get_latest_info()
-    except Exception: info={"version":CURRENT_VERSION,"notes":{}}
-    messagebox.showinfo("What's New",f"Villager Launcher {info.get('version',CURRENT_VERSION)}\n\n{release_text(info)}")
 
-def minecraft_directory():
-    if settings.get("minecraft_path") and os.path.isdir(settings["minecraft_path"]): return settings["minecraft_path"]
-    app=os.environ.get("APPDATA")
-    return os.path.join(app,".minecraft") if app else None
+def choose_pfp(index):
+    path = filedialog.askopenfilename(title="Choose profile picture", filetypes=[("PNG images","*.png"), ("GIF images","*.gif"), ("BMP images","*.bmp"), ("All files","*.*")])
+    if path:
+        profiles[index]["pfile"] = path
+        save_profiles(); render_profiles()
 
-def minecraft_directory_exists(): return bool(minecraft_directory() and os.path.isdir(minecraft_directory()))
 
-def open_mods():
-    if not minecraft_directory_exists():
-        messagebox.showerror("Mods Unavailable","Can't access Minecraft.\n\nVillager Launcher could not find a Minecraft installation. You need an original Minecraft installation before mods can be accessed."); return
-    messagebox.showinfo("Mods","Minecraft installation detected.\n\nThe Mods browser is ready for the next module.")
+def create_profile():
+    name = simple_prompt("New Profile", "Profile name:")
+    if not name: return
+    profiles.append({"name":name, "version":"", "loader":"Vanilla", "description":"", "pfile":""})
+    save_profiles(); render_profiles()
 
-def open_profile(): messagebox.showinfo("Profile","Profile\n\nNo Minecraft account is connected yet.")
-def open_launcher_page(): messagebox.showinfo("Launcher",f"Villager Launcher {CURRENT_VERSION}\n\nManual updates are enabled.\nAutomatic updates are disabled.\nRollback support is enabled.")
 
-def open_diagnostics():
-    mc=minecraft_directory()
-    messagebox.showinfo("Diagnostics",f"Villager Launcher {CURRENT_VERSION}\n\nMinecraft: {'Detected' if mc and os.path.isdir(mc) else 'Not detected'}\n\nMinecraft path: {mc or 'Not found'}\nImage system: Removed\nAutomatic updates: Disabled\nManual updates: Enabled\nRollback system: Enabled\nSettings file: {SETTINGS_FILE}")
+def simple_prompt(title, prompt):
+    win = tk.Toplevel(root); win.title(title); win.geometry("430x170"); win.configure(bg=theme()["panel"]); win.grab_set()
+    label(win, prompt, 11, True).pack(anchor="w", padx=25, pady=(25,8))
+    entry = tk.Entry(win, font=(FONT,11)); entry.pack(fill="x", padx=25); entry.focus_set(); result=[]
+    def done(): result.append(entry.get().strip()); win.destroy()
+    button(win,"Create",done,True).pack(anchor="e", padx=25, pady=18)
+    win.wait_window(); return result[0] if result else ""
 
-def get_version_history():
-    with github_request(COMMITS_URL,10) as r: commits=json.loads(r.read().decode("utf-8"))
-    if not isinstance(commits,list): raise ValueError("Invalid GitHub commit history.")
-    history=[]; seen=set()
-    for commit in commits:
-        try:
-            sha=commit["sha"]; message=commit["commit"]["message"]
-            match=re.search(r"\b(\d+\.\d+\.\d+(?:\.\d+)?)\b",message)
-            if match and match.group(1) not in seen:
-                version=match.group(1); seen.add(version); history.append({"version":version,"sha":sha,"message":message.splitlines()[0]})
-        except (KeyError,TypeError): pass
-    return history
 
-def download_rollback(version_info):
-    version=version_info["version"]; sha=version_info["sha"]
-    url=f"https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/{sha}/launcher.py"
-    return download_url(url,"villager_launcher_rollback_"+version.replace(".","_")+".py")
+def render_profiles():
+    clear_content(); label(content,"PROFILES",24,True).pack(anchor="w"); label(content,"Separate Minecraft setups with their own identity and settings.",10,False,theme()["muted"]).pack(anchor="w",pady=(3,18)); button(content,"+ NEW PROFILE",create_profile,True).pack(anchor="w",pady=(0,12))
+    for i,p in enumerate(profiles):
+        c=card(content); c.pack(fill="x",pady=5); inner=tk.Frame(c,bg=theme()["card"]); inner.pack(fill="x",padx=18,pady=14)
+        pic=load_pfp(p,55)
+        if pic:
+            x=tk.Label(inner,image=pic,bg=theme()["card"]); x.image=pic; x.pack(side="left",padx=(0,14))
+        else: tk.Label(inner,text="👤",font=(FONT,27),bg=theme()["card"],fg=theme()["fg"]).pack(side="left",padx=(0,14))
+        text=tk.Frame(inner,bg=theme()["card"]); text.pack(side="left",fill="x",expand=True); tk.Label(text,text=p.get("name","Profile"),font=(FONT,14,"bold"),bg=theme()["card"],fg=theme()["fg"]).pack(anchor="w"); tk.Label(text,text=(p.get("version") or "No version")+" • "+p.get("loader","Vanilla"),font=(FONT,9),bg=theme()["card"],fg=theme()["muted"]).pack(anchor="w")
+        button(inner,"CHOOSE PFP",lambda n=i: choose_pfp(n)).pack(side="right",padx=5); button(inner,"SELECT",lambda n=i: select_profile(n),True).pack(side="right",padx=5)
 
-def ask_file_choice(version):
-    return messagebox.askyesno("Rollback Files",f"Before rolling back to Villager Launcher {version}:\n\nDo you want to KEEP your Minecraft mods and texture/resource packs?\n\nYES = Keep them exactly where they are.\nNO = Move them out of the active folders into a safe Villager Launcher rollback backup.\n\nThe launcher itself never deletes these files.",default="yes")
 
-def move_game_files_to_backup():
-    mc=minecraft_directory()
-    if not mc: return []
-    backup=os.path.join(mc,"villager_launcher_rollback_backup"); moved=[]
-    for folder in ("mods","resourcepacks"):
-        source=os.path.join(mc,folder)
-        if not os.path.isdir(source): continue
-        target=os.path.join(backup,folder)
-        try:
-            os.makedirs(backup,exist_ok=True)
-            if os.path.exists(target): target=os.path.join(backup,folder+"_"+str(int(time.time())))
-            shutil.move(source,target); moved.append(folder)
-        except OSError: pass
-    return moved
+def select_profile(index):
+    global selected_profile
+    selected_profile = profiles[index]; home()
 
-def rollback_to_version(version_info,window):
-    version=version_info["version"]
-    if version==CURRENT_VERSION: messagebox.showinfo("Rollback","You are already using this version."); return
-    if not messagebox.askyesno("Confirm Rollback",f"Roll back Villager Launcher to {version}?\n\nThe current launcher will be replaced and restarted."): return
+
+def mod_files():
+    mc=minecraft_dir(); folder=os.path.join(mc,"mods") if mc else ""
+    if not os.path.isdir(folder): return []
+    try: return [x for x in os.listdir(folder) if x.lower().endswith(".jar")]
+    except OSError: return []
+
+
+def render_mods():
+    clear_content(); label(content,"MOD MANAGER",24,True).pack(anchor="w"); label(content,"Enable, disable and import mods without permanently deleting them.",10,False,theme()["muted"]).pack(anchor="w",pady=(3,18))
+    mc=minecraft_dir(); folder=os.path.join(mc,"mods") if mc else ""
+    if not mc or not os.path.isdir(mc):
+        label(content,"Minecraft folder not detected.",12,True).pack(anchor="w",pady=25); button(content,"OPEN SETTINGS",render_settings,True).pack(anchor="w"); return
+    button(content,"IMPORT .JAR",import_mod,True).pack(anchor="w",pady=(0,15));
+    for name in mod_files():
+        c=card(content); c.pack(fill="x",pady=3); tk.Label(c,text=name,font=(FONT,10),bg=theme()["card"],fg=theme()["fg"]).pack(side="left",padx=15,pady=10); button(c,"DISABLE",lambda n=name:disable_mod(n)).pack(side="right",padx=10,pady=5)
+
+
+def import_mod():
+    mc=minecraft_dir(); folder=os.path.join(mc,"mods") if mc else ""
+    if not folder: return
+    files=filedialog.askopenfilenames(title="Import Minecraft mods",filetypes=[("Minecraft mods","*.jar"),("All files","*.*")])
+    if files:
+        os.makedirs(folder,exist_ok=True)
+        for f in files:
+            try: shutil.copy2(f,os.path.join(folder,os.path.basename(f)))
+            except OSError: pass
+        render_mods()
+
+
+def disable_mod(name):
+    mc=minecraft_dir(); src=os.path.join(mc,"mods",name); dst=os.path.join(mc,"mods_disabled",name)
+    try: os.makedirs(os.path.dirname(dst),exist_ok=True); shutil.move(src,dst); render_mods()
+    except OSError as e: messagebox.showerror("Mod Error",str(e))
+
+
+def render_versions():
+    clear_content(); label(content,"MINECRAFT VERSIONS",24,True).pack(anchor="w"); label(content,"Versions already installed in your Minecraft folder.",10,False,theme()["muted"]).pack(anchor="w",pady=(3,18))
+    versions=installed_versions()
+    if not versions: label(content,"No installed versions were found.",12,False,theme()["muted"]).pack(anchor="w",pady=25); return
+    for v in versions:
+        c=card(content); c.pack(fill="x",pady=3); tk.Label(c,text=v,font=(FONT,11,"bold"),bg=theme()["card"],fg=theme()["fg"]).pack(side="left",padx=18,pady=12); tk.Label(c,text="Installed",font=(FONT,9),bg=theme()["card"],fg=theme()["muted"]).pack(side="right",padx=18)
+
+
+def render_backups():
+    clear_content(); label(content,"BACKUP CENTER",24,True).pack(anchor="w"); label(content,"Protect important Minecraft data before making changes.",10,False,theme()["muted"]).pack(anchor="w",pady=(3,18)); button(content,"CREATE BACKUP",create_backup,True).pack(anchor="w")
+    mc=minecraft_dir(); backup=os.path.join(mc,"villager_launcher_backups") if mc else ""
+    if os.path.isdir(backup):
+        label(content,"Existing backups",13,True).pack(anchor="w",pady=(25,10))
+        for n in sorted(os.listdir(backup),reverse=True):
+            tk.Label(content,text=n,font=(FONT,10),bg=theme()["panel"],fg=theme()["fg"]).pack(anchor="w",pady=3)
+
+
+def create_backup():
+    mc=minecraft_dir()
+    if not mc or not os.path.isdir(mc): messagebox.showerror("Backup","Minecraft folder not found."); return
+    backup=os.path.join(mc,"villager_launcher_backups"); os.makedirs(backup,exist_ok=True); stamp=time.strftime("backup_%Y%m%d_%H%M%S"); target=os.path.join(backup,stamp+".zip")
     try:
-        keep_files=ask_file_choice(version); moved=[]
-        if not keep_files: moved=move_game_files_to_backup()
-        status.configure(text=f"Downloading version {version}..."); root.update_idletasks(); path=download_rollback(version)
-        if moved: status.configure(text="Game files moved to rollback backup..."); root.update_idletasks(); time.sleep(1)
-        window.destroy(); install_update(path)
-    except Exception as e: messagebox.showerror("Rollback Error",f"Could not complete the rollback.\n\n{e}")
+        with zipfile.ZipFile(target,"w",zipfile.ZIP_DEFLATED) as z:
+            for folder in ("saves","mods","resourcepacks","config"):
+                source=os.path.join(mc,folder)
+                if os.path.isdir(source):
+                    for base,_,files in os.walk(source):
+                        for f in files:
+                            path=os.path.join(base,f); z.write(path,os.path.relpath(path,mc))
+        messagebox.showinfo("Backup Created","Minecraft backup created safely.\n\n"+target); render_backups()
+    except OSError as e: messagebox.showerror("Backup Error",str(e))
 
-def open_version_history():
-    window=tk.Toplevel(root); window.title("Villager Launcher Version History"); window.geometry("650x500"); t=get_theme(); window.configure(bg=t["panel"])
-    tk.Label(window,text="VERSION HISTORY",font=(FONT,22,"bold"),bg=t["panel"],fg=t["fg"]).pack(pady=(20,5))
-    tk.Label(window,text="Choose an older release to roll back to.",font=(FONT,10),bg=t["panel"],fg=t["muted"]).pack(pady=(0,15))
-    frame=tk.Frame(window,bg=t["panel"]); frame.pack(fill="both",expand=True,padx=25,pady=10)
-    try:
-        history=get_version_history()
-        if not history: tk.Label(frame,text="No version history was found.",font=(FONT,11),bg=t["panel"],fg=t["fg"]).pack(pady=30); return
-        for item in history:
-            text=f"Version {item['version']}"+("  • CURRENT" if item["version"]==CURRENT_VERSION else "")
-            tk.Button(frame,text=text,font=(FONT,11,"bold"),width=35,relief="flat",bg=t["button"],fg=t["fg"],activebackground=t["accent"],command=lambda x=item: rollback_to_version(x,window)).pack(pady=5)
-    except Exception as e: tk.Label(frame,text="Could not load version history.\n\n"+str(e),wraplength=550,font=(FONT,10),bg=t["panel"],fg=t["fg"]).pack(pady=30)
 
-def create_custom_theme():
-    global custom_theme,current_theme_name
-    selected=colorchooser.askcolor(title="Choose custom launcher color",initialcolor=get_theme()["accent"])
-    if not selected[1]: return
-    custom_theme=dict(get_theme()); custom_theme["accent"]=selected[1]; custom_theme["button"]=selected[1]; custom_theme["icons"]=dict(get_theme()["icons"]); current_theme_name="Custom"; save_settings(); apply_theme(); refresh_ui()
+def render_repair():
+    clear_content(); label(content,"REPAIR CENTER",24,True).pack(anchor="w"); label(content,"Diagnostics that explain what Villager Launcher can see.",10,False,theme()["muted"]).pack(anchor="w",pady=(3,18))
+    mc=minecraft_dir(); checks=[("Minecraft folder",bool(mc and os.path.isdir(mc))), ("Versions folder",bool(mc and os.path.isdir(os.path.join(mc,"versions")))), ("Mods folder",bool(mc and os.path.isdir(os.path.join(mc,"mods")))), ("Settings",os.path.isfile(SETTINGS_FILE))]
+    for name,ok in checks:
+        c=card(content); c.pack(fill="x",pady=3); tk.Label(c,text=("✓" if ok else "⚠")+"  "+name,font=(FONT,11,"bold"),bg=theme()["card"],fg=theme()["accent"] if ok else theme()["danger"]).pack(anchor="w",padx=18,pady=12)
+    button(content,"RESTART LAUNCHER",repair_restart,True).pack(anchor="w",pady=18)
+
+
+def repair_restart():
+    path=download_url(LAUNCHER_URL,"villager_launcher_repair.py"); install_update(path)
+
+
+def render_settings():
+    clear_content(); label(content,"SETTINGS",24,True).pack(anchor="w"); label(content,"Make Villager Launcher yours. Settings are stored locally.",10,False,theme()["muted"]).pack(anchor="w",pady=(3,18))
+    settings_section("GENERAL", [("Remember window size", "remember_window", True), ("Keep launcher open after Play", "keep_launcher_open", False), ("Show release notes", "show_release_notes", True)])
+    label(content,"APPEARANCE",14,True).pack(anchor="w",pady=(22,8));
+    row=tk.Frame(content,bg=theme()["panel"]); row.pack(fill="x",pady=5); tk.Label(row,text="Theme",font=(FONT,10,"bold"),bg=theme()["panel"],fg=theme()["fg"]).pack(side="left")
+    for name in list(THEMES)+["Custom"]: button(row,name,lambda n=name: choose_theme(n),name==current_theme_name).pack(side="left",padx=3)
+    button(content,"CREATE CUSTOM THEME",custom_theme_editor).pack(anchor="w",pady=8)
+    label(content,"MINECRAFT",14,True).pack(anchor="w",pady=(22,8));
+    tk.Label(content,text=settings.get("minecraft_path") or "Default: %APPDATA%\\.minecraft",font=(FONT,9),bg=theme()["panel"],fg=theme()["muted"],wraplength=750).pack(anchor="w"); button(content,"CHOOSE MINECRAFT FOLDER",choose_minecraft_dir).pack(anchor="w",pady=6)
+    tk.Label(content,text=settings.get("java_path") or "Java path not set",font=(FONT,9),bg=theme()["panel"],fg=theme()["muted"],wraplength=750).pack(anchor="w"); button(content,"CHOOSE JAVA",choose_java).pack(anchor="w",pady=6)
+    label(content,"UPDATES",14,True).pack(anchor="w",pady=(22,8)); settings_section("", [("Confirm before installing updates", "confirm_updates", True)])
+    button(content,"CHECK FOR UPDATES",check_for_updates,True).pack(anchor="w",pady=5); button(content,"RESET ALL SETTINGS",reset_settings).pack(anchor="w",pady=5)
+
+
+def settings_section(title, items):
+    if title: label(content,title,14,True).pack(anchor="w",pady=(0,8))
+    for text,key,default in items:
+        var=tk.BooleanVar(value=bool(settings.get(key,default))); row=tk.Frame(content,bg=theme()["panel"]); row.pack(fill="x",pady=3); tk.Checkbutton(row,text=text,variable=var,font=(FONT,10,"bold"),bg=theme()["panel"],fg=theme()["fg"],selectcolor=theme()["button"],activebackground=theme()["panel"],activeforeground=theme()["fg"],command=lambda k=key,v=var:(settings.__setitem__(k,v.get()),save_settings())).pack(anchor="w")
+
 
 def choose_theme(name):
-    global current_theme_name
-    current_theme_name=name; save_settings(); apply_theme(); refresh_ui()
+    global current_theme_name, custom_theme
+    if name in THEMES: current_theme_name=name
+    elif name=="Custom" and custom_theme: current_theme_name="Custom"
+    save_settings(); apply_theme(); render_current()
 
-# ---------- 1.4.0 redesigned settings ----------
-def setting_bool(parent,label,key,description=""):
-    var=tk.BooleanVar(value=bool(settings.get(key,False)))
-    row=tk.Frame(parent,bg=get_theme()["panel"]); row.pack(fill="x",pady=8)
-    tk.Checkbutton(row,text=label,variable=var,font=(FONT,11,"bold"),bg=get_theme()["panel"],fg=get_theme()["fg"],selectcolor=get_theme()["button"],activebackground=get_theme()["panel"],activeforeground=get_theme()["fg"],command=lambda: (settings.__setitem__(key,var.get()),save_settings())).pack(anchor="w")
-    if description: tk.Label(row,text=description,font=(FONT,9),bg=get_theme()["panel"],fg=get_theme()["muted"],wraplength=620,justify="left").pack(anchor="w",padx=26,pady=(2,0))
 
-def settings_header(parent,title,subtitle):
-    t=get_theme(); tk.Label(parent,text=title,font=(FONT,20,"bold"),bg=t["panel"],fg=t["fg"]).pack(anchor="w",pady=(0,3)); tk.Label(parent,text=subtitle,font=(FONT,10),bg=t["panel"],fg=t["muted"]).pack(anchor="w",pady=(0,18))
+def custom_theme_editor():
+    global custom_theme,current_theme_name
+    base=dict(theme()); chosen=colorchooser.askcolor(title="Choose theme accent",initialcolor=base["accent"])[1]
+    if not chosen: return
+    custom_theme=dict(base); custom_theme["accent"]=chosen; custom_theme["button"]=chosen; current_theme_name="Custom"; save_settings(); apply_theme(); render_settings()
 
-def settings_page(container,name):
-    for child in container.winfo_children(): child.destroy()
-    t=get_theme()
-    if name=="Appearance":
-        settings_header(container,"Appearance","Change launcher colors and interface preferences. Theme controls stay here — separate from general settings.")
-        tk.Label(container,text="Launcher theme",font=(FONT,11,"bold"),bg=t["panel"],fg=t["fg"]).pack(anchor="w")
-        for theme in THEMES:
-            tk.Button(container,text=("✓ " if current_theme_name==theme else "")+theme,font=(FONT,10,"bold"),relief="flat",bg=t["button"],fg=t["fg"],activebackground=t["accent"],command=lambda n=theme: choose_theme(n)).pack(fill="x",pady=3)
-        tk.Button(container,text="🎨 Custom Theme",font=(FONT,10,"bold"),relief="flat",bg=t["accent"],fg=t["fg"],command=create_custom_theme).pack(fill="x",pady=(8,3))
-    elif name=="General":
-        settings_header(container,"General","Control startup behavior, confirmations, and how the launcher remembers your choices.")
-        setting_bool(container,"Remember window size","remember_window","Keeps the launcher window dimensions between sessions.")
-        setting_bool(container,"Show release notes for updates","show_release_notes","Shows the release notes when a new launcher version is offered.")
-        setting_bool(container,"Confirm before installing updates","confirm_updates","Manual update checking never installs an update silently when this is enabled.")
-        setting_bool(container,"Keep launcher open after game launch","keep_launcher_open","Reserved for the future Minecraft launch integration.")
-    elif name=="Minecraft":
-        settings_header(container,"Minecraft","Choose where Villager Launcher should look for your Minecraft files.")
-        tk.Label(container,text="Custom Minecraft directory",font=(FONT,11,"bold"),bg=t["panel"],fg=t["fg"]).pack(anchor="w")
-        entry=tk.Entry(container,font=(FONT,10),bg=t["bg"],fg=t["fg"],insertbackground=t["fg"],relief="flat")
-        entry.insert(0,settings.get("minecraft_path", "")); entry.pack(fill="x",pady=6)
-        tk.Button(container,text="Save Minecraft Path",font=(FONT,10,"bold"),relief="flat",bg=t["accent"],fg=t["fg"],command=lambda:(settings.__setitem__("minecraft_path",entry.get().strip()),save_settings(),messagebox.showinfo("Saved","Minecraft path saved."))).pack(anchor="w",pady=4)
-        setting_bool(container,"Use custom Java executable","use_custom_java","Stores a Java path for future Minecraft launch integration without changing your system Java installation.")
-        java=tk.Entry(container,font=(FONT,10),bg=t["bg"],fg=t["fg"],insertbackground=t["fg"],relief="flat")
-        java.insert(0,settings.get("java_path", "")); java.pack(fill="x",pady=6)
-        tk.Button(container,text="Save Java Path",font=(FONT,10,"bold"),relief="flat",bg=t["button"],fg=t["fg"],command=lambda:(settings.__setitem__("java_path",java.get().strip()),save_settings())).pack(anchor="w",pady=4)
-    elif name=="Updates":
-        settings_header(container,"Updates","Villager Launcher uses manual update checks. Automatic updates remain disabled.")
-        tk.Label(container,text="Update policy",font=(FONT,12,"bold"),bg=t["panel"],fg=t["fg"]).pack(anchor="w")
-        tk.Label(container,text="CHECK FOR UPDATE → SHOW WHAT'S NEW → ASK → INSTALL → RESTART",font=(FONT,10,"bold"),bg=t["panel"],fg=t["accent"]).pack(anchor="w",pady=8)
-        setting_bool(container,"Check only when I press Check for Updates","check_updates_on_button_only","No background or automatic update process is enabled.")
-        tk.Button(container,text="Check for Updates Now",font=(FONT,10,"bold"),relief="flat",bg=t["accent"],fg=t["fg"],command=check_for_updates).pack(fill="x",pady=8)
-        tk.Button(container,text="What's New",font=(FONT,10,"bold"),relief="flat",bg=t["button"],fg=t["fg"],command=show_release_notes).pack(fill="x",pady=3)
-        tk.Button(container,text="Version History / Rollback",font=(FONT,10,"bold"),relief="flat",bg=t["button"],fg=t["fg"],command=open_version_history).pack(fill="x",pady=3)
-    elif name=="Privacy":
-        settings_header(container,"Privacy","Simple controls for launcher diagnostics and local data.")
-        setting_bool(container,"Diagnostic logging","diagnostic_logging","When enabled, future diagnostic modules may record launcher troubleshooting information locally.")
-        tk.Label(container,text="The launcher does not need your Minecraft password or a GitHub token to perform its public update check.",font=(FONT,10),bg=t["panel"],fg=t["muted"],wraplength=650,justify="left").pack(anchor="w",pady=15)
-    elif name=="Advanced":
-        settings_header(container,"Advanced","Developer-oriented launcher controls. These options do not modify Minecraft files automatically.")
-        setting_bool(container,"Show advanced diagnostics","show_advanced","Enables additional diagnostic information in future launcher modules.")
-        tk.Button(container,text="Open Diagnostics",font=(FONT,10,"bold"),relief="flat",bg=t["button"],fg=t["fg"],command=open_diagnostics).pack(fill="x",pady=4)
-        tk.Button(container,text="Repair / Restart Launcher",font=(FONT,10,"bold"),relief="flat",bg=t["accent"],fg=t["fg"],command=repair_and_restart).pack(fill="x",pady=4)
-        tk.Button(container,text="Reset All Settings",font=(FONT,10,"bold"),relief="flat",bg=t["button"],fg=t["fg"],command=reset_settings).pack(fill="x",pady=4)
 
 def reset_settings():
     global settings,current_theme_name,custom_theme
-    if not messagebox.askyesno("Reset Settings","Reset all Villager Launcher settings to their defaults?"): return
-    settings=dict(DEFAULT_SETTINGS); current_theme_name="Villager Green"; custom_theme=None; save_settings(); refresh_ui()
+    if not messagebox.askyesno("Reset Settings","Reset Villager Launcher settings? Your Minecraft files and profiles will not be deleted."): return
+    settings=dict(DEFAULT_SETTINGS); current_theme_name="Villager Green"; custom_theme=None; save_settings(); apply_theme(); render_settings()
 
-def open_settings():
-    w=tk.Toplevel(root); w.title("Villager Launcher Settings"); w.geometry("900x650"); t=get_theme(); w.configure(bg=t["bg"])
-    sidebar=tk.Frame(w,bg=t["bg"],width=210); sidebar.pack(side="left",fill="y"); sidebar.pack_propagate(False)
-    content=tk.Frame(w,bg=t["panel"]); content.pack(side="right",fill="both",expand=True,padx=10,pady=10)
-    tk.Label(sidebar,text="SETTINGS",font=(FONT,20,"bold"),bg=t["bg"],fg=t["fg"]).pack(anchor="w",padx=22,pady=(25,5))
-    tk.Label(sidebar,text="Villager Launcher 1.4.0",font=(FONT,9),bg=t["bg"],fg=t["muted"]).pack(anchor="w",padx=22,pady=(0,20))
-    for name in ("General","Appearance","Minecraft","Updates","Privacy","Advanced"):
-        tk.Button(sidebar,text=name,font=(FONT,10,"bold"),relief="flat",bg=t["button"],fg=t["fg"],activebackground=t["accent"],command=lambda n=name: settings_page(content,n)).pack(fill="x",padx=15,pady=3)
-    settings_page(content,"General")
 
-def play():
-    if not minecraft_directory_exists():
-        messagebox.showinfo("Minecraft Required","You need to own Minecraft Java Edition to play using Villager Launcher."); return
-    messagebox.showinfo("Minecraft","Minecraft installation detected. Launch integration will be added next.")
+def apply_theme():
+    t=theme(); root.configure(bg=t["bg"])
+    try: root.option_add("*Font", (FONT,10))
+    except tk.TclError: pass
 
-def make_button(parent,text,command,accent=False):
-    t=get_theme(); return tk.Button(parent,text=text,font=(FONT,11,"bold"),relief="flat",bd=0,bg=t["accent"] if accent else t["button"],fg=t["fg"],activebackground=t["accent"],activeforeground=t["fg"],cursor="hand2",padx=18,pady=11,command=command)
 
-def refresh_ui():
-    t=get_theme()
-    for child in root.winfo_children(): child.destroy()
-    build_ui()
+def render_current():
+    page=settings.get("start_page","Home")
+    if page=="Home": home()
+    elif page=="Profiles": render_profiles()
+    elif page=="Mods": render_mods()
+    elif page=="Versions": render_versions()
+    elif page=="Backups": render_backups()
+    elif page=="Repair": render_repair()
+    else: render_settings()
+
+
+def navigate(page):
+    settings["start_page"]=page; save_settings(); render_current()
+
 
 def build_ui():
-    global status,update_button,repair_button
-    t=get_theme(); root.configure(bg=t["bg"])
-    header=tk.Frame(root,bg=t["panel"],height=74); header.pack(fill="x"); header.pack_propagate(False)
-    tk.Label(header,text="VILLAGER LAUNCHER",font=(FONT,20,"bold"),bg=t["panel"],fg=t["fg"]).pack(side="left",padx=25)
-    tk.Label(header,text=f"v{CURRENT_VERSION}",font=(FONT,10,"bold"),bg=t["panel"],fg=t["accent"]).pack(side="left",padx=4)
-    make_button(header,"⚙ Settings",open_settings).pack(side="right",padx=20,pady=14)
-    body=tk.Frame(root,bg=t["bg"]); body.pack(fill="both",expand=True)
-    nav=tk.Frame(body,bg=t["panel"],width=190); nav.pack(side="left",fill="y"); nav.pack_propagate(False)
-    tk.Label(nav,text="MAIN",font=(FONT,9,"bold"),bg=t["panel"],fg=t["muted"]).pack(anchor="w",padx=20,pady=(24,8))
-    for text,cmd in (("⌂  Home",lambda:None),("🧩  Mods",open_mods),("👤  Profile",open_profile),("🧑‍🌾  Launcher",open_launcher_page)):
-        tk.Button(nav,text=text,font=(FONT,10,"bold"),anchor="w",relief="flat",bg=t["button"],fg=t["fg"],activebackground=t["accent"],command=cmd).pack(fill="x",padx=12,pady=4)
-    tk.Label(nav,text="TOOLS",font=(FONT,9,"bold"),bg=t["panel"],fg=t["muted"]).pack(anchor="w",padx=20,pady=(25,8))
-    tk.Button(nav,text="🛠  Diagnostics",font=(FONT,10,"bold"),anchor="w",relief="flat",bg=t["button"],fg=t["fg"],activebackground=t["accent"],command=open_diagnostics).pack(fill="x",padx=12,pady=4)
-    main=tk.Frame(body,bg=t["bg"]); main.pack(side="left",fill="both",expand=True,padx=28,pady=26)
-    tk.Label(main,text="Welcome back, Villager Commander.",font=(FONT,25,"bold"),bg=t["bg"],fg=t["fg"]).pack(anchor="w")
-    tk.Label(main,text="A cleaner launcher, rebuilt settings, and a much sharper interface.",font=(FONT,11),bg=t["bg"],fg=t["muted"]).pack(anchor="w",pady=(4,22))
-    card=tk.Frame(main,bg=t["panel"]); card.pack(fill="x",pady=8)
-    tk.Label(card,text="MINECRAFT",font=(FONT,10,"bold"),bg=t["panel"],fg=t["muted"]).pack(anchor="w",padx=24,pady=(20,3))
-    tk.Label(card,text="Ready when you are.",font=(FONT,18,"bold"),bg=t["panel"],fg=t["fg"]).pack(anchor="w",padx=24)
-    tk.Label(card,text="Villager Launcher only launches an original Minecraft installation.",font=(FONT,10),bg=t["panel"],fg=t["muted"]).pack(anchor="w",padx=24,pady=(3,16))
-    make_button(card,"▶  PLAY",play,True).pack(anchor="w",padx=24,pady=(0,20))
-    row=tk.Frame(main,bg=t["bg"]); row.pack(fill="x",pady=10)
-    update_button=make_button(row,"Check for Updates",check_for_updates); update_button.pack(side="left",padx=(0,8))
-    repair_button=make_button(row,"Repair / Restart",repair_and_restart); repair_button.pack(side="left",padx=8)
-    make_button(row,"What's New",show_release_notes).pack(side="left",padx=8)
-    status=tk.Label(main,text="Manual updates • Automatic updates disabled • Rollback enabled",font=(FONT,9),bg=t["bg"],fg=t["muted"]); status.pack(anchor="w",pady=14)
+    global content,status
+    t=theme(); root.configure(bg=t["bg"])
+    sidebar=tk.Frame(root,bg=t["panel"],width=225); sidebar.pack(side="left",fill="y"); sidebar.pack_propagate(False)
+    tk.Label(sidebar,text="VILLAGER",font=(FONT,18,"bold"),bg=t["panel"],fg=t["fg"]).pack(anchor="w",padx=22,pady=(24,0)); tk.Label(sidebar,text="LAUNCHER",font=(FONT,9,"bold"),bg=t["panel"],fg=t["accent"]).pack(anchor="w",padx=22,pady=(0,25))
+    for text,page in (("HOME","Home"),("PROFILES","Profiles"),("MODS","Mods"),("VERSIONS","Versions"),("BACKUPS","Backups"),("REPAIR","Repair"),("SETTINGS","Settings")):
+        b=tk.Button(sidebar,text=text,command=lambda p=page:navigate(p),font=(FONT,10,"bold"),relief="flat",bg=t["panel"],fg=t["fg"],activebackground=t["button"],activeforeground=t["fg"],anchor="w",padx=22,pady=11,cursor="hand2"); b.pack(fill="x")
+    main=tk.Frame(root,bg=t["bg"]); main.pack(side="left",fill="both",expand=True)
+    top=tk.Frame(main,bg=t["bg"]); top.pack(fill="x",padx=30,pady=(22,0)); tk.Label(top,text="Villager Launcher",font=(FONT,10,"bold"),bg=t["bg"],fg=t["muted"]).pack(side="left"); status=tk.Label(top,text="Ready",font=(FONT,9),bg=t["bg"],fg=t["muted"]); status.pack(side="right")
+    content=tk.Frame(main,bg=t["panel"]); content.pack(fill="both",expand=True,padx=25,pady=18); 
+    render_current()
 
-load_settings()
+
+def save_window():
+    if settings.get("remember_window",True):
+        settings["window_width"]=root.winfo_width(); settings["window_height"]=root.winfo_height(); save_settings()
+
+
 if len(sys.argv)>=3 and sys.argv[1]=="--install-update":
     finish_update_from_temp(sys.argv[2]); raise SystemExit
 
-root=tk.Tk(); root.title("Villager Launcher"); root.minsize(900,600)
-if settings.get("remember_window"):
-    root.geometry(f"{int(settings.get('window_width',1100))}x{int(settings.get('window_height',700))}")
-else: root.geometry("1100x700")
-root.option_add("*Font",(FONT,10))
-build_ui()
-root.protocol("WM_DELETE_WINDOW",lambda:(settings.update({"window_width":root.winfo_width(),"window_height":root.winfo_height()}) if settings.get("remember_window") else None,save_settings(),root.destroy()))
-root.mainloop()
+load_settings(); load_profiles()
+root=tk.Tk(); root.title("Villager Launcher 1.5.0"); root.geometry(f"{int(settings.get('window_width',1120))}x{int(settings.get('window_height',720))}"); root.minsize(900,600)
+build_ui(); root.protocol("WM_DELETE_WINDOW", lambda:(save_window(),root.destroy())); root.mainloop()
