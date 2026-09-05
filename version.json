@@ -1,33 +1,25 @@
 {
-  "version": "1.8.5",
+  "version": "1.8.6",
   "notes": {
     "Added": [
-      "Full 1.8.5 UI remake with real canvas-based rounded cards",
-      "Minecraft-style Home dashboard with large Play area and quick actions",
-      "Top-right active profile area and PFP support",
-      "Modrinth Workshop filters for Mods, Shaders, Resource Packs, and Data Packs",
-      "Minecraft-version and sorting filters in Workshop",
-      "Real Workshop project image loading from Modrinth icon URLs",
-      "Functional Workshop installation flow when original Minecraft is detected",
-      "Workshop installation status and explicit failure messages",
-      "30 built-in themes plus Custom Theme Editor",
-      "Startup update notification when a newer version is available"
+      "Repair Mode release focused on restoring launcher stability",
+      "Safe rounded-card renderer using valid Tkinter arc coordinates",
+      "Repair Center diagnostics for Minecraft folder, launcher evidence, versions, and Java"
     ],
     "Changed": [
-      "Backups remain inside Settings instead of the main sidebar",
-      "Check for Updates remains inside Settings instead of the main sidebar",
-      "Workshop Install stays locked and intentionally does nothing without original Minecraft",
-      "Theme colors now apply across the rebuilt launcher UI",
-      "Launch diagnostics clearly identify the stage and what broke"
+      "Rebuilt launcher.py cleanly instead of patching the broken 1.8.5 layout",
+      "Kept Modrinth Workshop with Mods, Shaders, Resource Packs, and Data Packs support",
+      "Kept Workshop installation locked until original Minecraft launcher evidence is detected",
+      "Kept Backups and Check for Updates inside Settings",
+      "Kept 30 built-in themes and custom accent themes"
     ],
     "Removed": [
-      "Fake rounded-frame appearance from the old UI",
-      "Manual JAR selection for Workshop installs"
+      "Broken rounded-card implementation from 1.8.5"
     ],
     "Fixed": [
-      "Workshop Install buttons now have a real gated installation path",
-      "Launcher no longer claims an install happened when it is locked",
-      "UI structure is actually rebuilt instead of only changing release notes"
+      "Tkinter create_arc coordinate crash that prevented 1.8.5 from opening",
+      "Launcher UI startup path rebuilt for Repair Mode",
+      "Update helper now replaces the launcher only after the current process closes"
     ]
   }
 }
