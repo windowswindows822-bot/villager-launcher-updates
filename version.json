@@ -1,27 +1,23 @@
 {
-  "version": "1.6.0",
+  "version": "1.6.1",
   "notes": {
     "Added": [
-      "Minecraft ownership gate for Minecraft management features",
-      "Profiles and profile pictures are locked until original Minecraft launcher evidence is detected",
-      "Mods and Minecraft versions are locked until original Minecraft launcher evidence is detected",
-      "New UI customization mode for moving supported Home elements with the mouse",
-      "Saved UI layout positions and Reset UI Layout control",
-      "Top-right active profile PFP area",
-      "Expanded UI customization controls in Settings"
+      "Restored the cleaner 1.4.0-style launcher layout",
+      "Preserved Minecraft ownership protection for profiles, PFPs, mods, versions, backups, and launching"
     ],
     "Changed": [
-      "Home tagline changed to 'Your Minecraft, Your Way.'",
-      "Home profile card no longer uses the large PFP on the left",
-      "Theme and UI structure refreshed for a cleaner 1.6.0 layout",
-      "Minecraft management pages now clearly show their locked/unlocked state",
-      "Launcher updated to version 1.6.0"
+      "Removed the experimental mouse UI movement editor",
+      "Removed saved draggable UI layout positions",
+      "Restored the simpler sidebar, header, content-card, and Settings structure",
+      "Kept the Home tagline as 'Your Minecraft, Your Way.'"
     ],
-    "Removed": [],
+    "Removed": [
+      "CHANGE UI / MOVE ELEMENTS editor",
+      "Drag-and-drop Home element positioning"
+    ],
     "Fixed": [
-      "PFP placement is now in the top-right launcher header",
-      "Minecraft-related features no longer appear freely usable when official-launcher evidence is missing",
-      "UI layout changes persist between launcher restarts"
+      "Launcher UI no longer uses the broken draggable layout system",
+      "Theme changes rebuild the interface cleanly"
     ]
   }
 }
