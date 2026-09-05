@@ -1,25 +1,9 @@
 {
-  "version": "1.9.0",
+  "version": "1.9.1",
+  "beta": true,
   "notes": {
-    "Added": [
-      "Check Everything & Fix in Repair Center",
-      "Full launcher health checks for app data, settings, profiles, Minecraft, Java, versions, and updater configuration",
-      "Feedback Center with 1-5 star rating, categories, feedback text, and optional diagnostics",
-      "Safe local feedback export without automatic upload of personal files"
-    ],
-    "Changed": [
-      "Promoted 1.9.0 to Stable Candidate for testing before public release",
-      "Repair Center now focuses on safe, known repairs instead of simple re-checking",
-      "Sidebar now includes Feedback"
-    ],
-    "Removed": [
-      "Rollback feature",
-      "Version History / Rollback UI",
-      "Repair Mode label from the launcher title"
-    ],
-    "Fixed": [
-      "Rebuilt the launcher health-check path on top of the working 1.8.6 rounded-card renderer",
-      "Kept updater behavior manual so updates are never downloaded automatically"
-    ]
+    "Added": ["Full launcher-wide theme palette system", "Colorful Microsoft-style four-square logo", "Real ⭐ emoji ratings", "Test Everything launcher diagnostics with safe fixes", "Offline Villager Bot with a built-in 100-question knowledge pack"],
+    "Changed": ["Major UI overhaul", "Improved Modrinth Workshop search, filters, sorting, project details, install handling, and installed-mod visibility", "Launcher is explicitly marked BETA/testing until manually approved"],
+    "Fixed": ["Theme colors now cover the full launcher palette", "Manual updater behavior remains manual"]
   }
 }
