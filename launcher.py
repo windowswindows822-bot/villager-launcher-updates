@@ -78,15 +78,33 @@ def install_update(temp_file):
 
     updater_file = os.path.join(tempfile.gettempdir(), "villager_launcher_updater.bat")
     bat_contents = f'''@echo off
-ping 127.0.0.1 -n 3 >nul
-move /Y "{new_launcher}" "{current_file}" >nul
-start "" "{sys.executable}" "{current_file}"
+set "NEW={new_launcher}"
+set "CURRENT={current_file}"
+set "PYTHON={sys.executable}"
+
+rem Wait for the old launcher process to fully exit.
+timeout /t 3 /nobreak >nul
+
+rem Retry until Windows lets us replace the old launcher.
+:retry
+copy /Y "%NEW%" "%CURRENT%" >nul 2>&1
+if errorlevel 1 (
+    timeout /t 1 /nobreak >nul
+    goto retry
+)
+
+start "" "%PYTHON%" "%CURRENT%"
+del "%NEW%" >nul 2>&1
 del "%~f0"
 '''
     with open(updater_file, "w", encoding="utf-8") as file:
         file.write(bat_contents)
 
-    subprocess.Popen(["cmd", "/c", updater_file], creationflags=subprocess.CREATE_NO_WINDOW)
+    subprocess.Popen(
+        ["cmd", "/c", updater_file],
+        creationflags=subprocess.CREATE_NO_WINDOW,
+        close_fds=True
+    )
     root.destroy()
 
 
