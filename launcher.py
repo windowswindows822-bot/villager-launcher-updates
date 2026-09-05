@@ -1,15 +1,16 @@
 import tkinter as tk
 from tkinter import messagebox, filedialog, colorchooser
-import os, sys, json, tempfile, subprocess, shutil, time
+import os, sys, json, tempfile, subprocess, shutil, time, traceback
 from urllib.request import Request, urlopen
 from urllib.parse import quote
 
-CURRENT_VERSION = '1.8.6'
+CURRENT_VERSION = '1.9.0'
 BASE = 'https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main'
 API = 'https://api.modrinth.com/v2'
 APP = os.path.join(os.environ.get('APPDATA', tempfile.gettempdir()), 'VillagerLauncher')
 SETTINGS_FILE = os.path.join(APP, 'settings.json')
 PROFILES_FILE = os.path.join(APP, 'profiles.json')
+FEEDBACK_DIR = os.path.join(APP, 'feedback')
 FONT = 'Segoe UI Variable'
 
 THEME_NAMES = ['Villager Green','Midnight','Sky','Nether','Ocean','Dirt','Stone','Diamond','Gold','Redstone','Lapis','Amethyst','Copper','Forest','Cherry Grove','Desert','Snow','Volcano','End','Piglin','Swamp','Plains','Jungle','Ice','Deep Dark','Stronghold','Sunrise','Night','Redstone Lab','Creeper']
@@ -32,6 +33,7 @@ page = 'Home'
 root = None
 body = None
 workshop_results = []
+last_repair_results = []
 
 
 def read_json(path, default):
@@ -107,7 +109,7 @@ def selected_version():
 
 
 def net_json(url, timeout=15):
-    request = Request(url + ('&' if '?' in url else '?') + 't=' + str(time.time_ns()), headers={'User-Agent':'Villager-Launcher/1.8.6'})
+    request = Request(url + ('&' if '?' in url else '?') + 't=' + str(time.time_ns()), headers={'User-Agent':f'Villager-Launcher/{CURRENT_VERSION}'})
     with urlopen(request, timeout=timeout) as response:
         return json.loads(response.read().decode('utf-8'))
 
@@ -117,7 +119,6 @@ def card(parent, x, y, w, h, fill=None, radius=18):
     radius = max(2, min(radius, w//2, h//2))
     c = tk.Canvas(parent, width=w, height=h, bg=parent.cget('bg'), highlightthickness=0, bd=0)
     c.place(x=x, y=y)
-    # FIX: Tkinter needs exactly four coordinates; start/extent are keywords.
     c.create_arc(0,0,2*radius,2*radius,start=90,extent=90,fill=fill,outline=fill)
     c.create_arc(w-2*radius,0,w,2*radius,start=0,extent=90,fill=fill,outline=fill)
     c.create_arc(0,h-2*radius,2*radius,h,start=180,extent=90,fill=fill,outline=fill)
@@ -156,13 +157,13 @@ def shell():
     sidebar = tk.Frame(root,bg=t['panel'])
     sidebar.place(x=0,y=0,width=225,relheight=1)
     tk.Label(sidebar,text='⛏  MINECRAFT',font=(FONT,13,'bold'),bg=t['panel'],fg=t['fg']).place(x=18,y=18)
-    nav=[('HOME','Home'),('PROFILES','Profiles'),('MOD WORKSHOP','Workshop'),('INSTALLATIONS','Installations'),('REPAIR','Repair'),('SETTINGS','Settings')]
+    nav=[('HOME','Home'),('PROFILES','Profiles'),('MOD WORKSHOP','Workshop'),('INSTALLATIONS','Installations'),('REPAIR','Repair'),('SETTINGS','Settings'),('FEEDBACK','Feedback')]
     for i,(name,destination) in enumerate(nav):
         active = page == destination
-        b=tk.Label(sidebar,text=name,bg=t['accent'] if active else t['panel'],fg='#fff' if active else t['muted'],font=(FONT,10,'bold'),anchor='w',padx=18)
-        b.place(x=12,y=72+i*46,width=200,height=40)
+        b=tk.Label(sidebar,text=name,bg=t['accent'] if active else t['panel'],fg='#fff' if active else t['muted'],font=(FONT,9,'bold'),anchor='w',padx=18)
+        b.place(x=12,y=66+i*42,width=200,height=36)
         b.bind('<Button-1>',lambda _e,p=destination:go(p))
-    tk.Label(sidebar,text=f'Repair Mode • {CURRENT_VERSION}',bg=t['panel'],fg=t['muted'],font=(FONT,8)).place(x=18,rely=1,y=-25)
+    tk.Label(sidebar,text=f'Stable Candidate • {CURRENT_VERSION}',bg=t['panel'],fg=t['muted'],font=(FONT,8)).place(x=18,rely=1,y=-25)
     header=tk.Frame(root,bg=t['bg'])
     header.place(x=225,y=0,relwidth=1,width=-225,height=78)
     tk.Label(header,text='Villager Launcher',font=(FONT,15,'bold'),bg=t['bg'],fg=t['fg']).place(x=28,y=18)
@@ -174,28 +175,30 @@ def shell():
 
 def render():
     shell()
-    {'Home':home,'Profiles':profiles_page,'Workshop':workshop_page,'Installations':installations_page,'Repair':repair_page,'Settings':settings_page}.get(page,home)()
+    {'Home':home,'Profiles':profiles_page,'Workshop':workshop_page,'Installations':installations_page,'Repair':repair_page,'Settings':settings_page,'Feedback':feedback_page}.get(page,home)()
 
 
 def home():
     t=T()
     label(body,'Welcome back',30,20,11,fg=t['muted'])
-    label(body,'Ready to meet your wishes?',30,45,27,True)
+    label(body,'Your Minecraft, Your Way.',30,45,27,True)
     card(body,30,95,700,245,t['card'],22)
     label(body,'MINECRAFT',55,120,10,True,t['muted'])
-    label(body,'Your Minecraft, Your Way.',55,150,22,True)
+    label(body,'Ready to play?',55,150,22,True)
     label(body,'Installation  •  '+(selected_version() or 'No installation selected'),55,198,10,fg=t['muted'])
     label(body,'Profile  •  '+profiles[selected].get('name','Default'),55,223,10,fg=t['muted'])
     button(body,'PLAY',launch_game,500,265,180,54,True)
-    for i,(name,dest) in enumerate([('Installations','Installations'),('Mod Workshop','Workshop'),('Settings','Settings')]):
+    for i,(name,dest) in enumerate([('Installations','Installations'),('Mod Workshop','Workshop'),('Repair Center','Repair')]):
         x=30+i*225
         card(body,x,375,205,100,t['panel'],16)
         label(body,name,x+18,398,11,True)
         button(body,'OPEN',lambda d=dest:go(d),x+18,435,90,28)
     card(body,755,95,330,245,t['panel'],22)
-    label(body,'ACTIVE PROFILE',780,120,10,True,t['muted'])
-    label(body,profiles[selected].get('name','Default'),780,155,19,True)
-    label(body,'Original Minecraft: '+('Detected' if owned() else 'Not detected'),780,210,10,True,t['accent'] if owned() else t['danger'])
+    label(body,'LAUNCHER HEALTH',780,120,10,True,t['muted'])
+    label(body,'1.9.0 Stable Candidate',780,155,19,True)
+    label(body,'Original Minecraft: '+('Detected' if owned() else 'Not detected'),780,205,10,True,t['accent'] if owned() else t['danger'])
+    label(body,'Rollback: Removed',780,238,10,True,t['muted'])
+    label(body,'Repair Center: Ready',780,265,10,True,t['accent'])
 
 
 def profiles_page():
@@ -249,12 +252,84 @@ def java_ok():
     except (OSError,subprocess.SubprocessError): return False
 
 
+def repair_checks():
+    d=mc_dir()
+    results=[]
+    results.append(('Launcher app folder',os.path.isdir(APP),'create_app_folder'))
+    results.append(('Settings file',os.path.isfile(SETTINGS_FILE),'repair_settings'))
+    results.append(('Profiles file',os.path.isfile(PROFILES_FILE),'repair_profiles'))
+    results.append(('Minecraft folder',bool(d and os.path.isdir(d)),'minecraft_folder'))
+    results.append(('Official launcher evidence',owned(),'ownership'))
+    results.append(('Installed versions',bool(versions()),'versions'))
+    results.append(('Java',java_ok(),'java'))
+    results.append(('Updater configuration',bool(BASE and CURRENT_VERSION),'updater'))
+    return results
+
+
+def repair_problem(kind):
+    if kind=='create_app_folder':
+        os.makedirs(APP,exist_ok=True);return 'Created the launcher data folder.'
+    if kind=='repair_settings':
+        os.makedirs(APP,exist_ok=True);save_state();return 'Rebuilt the missing settings file from safe defaults.'
+    if kind=='repair_profiles':
+        os.makedirs(APP,exist_ok=True)
+        if not isinstance(profiles,list) or not profiles:
+            profiles[:] = [{'name':'Default','version':'','loader':'Vanilla','description':'Your first Villager Launcher profile.'}]
+        save_state();return 'Rebuilt the missing profiles file.'
+    if kind=='updater':
+        return 'Updater configuration is already part of the launcher and needs no file change.'
+    return None
+
+
+def check_everything_and_fix():
+    global last_repair_results
+    last_repair_results=[]
+    checks=repair_checks()
+    for name,ok,kind in checks:
+        if ok:
+            last_repair_results.append((name,'OK',''))
+            continue
+        fixed=''
+        try:
+            fixed=repair_problem(kind) or ''
+        except Exception as e:
+            fixed=''
+            last_repair_results.append((name,'ERROR',str(e)))
+            continue
+        if fixed:
+            last_repair_results.append((name,'FIXED',fixed))
+        else:
+            last_repair_results.append((name,'PROBLEM','Needs user action; nothing unsafe was changed.'))
+    save_state()
+    render_repair_results()
+
+
+def render_repair_results():
+    t=T()
+    lines=[]
+    for name,status,detail in last_repair_results:
+        mark='✓' if status in ('OK','FIXED') else '✕'
+        text=f'{mark} {name}: {status}'
+        if detail: text += f' — {detail}'
+        lines.append(text)
+    messagebox.showinfo('Check Everything & Fix','\n\n'.join(lines) if lines else 'No checks were run.')
+    render()
+
+
 def repair_page():
-    t=T();label(body,'Repair Center',30,22,25,True);label(body,'Safe diagnostics. Nothing is deleted automatically.',30,57,10,fg=t['muted'])
-    checks=[('Minecraft folder',bool(mc_dir() and os.path.isdir(mc_dir()))),('Official launcher evidence',owned()),('Installed versions',bool(versions())),('Java',java_ok())]
-    for i,(name,ok) in enumerate(checks):
-        y=105+i*65;card(body,30,y,760,52,t['card'],14);label(body,name,50,y+16,11,True);label(body,'✓ OK' if ok else '✕ Problem',600,y+16,10,True,t['accent'] if ok else t['danger'])
-    button(body,'RUN CHECK AGAIN',render,30,390,180,40,True)
+    t=T();label(body,'Repair Center',30,22,25,True);label(body,'Check the launcher and safely fix known problems.',30,57,10,fg=t['muted'])
+    card(body,30,92,850,115,t['card'],18)
+    label(body,'CHECK EVERYTHING & FIX',55,112,14,True)
+    label(body,'Runs a full health scan and repairs only known-safe launcher problems.',55,143,10,fg=t['muted'])
+    button(body,'CHECK EVERYTHING & FIX',check_everything_and_fix,55,163,230,34,True)
+    checks=repair_checks()
+    for i,(name,ok,_) in enumerate(checks):
+        y=235+i*48
+        card(body,30,y,850,40,t['card'],12)
+        label(body,name,50,y+11,10,True)
+        label(body,'✓ OK' if ok else '✕ Problem',650,y+11,9,True,t['accent'] if ok else t['danger'])
+    if last_repair_results:
+        label(body,'Last scan: '+time.strftime('%Y-%m-%d %H:%M:%S'),30,620,9,fg=t['muted'])
 
 
 def launch_game():
@@ -269,7 +344,7 @@ def launch_game():
         messagebox.showerror('Launch Error',f'Stage: Version files\n\nWhat broke: Missing client JAR:\n{jar}');return
     if not java_ok():
         messagebox.showerror('Launch Error',f'Stage: Java startup\n\nWhat broke: Java could not be started.\n\nJava path: {settings.get("java_path") or "System Java"}');return
-    messagebox.showinfo('Launch Diagnostics','Stage: Validation complete\n\nMinecraft files and Java were found.\n\nWhat broke: Nothing in the local file checks.\n\nAuthenticated Microsoft launch integration is not enabled in this repair build, so no Minecraft process was started.')
+    messagebox.showinfo('Launch Diagnostics','Stage: Validation complete\n\nMinecraft files and Java were found.\n\nWhat broke: Nothing in the local file checks.\n\nAuthenticated Microsoft launch integration is not enabled yet, so no Minecraft process was started.')
 
 
 def workshop_page():
@@ -315,7 +390,7 @@ def install_project(project):
         if not primary or not primary.get('url'): raise ValueError('No downloadable file was provided.')
         kind=(project.get('project_type') or 'mod').lower();folders={'mod':'mods','shader':'shaderpacks','resourcepack':'resourcepacks','datapack':'datapacks'};folder=folders.get(kind,'mods')
         target_dir=os.path.join(mc_dir(),folder);os.makedirs(target_dir,exist_ok=True);filename=os.path.basename(primary['url'].split('?')[0]) or (slug+'.jar');target=os.path.join(target_dir,filename)
-        req=Request(primary['url'],headers={'User-Agent':'Villager-Launcher/1.8.6'})
+        req=Request(primary['url'],headers={'User-Agent':f'Villager-Launcher/{CURRENT_VERSION}'})
         with urlopen(req,timeout=30) as response:data=response.read()
         if not data: raise ValueError('Downloaded file was empty.')
         with open(target,'wb') as f:f.write(data)
@@ -379,7 +454,7 @@ def latest_info():
 
 
 def github_request(url,timeout=10):
-    return urlopen(Request(url+('&' if '?' in url else '?')+'t='+str(time.time_ns()),headers={'User-Agent':'Villager-Launcher/1.8.6'}),timeout=timeout)
+    return urlopen(Request(url+('&' if '?' in url else '?')+'t='+str(time.time_ns()),headers={'User-Agent':f'Villager-Launcher/{CURRENT_VERSION}'}),timeout=timeout)
 
 
 def vt(v):
@@ -431,8 +506,57 @@ def release_notes():
     messagebox.showinfo("What's New",f"Villager Launcher {info.get('version',CURRENT_VERSION)}\n\n{notes(info)}")
 
 
+def diagnostics_text():
+    d=mc_dir()
+    return '\n'.join([
+        f'Villager Launcher: {CURRENT_VERSION}',
+        f'OS: {os.name}',
+        f'Python: {sys.version.split()[0]}',
+        f'Minecraft folder: {d or "(none)"}',
+        f'Minecraft folder exists: {bool(d and os.path.isdir(d))}',
+        f'Original Minecraft evidence: {owned()}',
+        f'Selected version: {selected_version() or "(none)"}',
+        f'Java: {settings.get("java_path") or "System Java"}',
+        f'Java check: {java_ok()}',
+    ])
+
+
+def feedback_page():
+    t=T();label(body,'Feedback Center',30,20,25,True);label(body,'Tell us what is working, broken, or worth improving.',30,55,10,fg=t['muted'])
+    card(body,30,85,850,480,t['card'],20)
+    label(body,'Rating',55,108,12,True)
+    rating=tk.IntVar(value=5)
+    for i in range(1,6):
+        tk.Radiobutton(body,text='★',variable=rating,value=i,font=(FONT,18),bg=t['card'],fg=t['accent'],selectcolor=t['card'],activebackground=t['card']).place(x=55+(i-1)*42,y=132)
+    label(body,'Category',55,185,12,True)
+    category=tk.StringVar(value='General')
+    menu=tk.OptionMenu(body,category,'General','Bug','Idea','UI','Workshop','Repair','Performance');menu.configure(bg=t['button'],fg=t['fg'],activebackground=t['accent'],activeforeground='#fff',relief='flat',highlightthickness=0);menu.place(x=55,y=212,width=190,height=34)
+    label(body,'Your feedback',55,265,12,True)
+    text=tk.Text(body,font=(FONT,10),bg=t['panel'],fg=t['fg'],insertbackground=t['fg'],relief='flat',wrap='word');text.place(x=55,y=295,width=760,height=145)
+    include=tk.BooleanVar(value=False)
+    tk.Checkbutton(body,text='Include diagnostics (no personal files are attached)',variable=include,bg=t['card'],fg=t['muted'],activebackground=t['card'],activeforeground=t['fg'],selectcolor=t['panel']).place(x=55,y=455)
+    button(body,'SAVE FEEDBACK',lambda:save_feedback(rating.get(),category.get(),text.get('1.0','end').strip(),include.get()),55,495,165,36,True)
+    button(body,'COPY DIAGNOSTICS',lambda:copy_diagnostics(),235,495,175,36)
+
+
+def copy_diagnostics():
+    root.clipboard_clear();root.clipboard_append(diagnostics_text());root.update();messagebox.showinfo('Diagnostics','Diagnostics copied to the clipboard.')
+
+
+def save_feedback(rating,category,text,include_diagnostics):
+    if not text:
+        messagebox.showwarning('Feedback','Please enter some feedback first.')
+        return
+    os.makedirs(FEEDBACK_DIR,exist_ok=True)
+    payload={'version':CURRENT_VERSION,'timestamp':time.strftime('%Y-%m-%d %H:%M:%S'),'rating':rating,'category':category,'feedback':text}
+    if include_diagnostics:payload['diagnostics']=diagnostics_text()
+    filename=os.path.join(FEEDBACK_DIR,time.strftime('feedback_%Y%m%d_%H%M%S.json'))
+    with open(filename,'w',encoding='utf-8') as f:json.dump(payload,f,indent=2)
+    messagebox.showinfo('Feedback Saved','Your feedback was saved locally.\n\n'+filename+'\n\nNothing was uploaded automatically.')
+
+
 def main():
     global root
-    load_state();root=tk.Tk();root.title(f'Villager Launcher {CURRENT_VERSION} • Repair Mode');root.geometry(f"{int(settings.get('window_width',1180))}x{int(settings.get('window_height',760))}");root.minsize(1000,650);render();root.protocol('WM_DELETE_WINDOW',lambda:(save_state(),root.destroy()));root.after(700,lambda:check_updates(True));root.mainloop()
+    load_state();root=tk.Tk();root.title(f'Villager Launcher {CURRENT_VERSION}');root.geometry(f"{int(settings.get('window_width',1180))}x{int(settings.get('window_height',760))}");root.minsize(1000,650);render();root.protocol('WM_DELETE_WINDOW',lambda:(save_state(),root.destroy()));root.after(700,lambda:check_updates(True));root.mainloop()
 
 if __name__=='__main__':main()
