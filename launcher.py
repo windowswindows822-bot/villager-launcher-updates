@@ -10,7 +10,7 @@ import subprocess
 import shutil
 import time
 
-CURRENT_VERSION = "1.3.1.5"
+CURRENT_VERSION = "1.3.2"
 VERSION_URL = "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/version.json"
 LAUNCHER_URL = "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/launcher.py"
 SETTINGS_FILE = os.path.join(os.environ.get("APPDATA", tempfile.gettempdir()), "VillagerLauncher", "settings.json")
@@ -72,13 +72,13 @@ def get_theme():
     return THEMES[current_theme_name]
 
 def get_latest_version():
-    request = Request(VERSION_URL, headers={"User-Agent":"Villager-Launcher"})
+    request = Request(VERSION_URL + "?t=" + str(time.time_ns()), headers={"User-Agent":"Villager-Launcher"})
     with urlopen(request, timeout=5) as response:
         data = json.loads(response.read().decode("utf-8"))
     return data.get("version")
 
 def download_update():
-    request = Request(LAUNCHER_URL, headers={"User-Agent":"Villager-Launcher"})
+    request = Request(LAUNCHER_URL + "?t=" + str(time.time_ns()), headers={"User-Agent":"Villager-Launcher"})
     with urlopen(request, timeout=15) as response:
         new_launcher = response.read()
     if not new_launcher:
@@ -94,25 +94,20 @@ def install_update(temp_file):
     root.destroy()
 
 def repair_and_restart():
-    """Check the updater path, clean stale temp data, download the current release, and restart."""
     try:
         status.configure(text="Checking launcher updater...")
         update_button.configure(state="disabled")
         repair_button.configure(state="disabled")
         root.update_idletasks()
-
         latest_version = get_latest_version()
         if not latest_version:
             raise ValueError("Version information is missing.")
-
         temp_file = os.path.join(tempfile.gettempdir(), "villager_launcher_update.py")
         try:
             if os.path.exists(temp_file):
                 os.remove(temp_file)
         except OSError:
             pass
-
-        # Always re-download the release instead of trusting an old cached update.
         fresh_file = download_update()
         status.configure(text=f"Updater check passed • restarting with {latest_version}...")
         root.update_idletasks()
@@ -201,7 +196,7 @@ def apply_theme():
     nav_frame.configure(bg=theme["panel"])
     for button, key in zip([mods_button, profile_button, launcher_button], ["mods", "profile", "launcher"]):
         button.configure(bg=theme["button"], fg=theme["fg"], activebackground=theme["accent"], activeforeground=theme["fg"], text=f"{theme['icons'][key]}  {key.upper()}")
-    settings_button.configure(bg=theme["button"], fg=theme["fg"], activebackground=theme["accent"], activeforeground=theme["fg"], text=f"{theme['icons']['settings']}  SETTINGS")
+    settings_button.configure(bg=theme["button"], fg=theme["fg"], activebackground=theme["accent"], activeforeground=theme["fg"])
     play_button.configure(bg=theme["accent"], fg=theme["fg"], activebackground=theme["accent"], activeforeground=theme["fg"])
     update_button.configure(bg=theme["button"], fg=theme["fg"], activebackground=theme["accent"], activeforeground=theme["fg"])
     repair_button.configure(bg=theme["button"], fg=theme["fg"], activebackground=theme["accent"], activeforeground=theme["fg"])
@@ -281,15 +276,16 @@ minecraft_status = tk.Label(center, text=("🟢 Minecraft installation detected"
 minecraft_status.pack(pady=(0,15))
 play_button = tk.Button(center, text="▶  PLAY", font=("Segoe UI",18,"bold"), width=18, height=2, relief="flat", command=play)
 play_button.pack(pady=5)
-update_button = tk.Button(center, text="🔄  Check for Updates", font=("Segoe UI",11), width=24, relief="flat", command=check_for_updates)
+update_button = tk.Button(center, text="🔄  Check for Updates", font=("Segoe UI",11,"bold"), width=24, relief="flat", command=check_for_updates)
 update_button.pack(pady=5)
 repair_button = tk.Button(center, text="🧰  Fix Update & Restart", font=("Segoe UI",11,"bold"), width=24, relief="flat", command=repair_and_restart)
 repair_button.pack(pady=5)
-diagnostics_button = tk.Button(center, text="🛠️  Diagnostics", font=("Segoe UI",10), width=20, relief="flat", command=open_diagnostics)
+diagnostics_button = tk.Button(center, text="🛠️  Diagnostics", font=("Segoe UI",10,"bold"), width=24, relief="flat", command=open_diagnostics)
 diagnostics_button.pack(pady=5)
-status = tk.Label(center, text=f"Ready • Manual updates • Villager Launcher {CURRENT_VERSION}", font=("Segoe UI",10))
-status.pack(pady=8)
-settings_button = tk.Button(panel, text="⚙️  SETTINGS", font=("Segoe UI",10,"bold"), width=15, relief="flat", command=open_settings)
-settings_button.pack(side="left", padx=20, pady=(0,15))
+status = tk.Label(center, text="Ready", font=("Segoe UI",9))
+status.pack(pady=10)
+settings_button = tk.Button(panel, text="⚙️  SETTINGS", font=("Segoe UI",10,"bold"), width=14, relief="flat", command=open_settings)
+settings_button.place(relx=0.02, rely=0.96, anchor="sw")
+# Reserved bottom-right area for the future “Download Other Great Launcher” button.
 apply_theme()
 root.mainloop()
