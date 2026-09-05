@@ -1,23 +1,24 @@
 {
-  "version": "1.6.1",
+  "version": "1.6.2",
   "notes": {
     "Added": [
-      "Restored the cleaner 1.4.0-style launcher layout",
-      "Preserved Minecraft ownership protection for profiles, PFPs, mods, versions, backups, and launching"
+      "Clean rebuilt 1.4-style launcher interface",
+      "Stable top-right profile PFP area",
+      "Safer settings controls with no draggable UI system"
     ],
     "Changed": [
-      "Removed the experimental mouse UI movement editor",
-      "Removed saved draggable UI layout positions",
-      "Restored the simpler sidebar, header, content-card, and Settings structure",
-      "Kept the Home tagline as 'Your Minecraft, Your Way.'"
+      "Rebuilt launcher.py to remove the obsolete UI layout editor",
+      "Removed all settings layout-position handling",
+      "Kept the Your Minecraft, Your Way. home tagline",
+      "Kept Minecraft ownership protection for Profiles, PFPs, Mods, Versions, Backups, and launching"
     ],
     "Removed": [
-      "CHANGE UI / MOVE ELEMENTS editor",
-      "Drag-and-drop Home element positioning"
+      "Broken place_editable UI code",
+      "Draggable UI layout data"
     ],
     "Fixed": [
-      "Launcher UI no longer uses the broken draggable layout system",
-      "Theme changes rebuild the interface cleanly"
+      "Fixed AttributeError caused by tuple layout values",
+      "Launcher now starts without the old 1.6.0 layout system"
     ]
   }
 }
