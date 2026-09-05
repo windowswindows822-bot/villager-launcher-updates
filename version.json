@@ -1,27 +1,30 @@
 {
-  "version": "1.4.0",
+  "version": "1.5.0",
   "notes": {
     "Added": [
-      "Completely redesigned Villager Launcher interface",
-      "Expanded Settings center with General, Appearance, Minecraft, Updates, Privacy, and Advanced sections",
-      "Window size memory and launcher behavior settings",
-      "Custom Minecraft directory setting",
-      "Custom Java path setting for future launch integration",
-      "Manual update policy controls",
-      "Reset All Settings option",
-      "Sharper Segoe UI Variable typography throughout the launcher",
-      "New sidebar navigation and redesigned Minecraft home card"
+      "Major Minecraft Manager system",
+      "Minecraft profiles with separate names, versions, loaders, descriptions, and profile pictures",
+      "Local profile picture picker for PNG, GIF, and BMP images",
+      "Installed Minecraft version browser",
+      "Mod Manager with safe enable/disable and .jar importing",
+      "Minecraft Backup Center with saves, mods, resourcepacks, and config backups",
+      "Repair Center with Minecraft, versions, mods, and launcher settings diagnostics",
+      "Expanded theme system with improved colors, cards, buttons, typography, and custom accent themes",
+      "Custom Minecraft folder and Java executable selectors",
+      "Profile, version, mod, backup, and repair navigation"
     ],
     "Changed": [
-      "Settings redesigned into a full navigation-based control center",
-      "Main launcher layout redesigned for a cleaner modern interface",
-      "Buttons, spacing, headers, status area, and typography refreshed",
-      "Minecraft detection now respects a saved custom Minecraft directory"
+      "Home screen redesigned around the selected Minecraft profile",
+      "Launcher tagline changed to 'Your Galaxy, Your Way.'",
+      "Home greeting changed to 'Ready to meet your wishes?'",
+      "Settings and theme visuals refreshed for the 1.5.0 interface",
+      "Launcher version is now 1.5.0"
     ],
     "Removed": [],
     "Fixed": [
-      "Settings are now persisted in a structured launcher settings file",
-      "Launcher window dimensions can now be remembered safely"
+      "Theme contrast and card styling improved",
+      "Profile data and launcher settings are persisted locally",
+      "Updater source now identifies itself as version 1.5.0"
     ]
   }
 }
