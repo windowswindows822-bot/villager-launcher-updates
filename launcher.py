@@ -4,7 +4,7 @@ import json, os, sys, tempfile, subprocess, shutil, time, re
 from urllib.request import urlopen, Request
 from urllib.error import URLError
 
-CURRENT_VERSION = "1.3.5"
+CURRENT_VERSION = "1.3.6"
 BASE_URL = "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main"
 VERSION_URL = BASE_URL + "/version.json"
 LAUNCHER_URL = BASE_URL + "/launcher.py"
@@ -124,6 +124,10 @@ def show_release_notes():
 def minecraft_directory_exists():
     app=os.environ.get("APPDATA"); return bool(app and os.path.isdir(os.path.join(app,".minecraft")))
 
+def get_minecraft_directory():
+    app=os.environ.get("APPDATA")
+    return os.path.join(app,".minecraft") if app else None
+
 def open_mods():
     if not minecraft_directory_exists():
         messagebox.showerror("Mods Unavailable","Can't access Minecraft.\n\nVillager Launcher could not find a Minecraft installation. You need an original Minecraft installation before mods can be accessed."); return
@@ -155,21 +159,50 @@ def download_rollback(version_info):
     url=f"https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/{sha}/launcher.py"
     return download_url(url,"villager_launcher_rollback_"+version.replace(".","_")+".py")
 
+def ask_file_choice(version):
+    return messagebox.askyesno("Rollback Files",f"Before rolling back to Villager Launcher {version}:\n\nDo you want to KEEP your Minecraft mods and texture/resource packs?\n\nYES = Keep them exactly where they are.\nNO = Move them out of the active folders into a safe Villager Launcher rollback backup.\n\nThe launcher itself never deletes these files.",default="yes")
+
+def move_game_files_to_backup():
+    mc=get_minecraft_directory()
+    if not mc: return []
+    backup=os.path.join(mc,"villager_launcher_rollback_backup")
+    moved=[]
+    for folder in ("mods","resourcepacks"):
+        source=os.path.join(mc,folder)
+        if not os.path.isdir(source): continue
+        target=os.path.join(backup,folder)
+        try:
+            os.makedirs(backup,exist_ok=True)
+            if os.path.exists(target):
+                target=os.path.join(backup,folder+"_"+str(int(time.time())))
+            shutil.move(source,target)
+            moved.append(folder)
+        except OSError:
+            pass
+    return moved
+
 def rollback_to_version(version_info,window):
     version=version_info["version"]
     if version==CURRENT_VERSION:
         messagebox.showinfo("Rollback","You are already using this version."); return
     if not messagebox.askyesno("Confirm Rollback",f"Roll back Villager Launcher to {version}?\n\nThe current launcher will be replaced and restarted."): return
     try:
+        keep_files=ask_file_choice(version)
+        moved=[]
+        if not keep_files:
+            moved=move_game_files_to_backup()
         status.configure(text=f"Downloading version {version}..."); root.update_idletasks()
-        path=download_rollback(version); window.destroy(); install_update(path)
+        path=download_rollback(version)
+        if moved:
+            status.configure(text="Game files moved to rollback backup..."); root.update_idletasks(); time.sleep(1)
+        window.destroy(); install_update(path)
     except Exception as e:
-        messagebox.showerror("Rollback Error",f"Could not download the selected version.\n\n{e}")
+        messagebox.showerror("Rollback Error",f"Could not complete the rollback.\n\n{e}")
 
 def open_version_history():
     window=tk.Toplevel(root); window.title("Villager Launcher Version History"); window.geometry("650x500"); t=get_theme(); window.configure(bg=t["panel"])
     tk.Label(window,text="VERSION HISTORY",font=("Segoe UI",22,"bold"),bg=t["panel"],fg=t["fg"]).pack(pady=(20,5))
-    tk.Label(window,text="Choose an older release if you don't like a new update.",font=("Segoe UI",10),bg=t["panel"],fg=t["muted"]).pack(pady=(0,15))
+    tk.Label(window,text="Choose an older release to roll back to.",font=("Segoe UI",10),bg=t["panel"],fg=t["muted"]).pack(pady=(0,15))
     frame=tk.Frame(window,bg=t["panel"]); frame.pack(fill="both",expand=True,padx=25,pady=10)
     try:
         history=get_version_history()
