@@ -1,30 +1,27 @@
 {
-  "version": "1.5.0",
+  "version": "1.6.0",
   "notes": {
     "Added": [
-      "Major Minecraft Manager system",
-      "Minecraft profiles with separate names, versions, loaders, descriptions, and profile pictures",
-      "Local profile picture picker for PNG, GIF, and BMP images",
-      "Installed Minecraft version browser",
-      "Mod Manager with safe enable/disable and .jar importing",
-      "Minecraft Backup Center with saves, mods, resourcepacks, and config backups",
-      "Repair Center with Minecraft, versions, mods, and launcher settings diagnostics",
-      "Expanded theme system with improved colors, cards, buttons, typography, and custom accent themes",
-      "Custom Minecraft folder and Java executable selectors",
-      "Profile, version, mod, backup, and repair navigation"
+      "Minecraft ownership gate for Minecraft management features",
+      "Profiles and profile pictures are locked until original Minecraft launcher evidence is detected",
+      "Mods and Minecraft versions are locked until original Minecraft launcher evidence is detected",
+      "New UI customization mode for moving supported Home elements with the mouse",
+      "Saved UI layout positions and Reset UI Layout control",
+      "Top-right active profile PFP area",
+      "Expanded UI customization controls in Settings"
     ],
     "Changed": [
-      "Home screen redesigned around the selected Minecraft profile",
-      "Launcher tagline changed to 'Your Galaxy, Your Way.'",
-      "Home greeting changed to 'Ready to meet your wishes?'",
-      "Settings and theme visuals refreshed for the 1.5.0 interface",
-      "Launcher version is now 1.5.0"
+      "Home tagline changed to 'Your Minecraft, Your Way.'",
+      "Home profile card no longer uses the large PFP on the left",
+      "Theme and UI structure refreshed for a cleaner 1.6.0 layout",
+      "Minecraft management pages now clearly show their locked/unlocked state",
+      "Launcher updated to version 1.6.0"
     ],
     "Removed": [],
     "Fixed": [
-      "Theme contrast and card styling improved",
-      "Profile data and launcher settings are persisted locally",
-      "Updater source now identifies itself as version 1.5.0"
+      "PFP placement is now in the top-right launcher header",
+      "Minecraft-related features no longer appear freely usable when official-launcher evidence is missing",
+      "UI layout changes persist between launcher restarts"
     ]
   }
 }
