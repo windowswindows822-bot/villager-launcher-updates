@@ -1,27 +1,17 @@
 {
-  "version": "1.3.5",
+  "version": "1.3.6",
   "notes": {
     "Added": [
-      "Version History screen",
-      "Rollback to an older Villager Launcher release",
-      "GitHub-based previous-version lookup",
-      "Rollback confirmation before replacing the launcher"
+      "Rollback file-choice prompt",
+      "Option to keep Minecraft mods and texture/resource packs during rollback",
+      "Safe rollback backup for mods and resource packs when the user chooses not to keep them active"
     ],
     "Changed": [
-      "Settings now includes Version History / Rollback",
-      "Diagnostics now reports rollback and updater status",
-      "Launcher branding no longer depends on mascot images"
+      "Rollback now asks about Minecraft files before replacing the launcher"
     ],
-    "Removed": [
-      "Villager PNG mascot system",
-      "Steve PNG mascot system",
-      "Image Test button",
-      "Image-related startup and diagnostics code"
-    ],
+    "Removed": [],
     "Fixed": [
-      "Broken or missing mascot-image errors",
-      "Image-related launcher startup problems",
-      "Cleaner updater and settings integration"
+      "Rollback no longer silently ignores the user's mod and resource-pack choice"
     ]
   }
 }
