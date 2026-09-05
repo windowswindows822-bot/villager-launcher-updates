@@ -10,7 +10,7 @@ import subprocess
 import shutil
 import time
 
-CURRENT_VERSION = "1.3.1"
+CURRENT_VERSION = "1.3.2"
 VERSION_URL = "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/version.json"
 LAUNCHER_URL = "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/launcher.py"
 SETTINGS_FILE = os.path.join(os.environ.get("APPDATA", tempfile.gettempdir()), "VillagerLauncher", "settings.json")
@@ -69,12 +69,6 @@ def finish_update_from_temp(target_file):
             return
         except OSError:
             time.sleep(1)
-    messagebox.showerror("Update Error", "The update was downloaded, but Windows could not replace the old launcher file.")
-
-
-if len(sys.argv) >= 3 and sys.argv[1] == "--install-update":
-    finish_update_from_temp(sys.argv[2])
-    raise SystemExit
 
 
 def get_theme():
@@ -140,7 +134,11 @@ def check_for_updates():
         status.configure(text="Update failed")
         messagebox.showerror("Update Error", f"Something went wrong.\n\n{error}")
     finally:
-        update_button.configure(state="normal")
+        try:
+            if root.winfo_exists() and update_button.winfo_exists():
+                update_button.configure(state="normal")
+        except tk.TclError:
+            pass
 
 
 def minecraft_directory_exists():
@@ -177,7 +175,7 @@ def apply_theme():
     topbar.configure(bg=theme["panel"])
     center.configure(bg=theme["panel"])
     title.configure(bg=theme["panel"], fg=theme["fg"])
-    subtitle.configure(bg=theme["panel"], fg=theme["muted"])
+    subtitle.configure(bg=theme["panel"], fg=theme["fg"])
     version.configure(bg=theme["panel"], fg=theme["muted"])
     status.configure(bg=theme["panel"], fg=theme["muted"])
     minecraft_status.configure(bg=theme["panel"], fg=theme["muted"])
@@ -233,6 +231,10 @@ def play():
         return
     messagebox.showinfo("Minecraft", "Minecraft installation detected. Launch integration will be added next.")
 
+
+if len(sys.argv) >= 3 and sys.argv[1] == "--install-update":
+    finish_update_from_temp(sys.argv[2])
+    raise SystemExit
 
 load_settings()
 root = tk.Tk()
