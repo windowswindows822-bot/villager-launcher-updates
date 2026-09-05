@@ -1,25 +1,25 @@
 {
-  "version": "1.8.6",
+  "version": "1.9.0",
   "notes": {
     "Added": [
-      "Repair Mode release focused on restoring launcher stability",
-      "Safe rounded-card renderer using valid Tkinter arc coordinates",
-      "Repair Center diagnostics for Minecraft folder, launcher evidence, versions, and Java"
+      "Check Everything & Fix in Repair Center",
+      "Full launcher health checks for app data, settings, profiles, Minecraft, Java, versions, and updater configuration",
+      "Feedback Center with 1-5 star rating, categories, feedback text, and optional diagnostics",
+      "Safe local feedback export without automatic upload of personal files"
     ],
     "Changed": [
-      "Rebuilt launcher.py cleanly instead of patching the broken 1.8.5 layout",
-      "Kept Modrinth Workshop with Mods, Shaders, Resource Packs, and Data Packs support",
-      "Kept Workshop installation locked until original Minecraft launcher evidence is detected",
-      "Kept Backups and Check for Updates inside Settings",
-      "Kept 30 built-in themes and custom accent themes"
+      "Promoted 1.9.0 to Stable Candidate for testing before public release",
+      "Repair Center now focuses on safe, known repairs instead of simple re-checking",
+      "Sidebar now includes Feedback"
     ],
     "Removed": [
-      "Broken rounded-card implementation from 1.8.5"
+      "Rollback feature",
+      "Version History / Rollback UI",
+      "Repair Mode label from the launcher title"
     ],
     "Fixed": [
-      "Tkinter create_arc coordinate crash that prevented 1.8.5 from opening",
-      "Launcher UI startup path rebuilt for Repair Mode",
-      "Update helper now replaces the launcher only after the current process closes"
+      "Rebuilt the launcher health-check path on top of the working 1.8.6 rounded-card renderer",
+      "Kept updater behavior manual so updates are never downloaded automatically"
     ]
   }
 }
