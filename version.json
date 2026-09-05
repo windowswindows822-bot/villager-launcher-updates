@@ -1,19 +1,23 @@
 {
-  "version": "1.3.3",
+  "version": "1.3.4",
   "notes": {
     "Added": [
-      "Villager mascot image on the launcher",
-      "Steve running toward the villager scene",
-      "Click the villager to enlarge him and close the launcher",
-      "Structured What's New sections for Added, Changed, Removed, and Fixed"
+      "Real local PNG mascot system using villager-looking.png and steve-running.png",
+      "Image Test button",
+      "Image status in Diagnostics",
+      "Actual villager image enlargement when clicked"
     ],
     "Changed": [
-      "Launcher center layout updated to make room for the mascot scene",
-      "Release notes now clearly separate each type of change"
+      "Mascot images are loaded from the launcher's images folder",
+      "Mascot image loading no longer downloads Google thumbnails",
+      "Launcher no longer uses an emoji fallback for the villager or Steve scene"
     ],
-    "Removed": [],
+    "Removed": [
+      "Villager and Steve emoji image fallbacks"
+    ],
     "Fixed": [
-      "Improved update installer failure reporting"
+      "Black-and-white Windows emoji appearing instead of the villager image",
+      "Villager enlargement now uses a real enlarged image"
     ]
   }
 }
