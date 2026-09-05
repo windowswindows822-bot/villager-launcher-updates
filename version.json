@@ -1,22 +1,30 @@
 {
-  "version": "1.7.1",
+  "version": "1.8.0",
   "notes": {
     "Added": [
-      "Moved Backups into Settings > Backups",
-      "Moved Check for Updates into Settings > Updates",
-      "Cleaner main sidebar with Backups removed from navigation",
-      "Manual update controls remain inside Settings"
+      "Fresh rounded-corner launcher UI with larger cards and cleaner spacing",
+      "Detailed Minecraft launch-error reporting that identifies the failed stage and what broke",
+      "Mod Workshop powered by Modrinth instead of CurseForge",
+      "Workshop search with direct Install buttons",
+      "Workshop installs compatible mod releases automatically without asking the user to choose a JAR",
+      "Workshop errors now explain what failed",
+      "Preserved the existing 30 built-in themes"
     ],
     "Changed": [
-      "Settings now contains the launcher backup center and update center",
-      "Main navigation is focused on Home, Profiles, Mods, Installations, Repair, and Settings"
+      "Home is redesigned around a large Minecraft launch card and quick actions",
+      "Navigation and pages use the new rounded-card visual system",
+      "Mods page now opens the integrated Mod Workshop",
+      "Backups remain under Settings and update checking remains under Settings > Updates",
+      "Launcher keeps manual-only update behavior"
     ],
     "Removed": [
-      "Backups from the main sidebar navigation"
+      "Manual JAR-file selection from the Mod Workshop flow",
+      "Old flat launcher page presentation"
     ],
     "Fixed": [
-      "Backup management is now grouped with other launcher settings",
-      "Update checking is now grouped under Settings > Updates"
+      "Launch failures no longer show only a generic error",
+      "Missing version metadata, missing client JAR, Java startup failures, and unsupported authenticated launching are reported separately",
+      "Mod Workshop no longer depends on the user supplying a local JAR"
     ]
   }
 }
