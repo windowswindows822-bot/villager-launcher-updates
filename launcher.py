@@ -71,11 +71,16 @@ def get_theme():
         return custom_theme
     return THEMES[current_theme_name]
 
-def get_latest_version():
+def get_latest_info():
     request = Request(VERSION_URL + "?t=" + str(time.time_ns()), headers={"User-Agent":"Villager-Launcher"})
     with urlopen(request, timeout=5) as response:
         data = json.loads(response.read().decode("utf-8"))
-    return data.get("version")
+    if not isinstance(data, dict) or not data.get("version"):
+        raise ValueError("Version information is missing.")
+    return data
+
+def get_latest_version():
+    return get_latest_info().get("version")
 
 def download_update():
     request = Request(LAUNCHER_URL + "?t=" + str(time.time_ns()), headers={"User-Agent":"Villager-Launcher"})
@@ -99,7 +104,8 @@ def repair_and_restart():
         update_button.configure(state="disabled")
         repair_button.configure(state="disabled")
         root.update_idletasks()
-        latest_version = get_latest_version()
+        latest_info = get_latest_info()
+        latest_version = latest_info.get("version")
         if not latest_version:
             raise ValueError("Version information is missing.")
         temp_file = os.path.join(tempfile.gettempdir(), "villager_launcher_update.py")
@@ -122,22 +128,38 @@ def repair_and_restart():
         except tk.TclError:
             pass
 
+def show_release_notes(info=None):
+    if info is None:
+        try:
+            info = get_latest_info()
+        except Exception:
+            info = {"version": CURRENT_VERSION, "notes": "Release notes could not be loaded from the update server."}
+    version = info.get("version", CURRENT_VERSION)
+    notes = info.get("notes", "No release notes have been added yet.")
+    if isinstance(notes, list):
+        notes = "\n".join("• " + str(item) for item in notes)
+    messagebox.showinfo("What's New", f"Villager Launcher {version}\n\n{notes}")
+
 def check_for_updates():
     status.configure(text="Checking for updates...")
     update_button.configure(state="disabled")
     root.update_idletasks()
     try:
-        latest_version = get_latest_version()
+        latest_info = get_latest_info()
+        latest_version = latest_info.get("version")
         if not latest_version:
             raise ValueError("Version information is missing.")
         if latest_version == CURRENT_VERSION:
             status.configure(text="Up to date ✓")
-            messagebox.showinfo("Updates", f"Villager Launcher is up to date!\n\nVersion {CURRENT_VERSION}")
+            messagebox.showinfo("Updates", f"Villager Launcher is up to date!\n\nInstalled version: {CURRENT_VERSION}\nServer version: {latest_version}\n\nEverything is current.")
             return
-        status.configure(text=f"Downloading {latest_version}...")
+        status.configure(text=f"Update found: {latest_version}")
         root.update_idletasks()
         temp_file = download_update()
-        answer = messagebox.askyesno("Update Available", f"Version {latest_version} is available!\n\nCurrent version: {CURRENT_VERSION}\nNew version: {latest_version}\n\nInstall the update now?")
+        notes = latest_info.get("notes", "No release notes available.")
+        if isinstance(notes, list):
+            notes = "\n".join("• " + str(item) for item in notes)
+        answer = messagebox.askyesno("Update Available", f"Version {latest_version} is available!\n\nInstalled version: {CURRENT_VERSION}\nServer version: {latest_version}\n\nWhat's new:\n{notes}\n\nInstall the update now?")
         if answer:
             status.configure(text=f"Installing {latest_version}...")
             root.update_idletasks()
@@ -200,6 +222,7 @@ def apply_theme():
     play_button.configure(bg=theme["accent"], fg=theme["fg"], activebackground=theme["accent"], activeforeground=theme["fg"])
     update_button.configure(bg=theme["button"], fg=theme["fg"], activebackground=theme["accent"], activeforeground=theme["fg"])
     repair_button.configure(bg=theme["button"], fg=theme["fg"], activebackground=theme["accent"], activeforeground=theme["fg"])
+    notes_button.configure(bg=theme["button"], fg=theme["fg"], activebackground=theme["accent"], activeforeground=theme["fg"])
     diagnostics_button.configure(bg=theme["button"], fg=theme["fg"], activebackground=theme["accent"], activeforeground=theme["fg"])
 
 def create_custom_theme():
@@ -280,6 +303,8 @@ update_button = tk.Button(center, text="🔄  Check for Updates", font=("Segoe U
 update_button.pack(pady=5)
 repair_button = tk.Button(center, text="🧰  Fix Update & Restart", font=("Segoe UI",11,"bold"), width=24, relief="flat", command=repair_and_restart)
 repair_button.pack(pady=5)
+notes_button = tk.Button(center, text="📋  What's New", font=("Segoe UI",10,"bold"), width=24, relief="flat", command=show_release_notes)
+notes_button.pack(pady=5)
 diagnostics_button = tk.Button(center, text="🛠️  Diagnostics", font=("Segoe UI",10,"bold"), width=24, relief="flat", command=open_diagnostics)
 diagnostics_button.pack(pady=5)
 status = tk.Label(center, text="Ready", font=("Segoe UI",9))
