@@ -10,7 +10,7 @@ import subprocess
 import shutil
 import time
 
-CURRENT_VERSION = "1.3.2"
+CURRENT_VERSION = "1.3.1.5"
 VERSION_URL = "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/version.json"
 LAUNCHER_URL = "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/launcher.py"
 SETTINGS_FILE = os.path.join(os.environ.get("APPDATA", tempfile.gettempdir()), "VillagerLauncher", "settings.json")
@@ -22,10 +22,8 @@ THEMES = {
     "Nether": {"bg":"#180C0C","panel":"#2A1212","fg":"#FFFFFF","muted":"#D0A8A8","accent":"#C84B4B","button":"#542626","icons":{"mods":"🔥","profile":"👤","launcher":"💀","settings":"⚙️"}},
     "Ocean": {"bg":"#071820","panel":"#0D2833","fg":"#FFFFFF","muted":"#9FC5D0","accent":"#38A7C7","button":"#1B4655","icons":{"mods":"🌊","profile":"👤","launcher":"🐟","settings":"⚙️"}}
 }
-
 current_theme_name = "Villager Green"
 custom_theme = None
-
 
 def load_settings():
     global current_theme_name, custom_theme
@@ -41,7 +39,6 @@ def load_settings():
     except (OSError, json.JSONDecodeError):
         pass
 
-
 def save_settings():
     try:
         os.makedirs(os.path.dirname(SETTINGS_FILE), exist_ok=True)
@@ -52,7 +49,6 @@ def save_settings():
             json.dump(data, file, indent=2)
     except OSError:
         pass
-
 
 def finish_update_from_temp(target_file):
     source_file = os.path.abspath(sys.argv[0])
@@ -70,19 +66,16 @@ def finish_update_from_temp(target_file):
         except OSError:
             time.sleep(1)
 
-
 def get_theme():
     if current_theme_name == "Custom" and custom_theme:
         return custom_theme
     return THEMES[current_theme_name]
-
 
 def get_latest_version():
     request = Request(VERSION_URL, headers={"User-Agent":"Villager-Launcher"})
     with urlopen(request, timeout=5) as response:
         data = json.loads(response.read().decode("utf-8"))
     return data.get("version")
-
 
 def download_update():
     request = Request(LAUNCHER_URL, headers={"User-Agent":"Villager-Launcher"})
@@ -95,12 +88,44 @@ def download_update():
         file.write(new_launcher)
     return temp_file
 
-
 def install_update(temp_file):
     current_file = os.path.abspath(sys.argv[0])
     subprocess.Popen([sys.executable, temp_file, "--install-update", current_file], creationflags=subprocess.CREATE_NO_WINDOW, close_fds=True)
     root.destroy()
 
+def repair_and_restart():
+    """Check the updater path, clean stale temp data, download the current release, and restart."""
+    try:
+        status.configure(text="Checking launcher updater...")
+        update_button.configure(state="disabled")
+        repair_button.configure(state="disabled")
+        root.update_idletasks()
+
+        latest_version = get_latest_version()
+        if not latest_version:
+            raise ValueError("Version information is missing.")
+
+        temp_file = os.path.join(tempfile.gettempdir(), "villager_launcher_update.py")
+        try:
+            if os.path.exists(temp_file):
+                os.remove(temp_file)
+        except OSError:
+            pass
+
+        # Always re-download the release instead of trusting an old cached update.
+        fresh_file = download_update()
+        status.configure(text=f"Updater check passed • restarting with {latest_version}...")
+        root.update_idletasks()
+        time.sleep(1)
+        install_update(fresh_file)
+    except Exception as error:
+        status.configure(text="Repair check failed")
+        messagebox.showerror("Repair Error", f"Villager Launcher checked the updater but could not repair it.\n\n{error}")
+        try:
+            repair_button.configure(state="normal")
+            update_button.configure(state="normal")
+        except tk.TclError:
+            pass
 
 def check_for_updates():
     status.configure(text="Checking for updates...")
@@ -140,11 +165,9 @@ def check_for_updates():
         except tk.TclError:
             pass
 
-
 def minecraft_directory_exists():
     appdata = os.environ.get("APPDATA")
     return bool(appdata and os.path.isdir(os.path.join(appdata, ".minecraft")))
-
 
 def open_mods():
     if not minecraft_directory_exists():
@@ -152,21 +175,17 @@ def open_mods():
         return
     messagebox.showinfo("Mods", "Minecraft installation detected.\n\nThe Mods browser is ready for the next module.")
 
-
 def open_profile():
     messagebox.showinfo("Profile", "Profile\n\nNo Minecraft account is connected yet.")
 
-
 def open_launcher_page():
     messagebox.showinfo("Launcher", f"Villager Launcher {CURRENT_VERSION}\n\nManual updates are enabled.\nAutomatic updates are disabled.")
-
 
 def open_diagnostics():
     appdata = os.environ.get("APPDATA", "Not found")
     mc_path = os.path.join(appdata, ".minecraft") if appdata != "Not found" else "Not found"
     status_text = "Detected" if os.path.isdir(mc_path) else "Not detected"
     messagebox.showinfo("Diagnostics", f"Villager Launcher {CURRENT_VERSION}\n\nLauncher file:\n{os.path.abspath(sys.argv[0])}\n\nMinecraft folder:\n{mc_path}\n\nMinecraft status: {status_text}\n\nUpdate mode: Manual")
-
 
 def apply_theme():
     theme = get_theme()
@@ -185,8 +204,8 @@ def apply_theme():
     settings_button.configure(bg=theme["button"], fg=theme["fg"], activebackground=theme["accent"], activeforeground=theme["fg"], text=f"{theme['icons']['settings']}  SETTINGS")
     play_button.configure(bg=theme["accent"], fg=theme["fg"], activebackground=theme["accent"], activeforeground=theme["fg"])
     update_button.configure(bg=theme["button"], fg=theme["fg"], activebackground=theme["accent"], activeforeground=theme["fg"])
+    repair_button.configure(bg=theme["button"], fg=theme["fg"], activebackground=theme["accent"], activeforeground=theme["fg"])
     diagnostics_button.configure(bg=theme["button"], fg=theme["fg"], activebackground=theme["accent"], activeforeground=theme["fg"])
-
 
 def create_custom_theme():
     global custom_theme, current_theme_name
@@ -201,7 +220,6 @@ def create_custom_theme():
     current_theme_name = "Custom"
     save_settings()
     apply_theme()
-
 
 def open_settings():
     settings = tk.Toplevel(root)
@@ -224,13 +242,11 @@ def open_settings():
     tk.Button(settings, text="🛠️ Diagnostics", font=("Segoe UI",11,"bold"), width=25, relief="flat", bg=theme["button"], fg=theme["fg"], command=open_diagnostics).pack(pady=8)
     tk.Label(settings, text="Themes are saved automatically.\nThemes also change the launcher icons.", font=("Segoe UI",9), bg=theme["panel"], fg=theme["muted"]).pack(pady=12)
 
-
 def play():
     if not minecraft_directory_exists():
         messagebox.showinfo("Minecraft Required", "You need to own Minecraft Java Edition to play using Villager Launcher.")
         return
     messagebox.showinfo("Minecraft", "Minecraft installation detected. Launch integration will be added next.")
-
 
 if len(sys.argv) >= 3 and sys.argv[1] == "--install-update":
     finish_update_from_temp(sys.argv[2])
@@ -239,9 +255,8 @@ if len(sys.argv) >= 3 and sys.argv[1] == "--install-update":
 load_settings()
 root = tk.Tk()
 root.title(f"Villager Launcher {CURRENT_VERSION}")
-root.geometry("1000x620")
+root.geometry("1000x660")
 root.resizable(False, False)
-
 panel = tk.Frame(root)
 panel.pack(fill="both", expand=True, padx=20, pady=20)
 topbar = tk.Frame(panel)
@@ -257,21 +272,23 @@ launcher_button.pack(side="left", padx=4)
 center = tk.Frame(panel)
 center.pack(fill="both", expand=True)
 title = tk.Label(center, text="VILLAGER LAUNCHER", font=("Segoe UI",36,"bold"))
-title.pack(pady=(80,5))
+title.pack(pady=(70,5))
 subtitle = tk.Label(center, text="Your Minecraft Java launcher", font=("Segoe UI",14))
 subtitle.pack()
 version = tk.Label(center, text=f"Version {CURRENT_VERSION}", font=("Segoe UI",10))
 version.pack(pady=(8,15))
 minecraft_status = tk.Label(center, text=("🟢 Minecraft installation detected" if minecraft_directory_exists() else "⚪ Minecraft installation not detected"), font=("Segoe UI",11,"bold"))
-minecraft_status.pack(pady=(0,18))
+minecraft_status.pack(pady=(0,15))
 play_button = tk.Button(center, text="▶  PLAY", font=("Segoe UI",18,"bold"), width=18, height=2, relief="flat", command=play)
-play_button.pack(pady=6)
+play_button.pack(pady=5)
 update_button = tk.Button(center, text="🔄  Check for Updates", font=("Segoe UI",11), width=24, relief="flat", command=check_for_updates)
-update_button.pack(pady=6)
+update_button.pack(pady=5)
+repair_button = tk.Button(center, text="🧰  Fix Update & Restart", font=("Segoe UI",11,"bold"), width=24, relief="flat", command=repair_and_restart)
+repair_button.pack(pady=5)
 diagnostics_button = tk.Button(center, text="🛠️  Diagnostics", font=("Segoe UI",10), width=20, relief="flat", command=open_diagnostics)
-diagnostics_button.pack(pady=6)
+diagnostics_button.pack(pady=5)
 status = tk.Label(center, text=f"Ready • Manual updates • Villager Launcher {CURRENT_VERSION}", font=("Segoe UI",10))
-status.pack(pady=10)
+status.pack(pady=8)
 settings_button = tk.Button(panel, text="⚙️  SETTINGS", font=("Segoe UI",10,"bold"), width=15, relief="flat", command=open_settings)
 settings_button.pack(side="left", padx=20, pady=(0,15))
 apply_theme()
