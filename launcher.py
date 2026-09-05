@@ -10,10 +10,13 @@ import subprocess
 import shutil
 import time
 
-CURRENT_VERSION = "1.3.2"
+CURRENT_VERSION = "1.3.3"
 VERSION_URL = "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/version.json"
 LAUNCHER_URL = "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/launcher.py"
 SETTINGS_FILE = os.path.join(os.environ.get("APPDATA", tempfile.gettempdir()), "VillagerLauncher", "settings.json")
+VILLAGER_IMAGE_URL = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6uMAGXZDWt4mfvYJYrjPcgRI1sAXrfR4TTfAY0kmS9g&s=10"
+STEVE_IMAGE_URL = "https://toppng.com/uploads/preview/minecraft-clipart-steve-running-cartoon-minecraft-steve-runni-11563164386avxbqt1isf.png"
+IMAGE_DIR = os.path.join(os.environ.get("APPDATA", tempfile.gettempdir()), "VillagerLauncher", "images")
 
 THEMES = {
     "Villager Green": {"bg":"#101810","panel":"#182418","fg":"#FFFFFF","muted":"#AFC3AF","accent":"#55AA55","button":"#2D442D","icons":{"mods":"🧩","profile":"👤","launcher":"🧑‍🌾","settings":"⚙️"}},
@@ -24,6 +27,8 @@ THEMES = {
 }
 current_theme_name = "Villager Green"
 custom_theme = None
+villager_photo = None
+steve_photo = None
 
 def load_settings():
     global current_theme_name, custom_theme
@@ -65,6 +70,10 @@ def finish_update_from_temp(target_file):
             return
         except OSError:
             time.sleep(1)
+    try:
+        messagebox.showerror("Update Error", "The update was downloaded, but Windows could not replace the old launcher file.")
+    except tk.TclError:
+        pass
 
 def get_theme():
     if current_theme_name == "Custom" and custom_theme:
@@ -133,12 +142,23 @@ def show_release_notes(info=None):
         try:
             info = get_latest_info()
         except Exception:
-            info = {"version": CURRENT_VERSION, "notes": "Release notes could not be loaded from the update server."}
+            info = {"version": CURRENT_VERSION, "notes": {"Added": ["Villager and Steve mascot scene"], "Changed": [], "Removed": [], "Fixed": []}}
     version = info.get("version", CURRENT_VERSION)
-    notes = info.get("notes", "No release notes have been added yet.")
-    if isinstance(notes, list):
-        notes = "\n".join("• " + str(item) for item in notes)
-    messagebox.showinfo("What's New", f"Villager Launcher {version}\n\n{notes}")
+    notes = info.get("notes", {})
+    if isinstance(notes, dict):
+        sections = []
+        for key in ("Added", "Changed", "Removed", "Fixed"):
+            items = notes.get(key, [])
+            if isinstance(items, str):
+                items = [items]
+            if items:
+                sections.append(key.upper() + "\n" + "\n".join("• " + str(item) for item in items))
+        text = "\n\n".join(sections) if sections else "No changes listed."
+    elif isinstance(notes, list):
+        text = "\n".join("• " + str(item) for item in notes)
+    else:
+        text = str(notes)
+    messagebox.showinfo("What's New", f"Villager Launcher {version}\n\n{text}")
 
 def check_for_updates():
     status.configure(text="Checking for updates...")
@@ -156,10 +176,19 @@ def check_for_updates():
         status.configure(text=f"Update found: {latest_version}")
         root.update_idletasks()
         temp_file = download_update()
-        notes = latest_info.get("notes", "No release notes available.")
-        if isinstance(notes, list):
-            notes = "\n".join("• " + str(item) for item in notes)
-        answer = messagebox.askyesno("Update Available", f"Version {latest_version} is available!\n\nInstalled version: {CURRENT_VERSION}\nServer version: {latest_version}\n\nWhat's new:\n{notes}\n\nInstall the update now?")
+        notes = latest_info.get("notes", {})
+        if isinstance(notes, dict):
+            sections = []
+            for key in ("Added", "Changed", "Removed", "Fixed"):
+                items = notes.get(key, [])
+                if isinstance(items, str):
+                    items = [items]
+                if items:
+                    sections.append(key.upper() + "\n" + "\n".join("• " + str(item) for item in items))
+            notes_text = "\n\n".join(sections) if sections else "No release notes available."
+        else:
+            notes_text = str(notes)
+        answer = messagebox.askyesno("Update Available", f"Version {latest_version} is available!\n\nInstalled version: {CURRENT_VERSION}\nServer version: {latest_version}\n\nWHAT'S NEW\n{notes_text}\n\nInstall the update now?")
         if answer:
             status.configure(text=f"Installing {latest_version}...")
             root.update_idletasks()
@@ -204,6 +233,49 @@ def open_diagnostics():
     status_text = "Detected" if os.path.isdir(mc_path) else "Not detected"
     messagebox.showinfo("Diagnostics", f"Villager Launcher {CURRENT_VERSION}\n\nLauncher file:\n{os.path.abspath(sys.argv[0])}\n\nMinecraft folder:\n{mc_path}\n\nMinecraft status: {status_text}\n\nUpdate mode: Manual")
 
+def download_image(url, filename):
+    os.makedirs(IMAGE_DIR, exist_ok=True)
+    path = os.path.join(IMAGE_DIR, filename)
+    try:
+        cache_bust = ("&" if "?" in url else "?") + "t=" + str(time.time_ns())
+        request = Request(url + cache_bust, headers={"User-Agent":"Villager-Launcher"})
+        with urlopen(request, timeout=10) as response:
+            data = response.read()
+        with open(path, "wb") as file:
+            file.write(data)
+        return path
+    except Exception:
+        return None
+
+def load_mascot_images():
+    global villager_photo, steve_photo
+    try:
+        villager_path = download_image(VILLAGER_IMAGE_URL, "villager.png")
+        steve_path = download_image(STEVE_IMAGE_URL, "steve.png")
+        if villager_path:
+            villager_photo = tk.PhotoImage(file=villager_path)
+            if villager_photo.width() > 220:
+                villager_photo = villager_photo.subsample(max(1, villager_photo.width() // 220), max(1, villager_photo.height() // 230))
+        if steve_path:
+            steve_photo = tk.PhotoImage(file=steve_path)
+            if steve_photo.width() > 180:
+                steve_photo = steve_photo.subsample(max(1, steve_photo.width() // 180), max(1, steve_photo.height() // 200))
+    except Exception:
+        villager_photo = None
+        steve_photo = None
+
+def villager_clicked():
+    if villager_photo is not None:
+        grow = tk.Toplevel(root)
+        grow.title("VILLAGER")
+        grow.configure(bg=get_theme()["bg"])
+        grow.geometry("520x560")
+        label = tk.Label(grow, image=villager_photo, bg=get_theme()["bg"])
+        label.pack(expand=True)
+    else:
+        messagebox.showinfo("Villager", "The villager is staring directly at you. 👁️👁️")
+    root.after(700, root.destroy)
+
 def apply_theme():
     theme = get_theme()
     root.configure(bg=theme["bg"])
@@ -215,6 +287,8 @@ def apply_theme():
     version.configure(bg=theme["panel"], fg=theme["muted"])
     status.configure(bg=theme["panel"], fg=theme["muted"])
     minecraft_status.configure(bg=theme["panel"], fg=theme["muted"])
+    scene_frame.configure(bg=theme["panel"])
+    scene_arrow.configure(bg=theme["panel"], fg=theme["fg"])
     nav_frame.configure(bg=theme["panel"])
     for button, key in zip([mods_button, profile_button, launcher_button], ["mods", "profile", "launcher"]):
         button.configure(bg=theme["button"], fg=theme["fg"], activebackground=theme["accent"], activeforeground=theme["fg"], text=f"{theme['icons'][key]}  {key.upper()}")
@@ -290,27 +364,39 @@ launcher_button.pack(side="left", padx=4)
 center = tk.Frame(panel)
 center.pack(fill="both", expand=True)
 title = tk.Label(center, text="VILLAGER LAUNCHER", font=("Segoe UI",36,"bold"))
-title.pack(pady=(70,5))
+title.pack(pady=(25,5))
 subtitle = tk.Label(center, text="Your Minecraft Java launcher", font=("Segoe UI",14))
 subtitle.pack()
 version = tk.Label(center, text=f"Version {CURRENT_VERSION}", font=("Segoe UI",10))
-version.pack(pady=(8,15))
+version.pack(pady=(8,5))
 minecraft_status = tk.Label(center, text=("🟢 Minecraft installation detected" if minecraft_directory_exists() else "⚪ Minecraft installation not detected"), font=("Segoe UI",11,"bold"))
-minecraft_status.pack(pady=(0,15))
+minecraft_status.pack(pady=(0,5))
+scene_frame = tk.Frame(center)
+scene_frame.pack(pady=(0,3))
+villager_button = tk.Button(scene_frame, image=None, text="🧑‍🌾\n👁️👁️", font=("Segoe UI",30,"bold"), relief="flat", bd=0, command=villager_clicked)
+villager_button.pack(side="left", padx=35)
+scene_arrow = tk.Label(scene_frame, text="←", font=("Segoe UI",30,"bold"))
+scene_arrow.pack(side="left", padx=10)
+steve_label = tk.Label(scene_frame, text="🏃", font=("Segoe UI",55,"bold"))
+steve_label.pack(side="left", padx=35)
 play_button = tk.Button(center, text="▶  PLAY", font=("Segoe UI",18,"bold"), width=18, height=2, relief="flat", command=play)
-play_button.pack(pady=5)
+play_button.pack(pady=3)
 update_button = tk.Button(center, text="🔄  Check for Updates", font=("Segoe UI",11,"bold"), width=24, relief="flat", command=check_for_updates)
-update_button.pack(pady=5)
+update_button.pack(pady=3)
 repair_button = tk.Button(center, text="🧰  Fix Update & Restart", font=("Segoe UI",11,"bold"), width=24, relief="flat", command=repair_and_restart)
-repair_button.pack(pady=5)
-notes_button = tk.Button(center, text="📋  What's New", font=("Segoe UI",10,"bold"), width=24, relief="flat", command=show_release_notes)
-notes_button.pack(pady=5)
+repair_button.pack(pady=3)
 diagnostics_button = tk.Button(center, text="🛠️  Diagnostics", font=("Segoe UI",10,"bold"), width=24, relief="flat", command=open_diagnostics)
-diagnostics_button.pack(pady=5)
+diagnostics_button.pack(pady=3)
+notes_button = tk.Button(center, text="📝  What's New", font=("Segoe UI",10,"bold"), width=24, relief="flat", command=show_release_notes)
+notes_button.pack(pady=3)
 status = tk.Label(center, text="Ready", font=("Segoe UI",9))
-status.pack(pady=10)
+status.pack(pady=4)
 settings_button = tk.Button(panel, text="⚙️  SETTINGS", font=("Segoe UI",10,"bold"), width=14, relief="flat", command=open_settings)
 settings_button.place(relx=0.02, rely=0.96, anchor="sw")
-# Reserved bottom-right area for the future “Download Other Great Launcher” button.
 apply_theme()
+load_mascot_images()
+if villager_photo is not None:
+    villager_button.configure(image=villager_photo, text="", width=220, height=230)
+if steve_photo is not None:
+    steve_label.configure(image=steve_photo, text="", width=180, height=200)
 root.mainloop()
