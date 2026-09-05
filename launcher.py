@@ -10,7 +10,7 @@ import subprocess
 import shutil
 import time
 
-CURRENT_VERSION = "1.3.1"
+CURRENT_VERSION = "1.3.2"
 VERSION_URL = "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/version.json"
 LAUNCHER_URL = "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/launcher.py"
 SETTINGS_FILE = os.path.join(os.environ.get("APPDATA", tempfile.gettempdir()), "VillagerLauncher", "settings.json")
