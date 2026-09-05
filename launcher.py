@@ -1,351 +1,234 @@
 import tkinter as tk
-from tkinter import ttk, messagebox, filedialog
-import json, os, sys, tempfile, subprocess, shutil, time, traceback
-from urllib.request import urlopen, Request
+from tkinter import ttk,messagebox,filedialog,colorchooser
+import os,sys,json,tempfile,subprocess,shutil,time,threading
+from urllib.request import Request,urlopen
 from urllib.parse import quote
 
-CURRENT_VERSION="1.8.0"
-BASE_URL="https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main"
-VERSION_URL=BASE_URL+"/version.json"
-LAUNCHER_URL=BASE_URL+"/launcher.py"
-MODRINTH_API="https://api.modrinth.com/v2"
-APP_DIR=os.path.join(os.environ.get("APPDATA",tempfile.gettempdir()),"VillagerLauncher")
-SETTINGS_FILE=os.path.join(APP_DIR,"settings.json")
-PROFILES_FILE=os.path.join(APP_DIR,"profiles.json")
-FONT="Segoe UI Variable"
+CURRENT_VERSION='1.8.5'
+BASE='https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main'
+API='https://api.modrinth.com/v2'
+APP=os.path.join(os.environ.get('APPDATA',tempfile.gettempdir()),'VillagerLauncher')
+SET=os.path.join(APP,'settings.json'); PROFILES=os.path.join(APP,'profiles.json')
+FONT='Segoe UI Variable'
+NAMES=['Villager Green','Midnight','Sky','Nether','Ocean','Dirt','Stone','Diamond','Gold','Redstone','Lapis','Amethyst','Copper','Forest','Cherry Grove','Desert','Snow','Volcano','End','Piglin','Swamp','Plains','Jungle','Ice','Deep Dark','Stronghold','Sunrise','Night','Redstone Lab','Creeper']
+COLORS=[('#0e1510','#162119','#203021','#fff','#a9b9aa','#62c462','#2d442d','#c65353'),('#080d17','#111a29','#1a263b','#fff','#a9b5c9','#7188ff','#29385e','#d15c66'),('#dff1fa','#f5fbff','#e8f4fa','#173042','#5c7180','#3a91c9','#c7e0ed','#b64e4e'),('#190b0b','#291212','#3a1a1a','#fff','#d0a8a8','#e05a5a','#542626','#ff8a70'),('#07181f','#0d2833','#123743','#fff','#9fc5d0','#38a7c7','#1b4655','#d45d67'),('#24180f','#352416','#47301e','#fff8ec','#c9b69d','#9b6b43','#60452c','#b94a48'),('#202124','#2c2d30','#393a3d','#f5f5f5','#b9babd','#a0a3a8','#4a4c50','#c65a5a'),('#071d24','#0d3038','#12404a','#f1ffff','#9ac9cf','#59d8e4','#1c5962','#d35c68'),('#211a06','#302707','#40360b','#fffbea','#d2c28a','#e8c84a','#5b4b13','#c45b45'),('#210b0b','#351010','#471818','#fff5f5','#d5aaaa','#f04d4d','#641e1e','#ff7777'),('#08162b','#0d2140','#123058','#f4f8ff','#a5b9d5','#4c83d8','#1d4070','#d45d67'),('#190d26','#28143a','#382052','#fff7ff','#c5a9d5','#b66cde','#513078','#e06a78'),('#24130d','#382016','#4a2b1d','#fff7f1','#d2b0a0','#d77b4d','#67402d','#c9584c'),('#08170d','#102719','#183622','#f4fff5','#a6c5aa','#55b96a','#245b32','#c75a55'),('#260f1b','#3a1727','#4c2034','#fff7fb','#d6adbe','#f083b0','#6b2f4a','#e05d69'),('#261e10','#382d18','#4a3c20','#fffbef','#d0c19b','#d6b45b','#66532b','#c55d4d'),('#dde8f0','#f4f9fc','#e7f0f6','#20313c','#647883','#5a9dc5','#c7dde9','#b65353'),('#1d0905','#30100a','#45170e','#fff8f0','#d4aaa0','#ff713f','#652416','#ff9b50'),('#090610','#150d1e','#21132e','#faf4ff','#bba8c7','#b75be8','#3d2052','#d75d7d'),('#2a1018','#3c1822','#51212d','#fff4f5','#d7aeb5','#e6a06d','#6c3040','#f06a62'),('#111a0d','#1b2913','#26381a','#f5ffe9','#b5c59c','#86b84a','#3c5724','#c45c52'),('#132014','#20351f','#2d4729','#f8fff3','#b2c7a8','#8bc34a','#426332','#c85c55'),('#071a10','#0d2a19','#143923','#f2fff5','#9fc5aa','#39c66a','#1d6038','#c45a5a'),('#071a24','#0d2a38','#123a4b','#f2fcff','#a4c7d2','#6dd6f2','#1e596b','#c65b68'),('#070b0e','#0d1318','#141e24','#e8ffff','#91a8ad','#27d0c0','#173d3b','#c95762'),('#151515','#202020','#2d2d2d','#f5f5f5','#b2b2b2','#c0c0c0','#444','#c45a5a'),('#24100c','#3a1a12','#4c2419','#fff8f1','#d6b0a0','#ff9b5b','#6d3624','#d65d54'),('#050812','#0b1020','#121a2e','#f5f8ff','#9baac8','#6b8cff','#25345e','#c85a6b'),('#130d0c','#211514','#30201e','#fff8f6','#c5a9a4','#ff4f38','#54241d','#ff8270'),('#0a1709','#11230e','#193515','#f5fff0','#aac59e','#69d34b','#2b5b20','#d05b55')]
+THEMES={n:dict(zip('bg panel card fg muted accent button danger'.split(),c)) for n,c in zip(NAMES,COLORS)}
+DEFAULT={'theme':'Villager Green','minecraft_path':'','java_path':'','window_width':1180,'window_height':760,'pfp':'','confirm_updates':True}
+settings=dict(DEFAULT); custom={}; profiles=[]; selected=0; page='Home'; root=None; body=None; status=None; results=[]; images={}
 
-PALETTES={
-"Villager Green":("#0e1510","#162119","#203021","#ffffff","#a9b9aa","#62c462","#2d442d","#c65353"),
-"Midnight":("#080d17","#111a29","#1a263b","#ffffff","#a9b5c9","#7188ff","#29385e","#d15c66"),
-"Sky":("#dff1fa","#f5fbff","#e8f4fa","#173042","#5c7180","#3a91c9","#c7e0ed","#b64e4e"),
-"Nether":("#190b0b","#291212","#3a1a1a","#ffffff","#d0a8a8","#e05a5a","#542626","#ff8a70"),
-"Ocean":("#07181f","#0d2833","#123743","#ffffff","#9fc5d0","#38a7c7","#1b4655","#d45d67"),
-"Dirt":("#24180f","#352416","#47301e","#fff8ec","#c9b69d","#9b6b43","#60452c","#b94a48"),
-"Stone":("#202124","#2c2d30","#393a3d","#f5f5f5","#b9babd","#a0a3a8","#4a4c50","#c65a5a"),
-"Diamond":("#071d24","#0d3038","#12404a","#f1ffff","#9ac9cf","#59d8e4","#1c5962","#d35c68"),
-"Gold":("#211a06","#302707","#40360b","#fffbea","#d2c28a","#e8c84a","#5b4b13","#c45b45"),
-"Redstone":("#210b0b","#351010","#471818","#fff5f5","#d5aaaa","#f04d4d","#641e1e","#ff7777"),
-"Lapis":("#08162b","#0d2140","#123058","#f4f8ff","#a5b9d5","#4c83d8","#1d4070","#d45d67"),
-"Amethyst":("#190d26","#28143a","#382052","#fff7ff","#c5a9d5","#b66cde","#513078","#e06a78"),
-"Copper":("#24130d","#382016","#4a2b1d","#fff7f1","#d2b0a0","#d77b4d","#67402d","#c9584c"),
-"Forest":("#08170d","#102719","#183622","#f4fff5","#a6c5aa","#55b96a","#245b32","#c75a55"),
-"Cherry Grove":("#260f1b","#3a1727","#4c2034","#fff7fb","#d6adbe","#f083b0","#6b2f4a","#e05d69"),
-"Desert":("#261e10","#382d18","#4a3c20","#fffbef","#d0c19b","#d6b45b","#66532b","#c55d4d"),
-"Snow":("#dde8f0","#f4f9fc","#e7f0f6","#20313c","#647883","#5a9dc5","#c7dde9","#b65353"),
-"Volcano":("#1d0905","#30100a","#45170e","#fff8f0","#d4aaa0","#ff713f","#652416","#ff9b50"),
-"End":("#090610","#150d1e","#21132e","#faf4ff","#bba8c7","#b75be8","#3d2052","#d75d7d"),
-"Piglin":("#2a1018","#3c1822","#51212d","#fff4f5","#d7aeb5","#e6a06d","#6c3040","#f06a62"),
-"Swamp":("#111a0d","#1b2913","#26381a","#f5ffe9","#b5c59c","#86b84a","#3c5724","#c45c52"),
-"Plains":("#132014","#20351f","#2d4729","#f8fff3","#b2c7a8","#8bc34a","#426332","#c85c55"),
-"Jungle":("#071a10","#0d2a19","#143923","#f2fff5","#9fc5aa","#39c66a","#1d6038","#c45a5a"),
-"Ice":("#071a24","#0d2a38","#123a4b","#f2fcff","#a4c7d2","#6dd6f2","#1e596b","#c65b68"),
-"Deep Dark":("#070b0e","#0d1318","#141e24","#e8ffff","#91a8ad","#27d0c0","#173d3b","#c95762"),
-"Stronghold":("#151515","#202020","#2d2d2d","#f5f5f5","#b2b2b2","#c0c0c0","#444444","#c45a5a"),
-"Sunrise":("#24100c","#3a1a12","#4c2419","#fff8f1","#d6b0a0","#ff9b5b","#6d3624","#d65d54"),
-"Night":("#050812","#0b1020","#121a2e","#f5f8ff","#9baac8","#6b8cff","#25345e","#c85a6b"),
-"Redstone Lab":("#130d0c","#211514","#30201e","#fff8f6","#c5a9a4","#ff4f38","#54241d","#ff8270"),
-"Creeper":("#0a1709","#11230e","#193515","#f5fff0","#aac59e","#69d34b","#2b5b20","#d05b55")}
-THEMES={n:dict(zip(("bg","panel","card","fg","muted","accent","button","danger"),v)) for n,v in PALETTES.items()}
-DEFAULT={"theme":"Villager Green","remember_window":True,"window_width":1180,"window_height":760,"minecraft_path":"","java_path":"","confirm_updates":True,"start_page":"Home","ui_density":"Comfortable"}
-settings=dict(DEFAULT); profiles=[]; selected_profile=0; current_theme="Villager Green"; custom_themes={}; root=None; content=None; header_pfp=None; status=None; nav={}; page="Home"
-
-# ---------- storage ----------
-def read_json(path,default):
-    try:
-        with open(path,"r",encoding="utf-8") as f:return json.load(f)
-    except (OSError,ValueError):return default
-
-def save_settings():
-    try:
-        os.makedirs(APP_DIR,exist_ok=True); d=dict(settings); d.update({"theme":current_theme,"custom_themes":custom_themes})
-        with open(SETTINGS_FILE,"w",encoding="utf-8") as f:json.dump(d,f,indent=2)
-    except OSError: pass
-
-def load_settings():
-    global settings,current_theme,custom_themes
-    d=read_json(SETTINGS_FILE,{})
-    if isinstance(d,dict):
-        for k in DEFAULT:
-            if k in d: settings[k]=d[k]
-        current_theme=d.get("theme","Villager Green")
-        custom_themes=d.get("custom_themes",{}) if isinstance(d.get("custom_themes",{}),dict) else {}
-    if current_theme not in THEMES and current_theme not in custom_themes: current_theme="Villager Green"
-
-def save_profiles():
-    try:
-        os.makedirs(APP_DIR,exist_ok=True)
-        with open(PROFILES_FILE,"w",encoding="utf-8") as f:json.dump(profiles,f,indent=2)
-    except OSError: pass
-
-def load_profiles():
-    global profiles,selected_profile
-    profiles=read_json(PROFILES_FILE,[])
-    if not isinstance(profiles,list) or not profiles:
-        profiles=[{"name":"Default","version":"","loader":"Vanilla","description":"Your first Villager Launcher profile.","pfile":""}]; save_profiles()
-    selected_profile=min(selected_profile,len(profiles)-1)
-
-def palette(): return custom_themes.get(current_theme,THEMES.get(current_theme,THEMES["Villager Green"]))
-
-# ---------- network/update ----------
-def get_json(url,timeout=12):
-    req=Request(url+(("&" if "?" in url else "?")+"t="+str(time.time_ns())),headers={"User-Agent":"Villager-Launcher/1.8"})
-    with urlopen(req,timeout=timeout) as r:return json.loads(r.read().decode("utf-8"))
-
-def check_updates():
-    try:
-        status.config(text="Checking for updates…"); d=get_json(VERSION_URL,8); v=str(d.get("version",""))
-        if not v: raise ValueError("The update server returned no version number.")
-        if v==CURRENT_VERSION:
-            status.config(text="Up to date"); messagebox.showinfo("Updates",f"Villager Launcher is up to date.\n\nInstalled: {CURRENT_VERSION}\nLatest: {v}"); return
-        notes=d.get("notes",{}); lines=[]
-        for k in ("Added","Changed","Fixed","Removed"):
-            if notes.get(k): lines.append(k.upper()+"\n"+"\n".join("• "+str(x) for x in notes[k]))
-        if not messagebox.askyesno("Update Available",f"Version {v} is available.\n\n"+"\n\n".join(lines)+"\n\nInstall now?"): return
-        req=Request(LAUNCHER_URL+"?t="+str(time.time_ns()),headers={"User-Agent":"Villager-Launcher/1.8"})
-        with urlopen(req,timeout=20) as r: data=r.read()
-        p=os.path.join(tempfile.gettempdir(),"villager_launcher_update.py")
-        with open(p,"wb") as f:f.write(data)
-        subprocess.Popen([sys.executable,p,"--install-update",os.path.abspath(sys.argv[0])],creationflags=getattr(subprocess,"CREATE_NO_WINDOW",0),close_fds=True)
-        root.destroy()
-    except Exception as e:
-        status.config(text="Update failed"); messagebox.showerror("Update Error",f"Could not check/install the update.\n\n{e}")
-
-def finish_update(target):
-    src=os.path.abspath(sys.argv[0]); target=os.path.abspath(target); time.sleep(2)
-    for _ in range(30):
-        try: shutil.copy2(src,target); subprocess.Popen([sys.executable,target],close_fds=True); os.remove(src); return
-        except OSError: time.sleep(1)
-    messagebox.showerror("Update Error","Windows could not replace the launcher file.")
-
-# ---------- minecraft ----------
-def mc_dir():
-    p=settings.get("minecraft_path","")
-    if p and os.path.isdir(p): return p
-    a=os.environ.get("APPDATA"); return os.path.join(a,".minecraft") if a else None
-
-def ownership_verified():
-    d=mc_dir(); return bool(d and os.path.isdir(d) and (os.path.isfile(os.path.join(d,"launcher_accounts.json")) or os.path.isfile(os.path.join(d,"launcher_profiles.json"))))
-
-def require_minecraft(feature):
-    if ownership_verified(): return True
-    messagebox.showwarning("Minecraft Required",f"{feature} is locked until an original Minecraft installation is detected.\n\nSign in with the official Minecraft launcher, then select its Minecraft data folder in Villager Launcher Settings.")
-    return False
-
-def versions():
-    d=os.path.join(mc_dir() or "","versions")
-    try:return sorted([x for x in os.listdir(d) if os.path.isdir(os.path.join(d,x))],reverse=True) if os.path.isdir(d) else []
-    except OSError:return []
-
-def selected_version():
-    p=profiles[selected_profile] if profiles else {}
-    return p.get("version") or (versions()[0] if versions() else "")
-
-def detailed_launch_error(title,stage,error,extra=None):
-    status.config(text="Launch failed")
-    details=[f"Stage: {stage}",f"What broke: {error}"]
-    if extra: details.append(str(extra))
-    details.append("\nThis launcher did not delete or modify your Minecraft files.")
-    messagebox.showerror(title,"\n\n".join(details))
-
-def launch_game():
-    if not require_minecraft("Minecraft launching"): return
-    d=mc_dir(); v=selected_version()
-    if not d: return detailed_launch_error("Launch Error","Minecraft folder","Minecraft directory could not be found.")
-    if not v: return detailed_launch_error("Launch Error","Version selection","No installed Minecraft version was selected.","Open Installations and select an installed version first.")
-    vd=os.path.join(d,"versions",v); jar=os.path.join(vd,v+".jar"); meta=os.path.join(vd,v+".json")
-    if not os.path.isfile(meta): return detailed_launch_error("Launch Error","Version metadata",f"Missing version JSON: {meta}")
-    if not os.path.isfile(jar): return detailed_launch_error("Launch Error","Client JAR",f"Missing client JAR: {jar}")
-    java=settings.get("java_path","") or "java"
-    try:
-        subprocess.Popen([java,"-version"],stdout=subprocess.DEVNULL,stderr=subprocess.PIPE,creationflags=getattr(subprocess,"CREATE_NO_WINDOW",0),text=True,timeout=8)
-    except Exception as e:
-        return detailed_launch_error("Launch Error","Java startup",f"Java executable could not be started: {java}",e)
-    # Full authenticated Minecraft launching requires Microsoft account tokens and the launcher libraries.
-    # We deliberately refuse to guess credentials or bypass authentication.
-    detailed_launch_error("Launch Error","Authenticated Minecraft startup","The selected Minecraft files are present, but authenticated launch integration is not enabled in this build.","The launcher checked the version JSON, client JAR, and Java executable successfully. No game process was started.")
-
-# ---------- mod workshop (Modrinth catalog) ----------
-def api_get(path,timeout=15): return get_json(MODRINTH_API+path,timeout)
-def mod_search(query):
-    q=quote(query.strip())
-    return api_get(f"/search?query={q}&facets=%5B%5B%22project_type%3Amod%22%5D%5D&limit=20",15).get("hits",[])
-
-def install_workshop_mod(project):
-    if not require_minecraft("Mod Workshop"): return
-    game=selected_version() or ""
-    if not game: messagebox.showwarning("Mod Workshop","Select an installed Minecraft version in Installations first."); return
-    try:
-        slug=project.get("slug") or project.get("project_id")
-        versions_data=api_get(f"/project/{quote(slug)}/version?game_versions=%5B%22{quote(game)}%22%5D",15)
-        if not versions_data: raise ValueError(f"No Modrinth release of this mod supports Minecraft {game}.")
-        pv=versions_data[0]; files=pv.get("files",[])
-        primary=next((x for x in files if x.get("primary")),files[0] if files else None)
-        if not primary or not primary.get("url"): raise ValueError("The workshop returned no downloadable file.")
-        mods=os.path.join(mc_dir(),"mods"); os.makedirs(mods,exist_ok=True)
-        name=os.path.basename(primary.get("filename") or "mod.jar")
-        target=os.path.join(mods,name)
-        req=Request(primary["url"],headers={"User-Agent":"Villager-Launcher/1.8"})
-        with urlopen(req,timeout=30) as r:data=r.read()
-        if not data: raise ValueError("The downloaded mod file was empty.")
-        tmp=target+".part"
-        with open(tmp,"wb") as f:f.write(data)
-        os.replace(tmp,target)
-        status.config(text=f"Installed {project.get('title','mod')}")
-        messagebox.showinfo("Mod Workshop",f"Installed: {project.get('title','Unknown mod')}\n\nMinecraft: {game}\nFile: {name}\n\nNo JAR selection was required.")
-        render_mods()
-    except Exception as e:
-        messagebox.showerror("Mod Workshop Error",f"The workshop could not install this mod.\n\nWhat broke: {e}")
+def load():
+ global settings,custom,profiles
+ d=read(SET,{})
+ if isinstance(d,dict):
+  settings.update({k:d[k] for k in DEFAULT if k in d}); custom=d.get('custom_themes',{}) if isinstance(d.get('custom_themes',{}),dict) else {}
+ profiles=read(PROFILES,[])
+ if not isinstance(profiles,list) or not profiles: profiles=[{'name':'Default','version':'','loader':'Vanilla','description':'Your first Villager Launcher profile.'}]
+def read(p,d):
+ try:
+  with open(p,encoding='utf8') as f:return json.load(f)
+ except:return d
+def save():
+ os.makedirs(APP,exist_ok=True)
+ with open(SET,'w',encoding='utf8') as f:json.dump({**settings,'theme':settings['theme'],'custom_themes':custom},f,indent=2)
+ with open(PROFILES,'w',encoding='utf8') as f:json.dump(profiles,f,indent=2)
+def T():return custom.get(settings['theme'],THEMES.get(settings['theme'],THEMES['Villager Green']))
+def mc():
+ p=settings['minecraft_path'];
+ if p and os.path.isdir(p):return p
+ a=os.environ.get('APPDATA');return os.path.join(a,'.minecraft') if a else ''
+def owned():
+ d=mc();return bool(d and os.path.isdir(d) and (os.path.isfile(os.path.join(d,'launcher_accounts.json')) or os.path.isfile(os.path.join(d,'launcher_profiles.json'))))
+def gate(feature):
+ if owned():return True
+ messagebox.showwarning('Minecraft Required',feature+' is locked until an original Minecraft installation is detected. Sign in through the official Minecraft Launcher, then select its Minecraft folder in Settings.')
+ return False
+def vers():
+ d=os.path.join(mc(),'versions')
+ try:return sorted([x for x in os.listdir(d) if os.path.isdir(os.path.join(d,x))],reverse=True) if os.path.isdir(d) else []
+ except:return []
+def version():
+ if profiles and profiles[selected].get('version'):return profiles[selected]['version']
+ v=vers();return v[0] if v else ''
+def api(url,timeout=15):
+ r=Request(url+(('&' if '?' in url else '?')+'t='+str(time.time_ns())),headers={'User-Agent':'Villager-Launcher/1.8.5'})
+ with urlopen(r,timeout=timeout) as x:return json.loads(x.read().decode())
+def card(par,x,y,w,h,fill=None,r=20):
+ fill=fill or T()['card']; c=tk.Canvas(par,width=w,height=h,bg=par.cget('bg'),highlightthickness=0);c.place(x=x,y=y)
+ c.create_arc(0,0,2*r,2*r,90,90,fill=fill,outline=fill);c.create_arc(w-2*r,0,w,2*r,0,90,fill=fill,outline=fill);c.create_arc(0,h-2*r,2*r,2*r,180,90,fill=fill,outline=fill);c.create_arc(w-2*r,h-2*r,w,h,270,90,fill=fill,outline=fill);c.create_rectangle(r,0,w-r,h,fill=fill,outline=fill);c.create_rectangle(0,r,w,h-r,fill=fill,outline=fill);return c
+def lbl(p,text,x,y,size=10,bold=False,fg=None):tk.Label(p,text=text,font=(FONT,size,'bold' if bold else 'normal'),bg=p.cget('bg'),fg=fg or T()['fg'],anchor='w').place(x=x,y=y)
+def btn(p,text,cmd,x,y,w=140,h=40,primary=False,enabled=True):
+ t=T();c=card(p,x,y,w,h,t['accent'] if primary else t['button'],12);c.create_text(w/2,h/2,text=text,fill='#fff' if primary else t['fg'],font=(FONT,10,'bold'))
+ if enabled:c.bind('<Button-1>',lambda e:cmd());c.configure(cursor='hand2')
+ return c
+def go(p):
+ global page;page=p;render()
+def shell():
+ global body
+ t=T();root.configure(bg=t['bg'])
+ for w in root.winfo_children():w.destroy()
+ s=tk.Frame(root,bg=t['panel']);s.place(x=0,y=0,width=225,relheight=1)
+ tk.Label(s,text='⛏  MINECRAFT',font=(FONT,13,'bold'),bg=t['panel'],fg=t['fg']).place(x=18,y=18)
+ for i,(n,p) in enumerate([('HOME','Home'),('PROFILES','Profiles'),('MOD WORKSHOP','Workshop'),('INSTALLATIONS','Installations'),('REPAIR','Repair'),('SETTINGS','Settings')]):
+  bg=t['accent'] if page==p else t['panel'];fg='#fff' if page==p else t['muted'];b=tk.Label(s,text=n,bg=bg,fg=fg,font=(FONT,10,'bold'),anchor='w',padx=18);b.place(x=12,y=72+i*46,width=200,height=40);b.bind('<Button-1>',lambda e,p=p:go(p))
+ tk.Label(s,text=CURRENT_VERSION,bg=t['panel'],fg=t['muted'],font=(FONT,9)).place(x=18,rely=1,y=-25)
+ h=tk.Frame(root,bg=t['bg']);h.place(x=225,y=0,relwidth=1,width=-225,height=78)
+ tk.Label(h,text='Villager Launcher',font=(FONT,15,'bold'),bg=t['bg'],fg=t['fg']).place(x=28,y=20);tk.Label(h,text='Your Minecraft, Your Way.',font=(FONT,9),bg=t['bg'],fg=t['muted']).place(x=29,y=46)
+ tk.Label(h,text=profiles[selected].get('name','Default'),font=(FONT,10,'bold'),bg=t['bg'],fg=t['fg']).place(relx=1,x=-25,y=30,anchor='e')
+ body=tk.Frame(root,bg=t['bg']);body.place(x=225,y=78,relwidth=1,width=-225,relheight=1,height=-78)
+def render():
+ shell();{'Home':home,'Profiles':profiles_page,'Workshop':workshop,'Installations':installations,'Repair':repair,'Settings':settings_page}.get(page,home)()
+def home():
+ t=T();lbl(body,'Welcome back',11,20,11,False,t['muted']);lbl(body,'Ready to meet your wishes?',30,43,27,True)
+ card(body,30,95,700,245);lbl(body,'MINECRAFT',55,120,10,True,t['muted']);lbl(body,'Your Minecraft, Your Way.',55,150,22,True);lbl(body,'Installation  •  '+(version() or 'No installation selected'),55,198,10,False,t['muted']);lbl(body,'Profile  •  '+profiles[selected].get('name','Default'),55,223,10,False,t['muted']);btn(body,'PLAY',launch,500,265,180,54,True)
+ for i,(n,p) in enumerate([('Installations','Installations'),('Mod Workshop','Workshop'),('Settings','Settings')]):x=30+i*225;card(body,x,385,205,95,16 and t['panel']);lbl(body,n,x+18,408,11,True);btn(body,'OPEN',lambda p=p:go(p),x+18,440,90,28)
+ card(body,755,95,330,245,22,t['panel']);lbl(body,'ACTIVE PROFILE',780,120,10,True,t['muted']);lbl(body,profiles[selected].get('name','Default'),780,155,19,True);lbl(body,'Original Minecraft: '+('Detected' if owned() else 'Not detected'),780,210,10,False,t['accent'] if owned() else t['danger'])
+def profiles_page():
+ lbl(body,'Profiles',30,22,25,True);lbl(body,'Profiles and PFPs require original Minecraft.',30,57,10,False,T()['muted'])
+ if not gate('Profiles'):return
+ for i,p in enumerate(profiles):y=100+i*105;card(body,30,y,750,85);lbl(body,p.get('name','Profile'),55,y+18,14,True);lbl(body,(p.get('version') or 'Auto')+'  •  '+p.get('loader','Vanilla'),55,y+47,10,False,T()['muted']);btn(body,'SELECT',lambda i=i:select_profile(i),630,y+25,105,34,i==selected)
+ btn(body,'NEW PROFILE',new_profile,820,100,170,40,True);btn(body,'SET PFP',pfp,820,150,170,40)
+def select_profile(i):
+ global selected;selected=i;save();render()
+def new_profile():
+ if gate('Profiles'):profiles.append({'name':f'Profile {len(profiles)+1}','version':'','loader':'Vanilla','description':'New profile.'});save();render()
+def pfp():
+ if gate('Profile pictures'):
+  f=filedialog.askopenfilename(filetypes=[('PNG/GIF','*.png *.gif'),('All','*.*')]);
+  if f:settings['pfp']=f;save();render()
+def installations():
+ lbl(body,'Installations',30,22,25,True);lbl(body,'Choose an installed Minecraft version.',30,57,10,False,T()['muted'])
+ if not gate('Installations'):return
+ for i,v in enumerate(vers()[:8]):y=100+i*65;card(body,30,y,850,52, r=14);lbl(body,v,50,y+16,11,True);btn(body,'USE',lambda v=v:setver(v),760,y+9,90,34,v==version())
+def setver(v):profiles[selected]['version']=v;save();render()
+def repair():
+ lbl(body,'Repair Center',30,22,25,True);lbl(body,'Safe diagnostics. Nothing is deleted automatically.',30,57,10,False,T()['muted'])
+ checks=[('Minecraft folder',bool(mc() and os.path.isdir(mc()))),('Launcher evidence',owned()),('Installed versions',bool(vers())),('Java',java_ok())]
+ for i,(n,ok) in enumerate(checks):y=105+i*65;card(body,30,y,760,52,r=14);lbl(body,n,50,y+16,11,True);lbl(body,'✓ OK' if ok else '✕ Problem',600,y+16,10,True,T()['accent'] if ok else T()['danger'])
+def java_ok():
+ try:subprocess.run([settings.get('java_path') or 'java','-version'],stdout=subprocess.DEVNULL,stderr=subprocess.PIPE,timeout=5);return True
+ except:return False
+def launch():
+ if not gate('Minecraft launching'):return
+ v=version();d=mc()
+ if not v:return error('Version selection','No installed Minecraft version is selected.','Open Installations and select a version.')
+ vd=os.path.join(d,'versions',v);meta=os.path.join(vd,v+'.json');jar=os.path.join(vd,v+'.jar')
+ if not os.path.isfile(meta):return error('Version metadata','Missing '+v+'.json',meta)
+ if not os.path.isfile(jar):return error('Client JAR','Missing '+v+'.jar',jar)
+ if not java_ok():return error('Java startup','Java executable could not be started.',settings.get('java_path') or 'java')
+ error('Authenticated startup','Authenticated Microsoft launch integration is not enabled in 1.8.5.','Files and Java were checked; no game process was started instead of pretending it launched.')
+def error(stage,what,extra=''):messagebox.showerror('Minecraft Launch Error',f'Stage: {stage}\n\nWhat broke: {what}\n\n{extra}\n\nYour Minecraft files were not deleted.')
 
 def workshop():
-    if not require_minecraft("Mod Workshop"): return
-    clear_content(); p=palette(); card=round_card(content,p["card"],20); card.pack(fill="both",expand=True)
-    tk.Label(card,text="MOD WORKSHOP",font=(FONT,20,"bold"),bg=p["card"],fg=p["fg"]).pack(anchor="w",padx=24,pady=(22,4))
-    tk.Label(card,text="Browse and install mods directly from the workshop catalog — no manual .jar picking.",font=(FONT,10),bg=p["card"],fg=p["muted"]).pack(anchor="w",padx=24)
-    row=tk.Frame(card,bg=p["card"]);row.pack(fill="x",padx=24,pady=18); q=tk.StringVar(); ent=tk.Entry(row,textvariable=q,font=(FONT,11),bg=p["panel"],fg=p["fg"],insertbackground=p["fg"],relief="flat");ent.pack(side="left",fill="x",expand=True,ipady=10,padx=(0,10)); btn(row,"SEARCH",lambda:search_results(q.get(),results),True).pack(side="right")
-    results=tk.Frame(card,bg=p["card"]);results.pack(fill="both",expand=True,padx=24,pady=(0,20)); search_results("popular",results)
-
-def search_results(query,box):
-    p=palette()
-    for w in box.winfo_children():w.destroy()
-    try:hits=mod_search(query or "popular")
-    except Exception as e:
-        tk.Label(box,text=f"Workshop connection failed\n\nWhat broke: {e}",font=(FONT,11),bg=p["card"],fg=p["danger"]).pack(anchor="w",pady=20);return
-    if not hits:
-        tk.Label(box,text="No mods found for that search.",font=(FONT,11),bg=p["card"],fg=p["muted"]).pack(anchor="w",pady=20);return
-    for x in hits:
-        r=round_card(box,p["panel"],14);r.pack(fill="x",pady=5)
-        left=tk.Frame(r,bg=p["panel"]);left.pack(side="left",fill="x",expand=True,padx=16,pady=12)
-        tk.Label(left,text=x.get("title","Unnamed mod"),font=(FONT,12,"bold"),bg=p["panel"],fg=p["fg"]).pack(anchor="w")
-        tk.Label(left,text=(x.get("description") or "No description")[:180],font=(FONT,9),bg=p["panel"],fg=p["muted"],wraplength=650,justify="left").pack(anchor="w",pady=(3,0))
-        tk.Label(left,text=f"Downloads: {x.get('downloads',0):,}   •   Supports: {', '.join(x.get('versions',[])[:5])}",font=(FONT,8),bg=p["panel"],fg=p["muted"]).pack(anchor="w",pady=(5,0))
-        btn(r,"INSTALL",lambda x=x:install_workshop_mod(x),True).pack(side="right",padx=16)
-
-# ---------- UI ----------
-def clear_content():
-    for w in content.winfo_children():w.destroy()
-def round_card(parent,bg,r=16):
-    f=tk.Frame(parent,bg=bg,highlightthickness=1,highlightbackground=bg);return f
-
-def label(parent,text,size=10,bold=False,color=None):
-    p=palette(); return tk.Label(parent,text=text,font=(FONT,size,"bold" if bold else "normal"),bg=parent.cget("bg"),fg=color or p["fg"])
-
-def btn(parent,text,command,primary=False):
-    p=palette(); b=tk.Button(parent,text=text,font=(FONT,9,"bold"),command=command,bg=p["accent"] if primary else p["button"],fg="#ffffff",activebackground=p["accent"],activeforeground="#ffffff",relief="flat",bd=0,cursor="hand2",padx=16,pady=9)
-    return b
-
-def navigate(name):
-    global page; page=name
-    render()
-
-def home():
-    p=palette(); clear_content()
-    top=round_card(content,p["card"],22);top.pack(fill="x",pady=(0,14))
-    left=tk.Frame(top,bg=p["card"]);left.pack(side="left",fill="both",expand=True,padx=26,pady=26)
-    tk.Label(left,text="Your Minecraft, Your Way.",font=(FONT,27,"bold"),bg=p["card"],fg=p["fg"]).pack(anchor="w")
-    tk.Label(left,text="A cleaner launcher for your profiles, installations and mods.",font=(FONT,11),bg=p["card"],fg=p["muted"]).pack(anchor="w",pady=(6,18))
-    prof=profiles[selected_profile] if profiles else {"name":"Default"}; v=selected_version() or "No installation selected"; loader=prof.get("loader","Vanilla")
-    tk.Label(left,text=f"ACTIVE PROFILE   {prof.get('name','Default')}",font=(FONT,9,"bold"),bg=p["card"],fg=p["muted"]).pack(anchor="w")
-    tk.Label(left,text=f"{v}   •   {loader}",font=(FONT,13,"bold"),bg=p["card"],fg=p["fg"]).pack(anchor="w",pady=(4,14))
-    btn(left,"PLAY MINECRAFT",launch_game,True).pack(anchor="w")
-    side=tk.Frame(top,bg=p["card"]);side.pack(side="right",padx=25,pady=25)
-    tk.Label(side,text="STATUS",font=(FONT,9,"bold"),bg=p["card"],fg=p["muted"]).pack(anchor="e")
-    tk.Label(side,text="READY",font=(FONT,18,"bold"),bg=p["card"],fg=p["accent"]).pack(anchor="e",pady=5)
-    q=round_card(content,p["panel"],18);q.pack(fill="x",pady=7)
-    tk.Label(q,text="QUICK ACTIONS",font=(FONT,12,"bold"),bg=p["panel"],fg=p["fg"]).pack(anchor="w",padx=20,pady=(16,10))
-    rr=tk.Frame(q,bg=p["panel"]);rr.pack(fill="x",padx=14,pady=(0,16))
-    for name,fn in (("INSTALLATIONS",lambda:navigate("Installations")),("MOD WORKSHOP",workshop),("PROFILES",lambda:navigate("Profiles"))):btn(rr,name,fn,False).pack(side="left",padx=6)
-
-def profiles_page():
-    p=palette();clear_content(); head=round_card(content,p["card"]);head.pack(fill="x",pady=(0,12));tk.Label(head,text="PROFILES",font=(FONT,20,"bold"),bg=p["card"],fg=p["fg"]).pack(side="left",padx=22,pady=18);btn(head,"NEW PROFILE",new_profile,True).pack(side="right",padx=18)
-    for i,x in enumerate(profiles):
-        c=round_card(content,p["card"]);c.pack(fill="x",pady=5);left=tk.Frame(c,bg=p["card"]);left.pack(side="left",fill="x",expand=True,padx=18,pady=14);tk.Label(left,text=x.get("name","Profile"),font=(FONT,13,"bold"),bg=p["card"],fg=p["fg"]).pack(anchor="w");tk.Label(left,text=f"{x.get('version') or 'No version'} • {x.get('loader','Vanilla')}",font=(FONT,9),bg=p["card"],fg=p["muted"]).pack(anchor="w",pady=3);btn(c,"USE",lambda i=i:use_profile(i),i==selected_profile).pack(side="right",padx=8);btn(c,"PFP",lambda i=i:pick_pfp(i)).pack(side="right",padx=8)
-
-def use_profile(i):
-    global selected_profile;selected_profile=i;save_profiles();render()
-def new_profile():
-    if not require_minecraft("Profiles"):return
-    w=tk.Toplevel(root);w.title("New Profile");w.geometry("430x190");w.configure(bg=palette()["panel"]);e=tk.Entry(w,font=(FONT,11));e.pack(fill="x",padx=25,pady=(40,15));e.focus_set();btn(w,"CREATE",lambda:(profiles.append({"name":e.get().strip() or "New Profile","version":"","loader":"Vanilla","description":"","pfile":""}),save_profiles(),w.destroy(),render()),True).pack(padx=25,anchor="e")
-def pick_pfp(i):
-    if not require_minecraft("Profile pictures"):return
-    f=filedialog.askopenfilename(filetypes=[("Images","*.png;*.gif;*.bmp")]);
-    if f:profiles[i]["pfile"]=f;save_profiles();render()
-
-def installations():
-    p=palette();clear_content();c=round_card(content,p["card"]);c.pack(fill="both",expand=True);tk.Label(c,text="INSTALLATIONS",font=(FONT,20,"bold"),bg=p["card"],fg=p["fg"]).pack(anchor="w",padx=22,pady=(20,4));tk.Label(c,text="Installed Minecraft versions detected in your selected folder.",font=(FONT,10),bg=p["card"],fg=p["muted"]).pack(anchor="w",padx=22,pady=(0,15));
-    for v in versions():
-        r=round_card(c,p["panel"]);r.pack(fill="x",padx=18,pady=5);tk.Label(r,text=v,font=(FONT,12,"bold"),bg=p["panel"],fg=p["fg"]).pack(side="left",padx=16,pady=13);btn(r,"USE",lambda v=v:set_version(v),v==selected_version()).pack(side="right",padx=16)
-def set_version(v):profiles[selected_profile]["version"]=v;save_profiles();render()
-
-def render_mods():
-    p=palette();clear_content();c=round_card(content,p["card"]);c.pack(fill="both",expand=True);tk.Label(c,text="MODS",font=(FONT,20,"bold"),bg=p["card"],fg=p["fg"]).pack(anchor="w",padx=22,pady=(20,4));tk.Label(c,text="Installed mods",font=(FONT,10),bg=p["card"],fg=p["muted"]).pack(anchor="w",padx=22);btn(c,"OPEN MOD WORKSHOP",workshop,True).pack(anchor="w",padx=22,pady=15)
-    if not require_minecraft("Mods"):return
-    mods=os.path.join(mc_dir(),"mods"); files=[]
-    try:files=sorted(x for x in os.listdir(mods) if x.lower().endswith(".jar"))
-    except OSError:pass
-    for x in files:tk.Label(c,text="• "+x,font=(FONT,10),bg=p["card"],fg=p["fg"]).pack(anchor="w",padx=30,pady=3)
-
-def repair():
-    p=palette();clear_content();c=round_card(content,p["card"]);c.pack(fill="both",expand=True);tk.Label(c,text="REPAIR CENTER",font=(FONT,20,"bold"),bg=p["card"],fg=p["fg"]).pack(anchor="w",padx=22,pady=(20,5));tk.Label(c,text="Diagnostics never silently delete your Minecraft files.",font=(FONT,10),bg=p["card"],fg=p["muted"]).pack(anchor="w",padx=22,pady=(0,18));btn(c,"RUN DIAGNOSTICS",diagnostics,True).pack(anchor="w",padx=22);tk.Label(c,text="Checks Minecraft folder, selected version, JSON/JAR presence, Java path, and mods folder.",font=(FONT,9),bg=p["card"],fg=p["muted"],wraplength=700,justify="left").pack(anchor="w",padx=22,pady=15)
-def diagnostics():
-    d=mc_dir(); checks=[("Minecraft folder",bool(d and os.path.isdir(d))), ("Ownership evidence",ownership_verified()), ("Selected version",bool(selected_version())), ("Version JSON",bool(d and selected_version() and os.path.isfile(os.path.join(d,"versions",selected_version(),selected_version()+".json")))), ("Client JAR",bool(d and selected_version() and os.path.isfile(os.path.join(d,"versions",selected_version(),selected_version()+".jar"))))]; messagebox.showinfo("Diagnostics","\n".join(("✓ " if ok else "✗ ")+name for name,ok in checks))
+ lbl(body,'Mod Workshop',30,18,25,True);lbl(body,'Modrinth • browse freely, install only when original Minecraft is detected.',30,53,10,False,T()['muted'])
+ q=tk.Entry(body,bg=T()['card'],fg=T()['fg'],insertbackground=T()['fg'],relief='flat',font=(FONT,10));q.place(x=30,y=85,width=310,height=38)
+ typ=ttk.Combobox(body,values=['All','Mods','Shaders','Resource Packs','Data Packs'],state='readonly');typ.set('All');typ.place(x=350,y=85,width=140,height=38)
+ vv=ttk.Combobox(body,values=['All']+vers(),state='readonly');vv.set('All');vv.place(x=500,y=85,width=130,height=38)
+ sort=ttk.Combobox(body,values=['Relevance','Downloads','Updated'],state='readonly');sort.set('Relevance');sort.place(x=640,y=85,width=120,height=38)
+ btn(body,'SEARCH',lambda:search_workshop(q.get(),typ.get(),vv.get(),sort.get()),775,85,120,38,True);lbl(body,'INSTALL is locked and intentionally does nothing without original Minecraft.',30,133,9,False,T()['danger'] if not owned() else T()['accent'])
+ box=tk.Frame(body,bg=T()['bg']);box.place(x=30,y=160,relwidth=1,width=-60,relheight=1,height=-175);show_results(box)
+def show_results(box):
+ for w in box.winfo_children():w.destroy()
+ for item in results[:10]:
+  f=card(box,0,0,1000,92,r=16);f.pack(fill='x',pady=5);name=item.get('title','Project');desc=(item.get('description') or '')[:100];lbl(f,name,22,12,12,True);lbl(f,desc,22,38,9,False,T()['muted']);lbl(f,f"{item.get('project_type','mod')}  •  {item.get('downloads',0):,} downloads",22,65,9,False,T()['muted']);draw_image(f,item.get('icon_url',''));btn(f,'INSTALL' if owned() else 'LOCKED',lambda item=item:install(item),850,27,115,38,owned(),owned())
+def draw_image(f,url):
+ if not url:return
+ lab=tk.Label(f,bg=T()['panel'],text='');lab.place(x=770,y=17,width=55,height=55)
+ def work():
+  try:
+   with urlopen(Request(url,headers={'User-Agent':'Villager-Launcher/1.8.5'}),timeout=8) as r:data=r.read()
+   path=os.path.join(tempfile.gettempdir(),'vlimg_'+str(abs(hash(url)))+'.img');open(path,'wb').write(data)
+   def ui():
+    try:im=tk.PhotoImage(file=path);images[url]=im;lab.configure(image=im)
+    except:
+     try:
+      from PIL import Image,ImageTk;im=Image.open(path);im.thumbnail((52,52));im=ImageTk.PhotoImage(im);images[url]=im;lab.configure(image=im)
+     except:lab.configure(text='IMG',fg=T()['muted'])
+   root.after(0,ui)
+  except:pass
+ threading.Thread(target=work,daemon=True).start()
+def search_workshop(q,typ,v,sort):
+ try:
+  facets={'Mods':'mod','Shaders':'shader','Resource Packs':'resourcepack','Data Packs':'datapack'};f=[]
+  if typ!='All':f=[[f'project_type:{facets[typ]}']]
+  u=f'{API}/search?query={quote(q)}&limit=20&index={sort.lower()}'
+  if f:u+='&facets='+quote(json.dumps(f,separators=(',',':')))
+  data=api(u).get('hits',[])
+  if v!='All':data=[x for x in data if v in x.get('versions',[])]
+  global results;results=data;render()
+ except Exception as e:messagebox.showerror('Workshop Error',str(e))
+def install(item):
+ if not gate('Mod Workshop installation'):return
+ v=version()
+ if not v:return messagebox.showwarning('Workshop','Select an installed Minecraft version first.')
+ try:
+  data=api(API+'/project/'+quote(item.get('project_id') or item.get('slug'))+'/version');ok=[x for x in data if v in x.get('game_versions',[])]
+  if not ok:raise ValueError('No compatible release for Minecraft '+v)
+  fs=ok[0].get('files') or [];file=next((x for x in fs if x.get('primary')),fs[0] if fs else None)
+  if not file:raise ValueError('No downloadable file was provided.')
+  folder={'mod':'mods','shader':'shaderpacks','resourcepack':'resourcepacks','datapack':'datapacks'}.get(item.get('project_type'),'mods');dest=os.path.join(mc(),folder);os.makedirs(dest,exist_ok=True);out=os.path.join(dest,os.path.basename(file['filename']))
+  status.set('Downloading…');with_url=urlopen(Request(file['url'],headers={'User-Agent':'Villager-Launcher/1.8.5'}),timeout=60);data=with_url.read();with_url.close();open(out,'wb').write(data)
+  if not os.path.isfile(out):raise IOError('Downloaded file was not created.')
+  status.set('Installed');messagebox.showinfo('Installed',f"{item.get('title','Project')} installed to {folder}.")
+ except Exception as e:status.set('Install failed');messagebox.showerror('Install Failed',f'Stage: Download / install\n\nWhat broke: {e}')
 
 def settings_page():
-    p=palette();clear_content();
-    c=round_card(content,p["card"]);c.pack(fill="both",expand=True)
-    tk.Label(c,text="SETTINGS",font=(FONT,20,"bold"),bg=p["card"],fg=p["fg"]).pack(anchor="w",padx=22,pady=(20,15))
-    section(c,"Appearance")
-    row=tk.Frame(c,bg=p["card"]);row.pack(fill="x",padx=22,pady=7);tk.Label(row,text="Theme",font=(FONT,10,"bold"),bg=p["card"],fg=p["fg"]).pack(side="left");combo=ttk.Combobox(row,values=list(THEMES)+list(custom_themes),state="readonly",width=24);combo.set(current_theme);combo.pack(side="right");combo.bind("<<ComboboxSelected>>",lambda e:set_theme(combo.get()))
-    section(c,"Minecraft")
-    pathrow=tk.Frame(c,bg=p["card"]);pathrow.pack(fill="x",padx=22,pady=5);tk.Label(pathrow,text=settings.get("minecraft_path") or "Default .minecraft",font=(FONT,9),bg=p["card"],fg=p["muted"]).pack(side="left",fill="x",expand=True);btn(pathrow,"CHOOSE FOLDER",choose_mc).pack(side="right")
-    jrow=tk.Frame(c,bg=p["card"]);jrow.pack(fill="x",padx=22,pady=5);tk.Label(jrow,text=settings.get("java_path") or "Java from PATH",font=(FONT,9),bg=p["card"],fg=p["muted"]).pack(side="left",fill="x",expand=True);btn(jrow,"CHOOSE JAVA",choose_java).pack(side="right")
-    section(c,"Updates")
-    btn(c,"CHECK FOR UPDATES",check_updates,True).pack(anchor="w",padx=22,pady=5)
-    section(c,"Backups")
-    btn(c,"CREATE BACKUP",create_backup).pack(anchor="w",padx=22,pady=5)
-    btn(c,"RESTORE BACKUP",restore_backup).pack(anchor="w",padx=22,pady=5)
-    section(c,"Launcher")
-    btn(c,"RESET ALL SETTINGS",reset_settings).pack(anchor="w",padx=22,pady=5)
-
-def section(parent,text):tk.Label(parent,text=text.upper(),font=(FONT,9,"bold"),bg=palette()["card"],fg=palette()["muted"]).pack(anchor="w",padx=22,pady=(16,5))
-def set_theme(n):
-    global current_theme
-    if n in THEMES or n in custom_themes:current_theme=n;save_settings();render()
+ lbl(body,'Settings',30,18,25,True);lbl(body,'Updates and Backups stay here, not in the sidebar.',30,53,10,False,T()['muted'])
+ card(body,30,85,1040,125);lbl(body,'Appearance',55,108,13,True);lbl(body,'Theme',55,140,10,False,T()['muted']);cb=ttk.Combobox(body,values=NAMES+list(custom),state='readonly');cb.set(settings['theme']);cb.place(x=130,y=136,width=210,height=34);cb.bind('<<ComboboxSelected>>',lambda e:settheme(cb.get()));btn(body,'CUSTOM THEME',theme_editor,360,135,150,36)
+ card(body,30,230,500,205);lbl(body,'Minecraft',55,252,13,True);lbl(body,settings['minecraft_path'] or 'Default .minecraft',55,285,9,False,T()['muted']);btn(body,'CHOOSE FOLDER',choose_mc,55,320,140,36);btn(body,'CHOOSE JAVA',choose_java,210,320,130,36)
+ card(body,555,230,515,205);lbl(body,'Updates',580,252,13,True);lbl(body,'Installed: '+CURRENT_VERSION,580,285,10,False,T()['muted']);btn(body,'CHECK FOR UPDATES',update_check,580,320,175,38,True)
+ card(body,30,455,1040,150);lbl(body,'Backups',55,477,13,True);lbl(body,'Safe launcher-managed mods backups.',55,507,9,False,T()['muted']);btn(body,'CREATE BACKUP',backup,55,540,145,38);btn(body,'OPEN BACKUPS',open_backups,215,540,145,38);btn(body,'RESET SETTINGS',reset,375,540,145,38)
+def settheme(v):settings['theme']=v;save();render()
 def choose_mc():
-    p=filedialog.askdirectory(title="Choose Minecraft folder")
-    if p:settings["minecraft_path"]=p;save_settings();render()
+ p=filedialog.askdirectory();
+ if p:settings['minecraft_path']=p;save();render()
 def choose_java():
-    p=filedialog.askopenfilename(title="Choose Java executable",filetypes=[("Java executable","java.exe"),("All files","*.*")])
-    if p:settings["java_path"]=p;save_settings();render()
-def create_backup():
-    if not require_minecraft("Backups"):return
-    d=mc_dir();src=os.path.join(d,"mods") if d else ""
-    if not os.path.isdir(src):messagebox.showinfo("Backup","No mods folder exists to back up yet.");return
-    dest=os.path.join(d,"villager_launcher_backups",time.strftime("backup_%Y%m%d_%H%M%S"));shutil.copytree(src,dest);messagebox.showinfo("Backup",f"Mods backup created safely at:\n{dest}")
-def restore_backup():messagebox.showinfo("Backup","Restore center is ready, but no automatic overwrite is performed. Existing files are never silently replaced.")
-def reset_settings():
-    global settings,current_theme,custom_themes;settings=dict(DEFAULT);current_theme="Villager Green";custom_themes={};save_settings();render()
-
-def render():
-    global content,status,nav,header_pfp
-    p=palette();root.configure(bg=p["bg"])
-    for w in root.winfo_children():w.destroy()
-    shell=tk.Frame(root,bg=p["bg"]);shell.pack(fill="both",expand=True)
-    side=round_card(shell,p["panel"]);side.pack(side="left",fill="y",padx=(12,8),pady=12);tk.Label(side,text="VILLAGER\nLAUNCHER",font=(FONT,15,"bold"),bg=p["panel"],fg=p["fg"],justify="left").pack(anchor="w",padx=20,pady=(22,26))
-    for n in ("Home","Profiles","Mods","Installations","Repair","Settings"):
-        b=btn(side,n.upper(),lambda n=n:navigate(n),n==page);b.pack(fill="x",padx=10,pady=3);nav[n]=b
-    tk.Frame(side,bg=p["panel"]).pack(fill="both",expand=True)
-    tk.Label(side,text="Your Minecraft, Your Way.",font=(FONT,8),bg=p["panel"],fg=p["muted"],wraplength=170,justify="left").pack(anchor="w",padx=20,pady=20)
-    main=tk.Frame(shell,bg=p["bg"]);main.pack(side="left",fill="both",expand=True,padx=(0,12),pady=12)
-    head=tk.Frame(main,bg=p["bg"]);head.pack(fill="x",pady=(4,14));tk.Label(head,text=page,font=(FONT,18,"bold"),bg=p["bg"],fg=p["fg"]).pack(side="left");status=tk.Label(head,text="Ready",font=(FONT,9),bg=p["bg"],fg=p["muted"]);status.pack(side="right",padx=12);prof=profiles[selected_profile] if profiles else {"name":"Default"};tk.Label(head,text=prof.get("name","Default"),font=(FONT,9,"bold"),bg=p["bg"],fg=p["fg"]).pack(side="right",padx=6)
-    content=tk.Frame(main,bg=p["bg"]);content.pack(fill="both",expand=True)
-    if page=="Home":home()
-    elif page=="Profiles":profiles_page()
-    elif page=="Mods":render_mods()
-    elif page=="Installations":installations()
-    elif page=="Repair":repair()
-    else:settings_page()
-
-def load_persisted():load_settings();load_profiles()
-
-if len(sys.argv)>=3 and sys.argv[1]=="--install-update": finish_update(sys.argv[2]); raise SystemExit
-load_persisted();root=tk.Tk();root.title(f"Villager Launcher {CURRENT_VERSION}");root.geometry(f"{settings.get('window_width',1180)}x{settings.get('window_height',760)}");root.minsize(940,620);render();root.protocol("WM_DELETE_WINDOW",lambda:(save_settings(),root.destroy()));root.mainloop()
+ p=filedialog.askopenfilename(filetypes=[('Executable','*.exe'),('All','*.*')]);
+ if p:settings['java_path']=p;save();render()
+def theme_editor():
+ w=tk.Toplevel(root);w.title('Custom Theme Editor');w.geometry('520x520');w.configure(bg=T()['bg']);tk.Label(w,text='Custom Theme Editor',font=(FONT,18,'bold'),bg=T()['bg'],fg=T()['fg']).pack(anchor='w',padx=24,pady=20);name=tk.Entry(w,bg=T()['card'],fg=T()['fg'],relief='flat');name.pack(fill='x',padx=24);name.insert(0,'My Theme');vals={k:tk.StringVar(value=T()[k]) for k in 'bg panel card fg muted accent button danger'.split()}
+ for k,v in vals.items():
+  r=tk.Frame(w,bg=T()['bg']);r.pack(fill='x',padx=24,pady=4);tk.Label(r,text=k.title(),width=12,anchor='w',bg=T()['bg'],fg=T()['fg']).pack(side='left');tk.Entry(r,textvariable=v,bg=T()['card'],fg=T()['fg'],relief='flat',width=14).pack(side='left')
+ def save_theme():
+  n=name.get().strip() or 'My Theme';custom[n]={k:v.get() for k,v in vals.items()};settings['theme']=n;save();w.destroy();render()
+ btn(w,'SAVE THEME',save_theme,0,0,180,40,True).pack(pady=18)
+def backup():
+ if not gate('Backups'):return
+ src=os.path.join(mc(),'mods');
+ if not os.path.isdir(src):return messagebox.showinfo('Backup','No mods folder exists yet.')
+ d=os.path.join(mc(),'villager_launcher_backups',time.strftime('%Y%m%d_%H%M%S'),'mods');os.makedirs(os.path.dirname(d),exist_ok=True);shutil.copytree(src,d);messagebox.showinfo('Backup Created',d)
+def open_backups():
+ d=os.path.join(mc() or APP,'villager_launcher_backups');os.makedirs(d,exist_ok=True);os.startfile(d) if hasattr(os,'startfile') else subprocess.Popen(['xdg-open',d])
+def reset():
+ global settings,custom;settings=dict(DEFAULT);custom={};save();render()
+def semver(v):
+ try:return tuple(map(int,v.split('.')[:3]))
+ except:return (0,0,0)
+def update_check():
+ try:
+  d=api(BASE+'/version.json');v=str(d.get('version',''))
+  if semver(v)<=semver(CURRENT_VERSION):return messagebox.showinfo('Updates','You are up to date.')
+  if messagebox.askyesno('Update Available',f'Version {v} is available. Update now?'):download_update()
+ except Exception as e:messagebox.showerror('Update Error',str(e))
+def download_update():
+ try:
+  data=api_bytes(BASE+'/launcher.py');p=os.path.join(tempfile.gettempdir(),'villager_launcher_update.py');open(p,'wb').write(data);subprocess.Popen([sys.executable,p,'--install-update',os.path.abspath(sys.argv[0])],creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0),close_fds=True);root.destroy()
+ except Exception as e:messagebox.showerror('Update Error',str(e))
+def api_bytes(u):
+ with urlopen(Request(u+'?t='+str(time.time_ns()),headers={'User-Agent':'Villager-Launcher/1.8.5'}),timeout=30) as r:return r.read()
+def startup_notice():
+ try:
+  d=api(BASE+'/version.json');v=str(d.get('version',''))
+  if semver(v)>semver(CURRENT_VERSION):root.after(700,lambda:messagebox.askyesno('Update Available',f'Villager Launcher {v} is available. You have not updated yet. Update now?') and download_update())
+ except:pass
+def finish_update(target):
+ src=os.path.abspath(sys.argv[0]);time.sleep(2)
+ for _ in range(30):
+  try:shutil.copy2(src,target);subprocess.Popen([sys.executable,target],close_fds=True);os.remove(src);return
+  except OSError:time.sleep(1)
+ messagebox.showerror('Update Error','Windows could not replace the launcher file.')
+def main():
+ global root,status
+ load()
+ if len(sys.argv)>=3 and sys.argv[1]=='--install-update':return finish_update(sys.argv[2])
+ root=tk.Tk();root.title('Villager Launcher '+CURRENT_VERSION);root.geometry(f"{settings['window_width']}x{settings['window_height']}");root.minsize(1000,650);status=tk.StringVar(value='Ready');render();startup_notice();root.protocol('WM_DELETE_WINDOW',lambda:(save(),root.destroy()));root.mainloop()
+if __name__=='__main__':main()
