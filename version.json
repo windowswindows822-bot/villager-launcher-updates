@@ -1,31 +1,22 @@
 {
-  "version": "1.7.0",
+  "version": "1.7.1",
   "notes": {
     "Added": [
-      "Major Minecraft-style launcher interface rebuild",
-      "30 built-in themes",
-      "Expanded Custom Theme Editor with live preview",
-      "Custom theme names and unlimited saved custom themes",
-      "Full custom theme color controls for background, panels, cards, text, accent, buttons, and danger colors",
-      "Theme duplication and custom theme deletion",
-      "UI density setting with Compact, Comfortable, and Spacious modes",
-      "Minecraft-style Home dashboard and improved Installations page",
-      "Improved profile, mods, backups, repair, and settings presentation"
+      "Moved Backups into Settings > Backups",
+      "Moved Check for Updates into Settings > Updates",
+      "Cleaner main sidebar with Backups removed from navigation",
+      "Manual update controls remain inside Settings"
     ],
     "Changed": [
-      "Reworked the launcher visual hierarchy to feel closer to the original Minecraft Launcher design language",
-      "Updated navigation and content cards for a cleaner game-launcher layout",
-      "Replaced the simple custom accent tool with a complete theme editor",
-      "Improved theme persistence through the launcher settings file",
-      "Kept the Your Minecraft, Your Way. branding"
+      "Settings now contains the launcher backup center and update center",
+      "Main navigation is focused on Home, Profiles, Mods, Installations, Repair, and Settings"
     ],
     "Removed": [
-      "Old one-color custom accent editor"
+      "Backups from the main sidebar navigation"
     ],
     "Fixed": [
-      "Custom theme colors now apply consistently across the launcher",
-      "Theme controls no longer use the old draggable UI system",
-      "Settings toggles now keep their actual saved values"
+      "Backup management is now grouped with other launcher settings",
+      "Update checking is now grouped under Settings > Updates"
     ]
   }
 }
