@@ -1,9 +1,9 @@
 {
-  "version": "1.9.1",
-  "beta": true,
+  "version": "1.9.5",
+  "beta": false,
   "notes": {
-    "Added": ["Full launcher-wide theme palette system", "Colorful Microsoft-style four-square logo", "Real ⭐ emoji ratings", "Test Everything launcher diagnostics with safe fixes", "Offline Villager Bot with a built-in 100-question knowledge pack"],
-    "Changed": ["Major UI overhaul", "Improved Modrinth Workshop search, filters, sorting, project details, install handling, and installed-mod visibility", "Launcher is explicitly marked BETA/testing until manually approved"],
-    "Fixed": ["Theme colors now cover the full launcher palette", "Manual updater behavior remains manual"]
+    "Added": ["Villager Launcher 1.9.5 release", "Workshop pre-open full diagnostic check", "Rebuilt Modrinth Workshop flow", "Safe Workshop readiness checks", "Expanded diagnostics and UI improvements"],
+    "Changed": ["Workshop now checks launcher, Minecraft, Java, connectivity, storage, configuration, themes, and UI before opening", "Installer Wizard intentionally deferred to a later update"],
+    "Fixed": ["Workshop opening reliability improvements", "Safer diagnostic handling before Workshop access"]
   }
 }
