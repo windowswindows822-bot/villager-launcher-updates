@@ -10,10 +10,10 @@ import subprocess
 import shutil
 import time
 
-CURRENT_VERSION = "1.2.0"
-
+CURRENT_VERSION = "1.3.0"
 VERSION_URL = "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/version.json"
 LAUNCHER_URL = "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/launcher.py"
+SETTINGS_FILE = os.path.join(os.environ.get("APPDATA", tempfile.gettempdir()), "VillagerLauncher", "settings.json")
 
 THEMES = {
     "Villager Green": {"bg":"#101810","panel":"#182418","fg":"#FFFFFF","muted":"#AFC3AF","accent":"#55AA55","button":"#2D442D","icons":{"mods":"🧩","profile":"👤","launcher":"🧑‍🌾","settings":"⚙️"}},
@@ -27,11 +27,37 @@ current_theme_name = "Villager Green"
 custom_theme = None
 
 
+def load_settings():
+    global current_theme_name, custom_theme
+    try:
+        with open(SETTINGS_FILE, "r", encoding="utf-8") as file:
+            data = json.load(file)
+        name = data.get("theme")
+        if name in THEMES:
+            current_theme_name = name
+        elif name == "Custom" and isinstance(data.get("custom_theme"), dict):
+            custom_theme = data["custom_theme"]
+            current_theme_name = "Custom"
+    except (OSError, json.JSONDecodeError):
+        pass
+
+
+def save_settings():
+    try:
+        os.makedirs(os.path.dirname(SETTINGS_FILE), exist_ok=True)
+        data = {"theme": current_theme_name}
+        if current_theme_name == "Custom" and custom_theme:
+            data["custom_theme"] = custom_theme
+        with open(SETTINGS_FILE, "w", encoding="utf-8") as file:
+            json.dump(data, file, indent=2)
+    except OSError:
+        pass
+
+
 def finish_update_from_temp(target_file):
     source_file = os.path.abspath(sys.argv[0])
     target_file = os.path.abspath(target_file)
     time.sleep(2)
-
     for _ in range(30):
         try:
             shutil.copy2(source_file, target_file)
@@ -43,7 +69,6 @@ def finish_update_from_temp(target_file):
             return
         except OSError:
             time.sleep(1)
-
     messagebox.showerror("Update Error", "The update was downloaded, but Windows could not replace the old launcher file.")
 
 
@@ -79,11 +104,7 @@ def download_update():
 
 def install_update(temp_file):
     current_file = os.path.abspath(sys.argv[0])
-    subprocess.Popen(
-        [sys.executable, temp_file, "--install-update", current_file],
-        creationflags=subprocess.CREATE_NO_WINDOW,
-        close_fds=True
-    )
+    subprocess.Popen([sys.executable, temp_file, "--install-update", current_file], creationflags=subprocess.CREATE_NO_WINDOW, close_fds=True)
     root.destroy()
 
 
@@ -139,7 +160,14 @@ def open_profile():
 
 
 def open_launcher_page():
-    messagebox.showinfo("Launcher", f"Villager Launcher {CURRENT_VERSION}\n\nReady to launch Minecraft Java Edition.")
+    messagebox.showinfo("Launcher", f"Villager Launcher {CURRENT_VERSION}\n\nManual updates are enabled.\nAutomatic updates are disabled.")
+
+
+def open_diagnostics():
+    appdata = os.environ.get("APPDATA", "Not found")
+    mc_path = os.path.join(appdata, ".minecraft") if appdata != "Not found" else "Not found"
+    status_text = "Detected" if os.path.isdir(mc_path) else "Not detected"
+    messagebox.showinfo("Diagnostics", f"Villager Launcher {CURRENT_VERSION}\n\nLauncher file:\n{os.path.abspath(sys.argv[0])}\n\nMinecraft folder:\n{mc_path}\n\nMinecraft status: {status_text}\n\nUpdate mode: Manual")
 
 
 def apply_theme():
@@ -152,12 +180,14 @@ def apply_theme():
     subtitle.configure(bg=theme["panel"], fg=theme["muted"])
     version.configure(bg=theme["panel"], fg=theme["muted"])
     status.configure(bg=theme["panel"], fg=theme["muted"])
+    minecraft_status.configure(bg=theme["panel"], fg=theme["muted"])
     nav_frame.configure(bg=theme["panel"])
     for button, key in zip([mods_button, profile_button, launcher_button], ["mods", "profile", "launcher"]):
         button.configure(bg=theme["button"], fg=theme["fg"], activebackground=theme["accent"], activeforeground=theme["fg"], text=f"{theme['icons'][key]}  {key.upper()}")
     settings_button.configure(bg=theme["button"], fg=theme["fg"], activebackground=theme["accent"], activeforeground=theme["fg"], text=f"{theme['icons']['settings']}  SETTINGS")
     play_button.configure(bg=theme["accent"], fg=theme["fg"], activebackground=theme["accent"], activeforeground=theme["fg"])
     update_button.configure(bg=theme["button"], fg=theme["fg"], activebackground=theme["accent"], activeforeground=theme["fg"])
+    diagnostics_button.configure(bg=theme["button"], fg=theme["fg"], activebackground=theme["accent"], activeforeground=theme["fg"])
 
 
 def create_custom_theme():
@@ -171,13 +201,14 @@ def create_custom_theme():
     custom_theme["button"] = selected[1]
     custom_theme["icons"] = dict(base["icons"])
     current_theme_name = "Custom"
+    save_settings()
     apply_theme()
 
 
 def open_settings():
     settings = tk.Toplevel(root)
     settings.title("Villager Launcher Settings")
-    settings.geometry("440x420")
+    settings.geometry("440x500")
     settings.resizable(False, False)
     theme = get_theme()
     settings.configure(bg=theme["panel"])
@@ -186,12 +217,14 @@ def open_settings():
     def choose(name):
         global current_theme_name
         current_theme_name = name
+        save_settings()
         apply_theme()
         settings.destroy()
     for name in THEMES:
         tk.Button(settings, text=name, font=("Segoe UI",11,"bold"), width=25, relief="flat", bg=theme["button"], fg=theme["fg"], command=lambda n=name: choose(n)).pack(pady=4)
     tk.Button(settings, text="🎨 Custom Theme", font=("Segoe UI",11,"bold"), width=25, relief="flat", bg=theme["button"], fg=theme["fg"], command=lambda: [create_custom_theme(), settings.destroy()]).pack(pady=(12,5))
-    tk.Label(settings, text="Themes also change the launcher icons.", font=("Segoe UI",9), bg=theme["panel"], fg=theme["muted"]).pack(pady=12)
+    tk.Button(settings, text="🛠️ Diagnostics", font=("Segoe UI",11,"bold"), width=25, relief="flat", bg=theme["button"], fg=theme["fg"], command=open_diagnostics).pack(pady=8)
+    tk.Label(settings, text="Themes are saved automatically.\nThemes also change the launcher icons.", font=("Segoe UI",9), bg=theme["panel"], fg=theme["muted"]).pack(pady=12)
 
 
 def play():
@@ -201,6 +234,7 @@ def play():
     messagebox.showinfo("Minecraft", "Minecraft installation detected. Launch integration will be added next.")
 
 
+load_settings()
 root = tk.Tk()
 root.title(f"Villager Launcher {CURRENT_VERSION}")
 root.geometry("1000x620")
@@ -221,17 +255,21 @@ launcher_button.pack(side="left", padx=4)
 center = tk.Frame(panel)
 center.pack(fill="both", expand=True)
 title = tk.Label(center, text="VILLAGER LAUNCHER", font=("Segoe UI",36,"bold"))
-title.pack(pady=(105,5))
+title.pack(pady=(80,5))
 subtitle = tk.Label(center, text="Your Minecraft Java launcher", font=("Segoe UI",14))
 subtitle.pack()
 version = tk.Label(center, text=f"Version {CURRENT_VERSION}", font=("Segoe UI",10))
-version.pack(pady=(8,25))
+version.pack(pady=(8,15))
+minecraft_status = tk.Label(center, text=("🟢 Minecraft installation detected" if minecraft_directory_exists() else "⚪ Minecraft installation not detected"), font=("Segoe UI",11,"bold"))
+minecraft_status.pack(pady=(0,18))
 play_button = tk.Button(center, text="▶  PLAY", font=("Segoe UI",18,"bold"), width=18, height=2, relief="flat", command=play)
-play_button.pack(pady=8)
+play_button.pack(pady=6)
 update_button = tk.Button(center, text="🔄  Check for Updates", font=("Segoe UI",11), width=24, relief="flat", command=check_for_updates)
-update_button.pack(pady=8)
-status = tk.Label(center, text=f"Ready • Villager Launcher {CURRENT_VERSION}", font=("Segoe UI",10))
-status.pack(pady=15)
+update_button.pack(pady=6)
+diagnostics_button = tk.Button(center, text="🛠️  Diagnostics", font=("Segoe UI",10), width=20, relief="flat", command=open_diagnostics)
+diagnostics_button.pack(pady=6)
+status = tk.Label(center, text=f"Ready • Manual updates • Villager Launcher {CURRENT_VERSION}", font=("Segoe UI",10))
+status.pack(pady=10)
 settings_button = tk.Button(panel, text="⚙️  SETTINGS", font=("Segoe UI",10,"bold"), width=15, relief="flat", command=open_settings)
 settings_button.pack(side="left", padx=20, pady=(0,15))
 apply_theme()
