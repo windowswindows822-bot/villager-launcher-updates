@@ -1,17 +1,27 @@
 {
-  "version": "1.3.6",
+  "version": "1.4.0",
   "notes": {
     "Added": [
-      "Rollback file-choice prompt",
-      "Option to keep Minecraft mods and texture/resource packs during rollback",
-      "Safe rollback backup for mods and resource packs when the user chooses not to keep them active"
+      "Completely redesigned Villager Launcher interface",
+      "Expanded Settings center with General, Appearance, Minecraft, Updates, Privacy, and Advanced sections",
+      "Window size memory and launcher behavior settings",
+      "Custom Minecraft directory setting",
+      "Custom Java path setting for future launch integration",
+      "Manual update policy controls",
+      "Reset All Settings option",
+      "Sharper Segoe UI Variable typography throughout the launcher",
+      "New sidebar navigation and redesigned Minecraft home card"
     ],
     "Changed": [
-      "Rollback now asks about Minecraft files before replacing the launcher"
+      "Settings redesigned into a full navigation-based control center",
+      "Main launcher layout redesigned for a cleaner modern interface",
+      "Buttons, spacing, headers, status area, and typography refreshed",
+      "Minecraft detection now respects a saved custom Minecraft directory"
     ],
     "Removed": [],
     "Fixed": [
-      "Rollback no longer silently ignores the user's mod and resource-pack choice"
+      "Settings are now persisted in a structured launcher settings file",
+      "Launcher window dimensions can now be remembered safely"
     ]
   }
 }
