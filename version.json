@@ -1,24 +1,31 @@
 {
-  "version": "1.6.2",
+  "version": "1.7.0",
   "notes": {
     "Added": [
-      "Clean rebuilt 1.4-style launcher interface",
-      "Stable top-right profile PFP area",
-      "Safer settings controls with no draggable UI system"
+      "Major Minecraft-style launcher interface rebuild",
+      "30 built-in themes",
+      "Expanded Custom Theme Editor with live preview",
+      "Custom theme names and unlimited saved custom themes",
+      "Full custom theme color controls for background, panels, cards, text, accent, buttons, and danger colors",
+      "Theme duplication and custom theme deletion",
+      "UI density setting with Compact, Comfortable, and Spacious modes",
+      "Minecraft-style Home dashboard and improved Installations page",
+      "Improved profile, mods, backups, repair, and settings presentation"
     ],
     "Changed": [
-      "Rebuilt launcher.py to remove the obsolete UI layout editor",
-      "Removed all settings layout-position handling",
-      "Kept the Your Minecraft, Your Way. home tagline",
-      "Kept Minecraft ownership protection for Profiles, PFPs, Mods, Versions, Backups, and launching"
+      "Reworked the launcher visual hierarchy to feel closer to the original Minecraft Launcher design language",
+      "Updated navigation and content cards for a cleaner game-launcher layout",
+      "Replaced the simple custom accent tool with a complete theme editor",
+      "Improved theme persistence through the launcher settings file",
+      "Kept the Your Minecraft, Your Way. branding"
     ],
     "Removed": [
-      "Broken place_editable UI code",
-      "Draggable UI layout data"
+      "Old one-color custom accent editor"
     ],
     "Fixed": [
-      "Fixed AttributeError caused by tuple layout values",
-      "Launcher now starts without the old 1.6.0 layout system"
+      "Custom theme colors now apply consistently across the launcher",
+      "Theme controls no longer use the old draggable UI system",
+      "Settings toggles now keep their actual saved values"
     ]
   }
 }
