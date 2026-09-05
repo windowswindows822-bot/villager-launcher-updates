@@ -2,29 +2,21 @@
   "version": "1.8.0",
   "notes": {
     "Added": [
-      "Fresh rounded-corner launcher UI with larger cards and cleaner spacing",
-      "Detailed Minecraft launch-error reporting that identifies the failed stage and what broke",
-      "Mod Workshop powered by Modrinth instead of CurseForge",
-      "Workshop search with direct Install buttons",
-      "Workshop installs compatible mod releases automatically without asking the user to choose a JAR",
-      "Workshop errors now explain what failed",
-      "Preserved the existing 30 built-in themes"
+      "Rounded modern launcher UI",
+      "Mod Workshop powered by Modrinth with direct Install buttons",
+      "Detailed Minecraft launch error reporting",
+      "Update notification on startup when a newer launcher version is available"
     ],
     "Changed": [
-      "Home is redesigned around a large Minecraft launch card and quick actions",
-      "Navigation and pages use the new rounded-card visual system",
-      "Mods page now opens the integrated Mod Workshop",
-      "Backups remain under Settings and update checking remains under Settings > Updates",
-      "Launcher keeps manual-only update behavior"
+      "Mod Workshop no longer asks users to manually choose a JAR file",
+      "Launch failures now identify the stage and specific problem",
+      "Main launcher layout uses rounded cards and cleaner spacing"
     ],
     "Removed": [
-      "Manual JAR-file selection from the Mod Workshop flow",
-      "Old flat launcher page presentation"
+      "Manual JAR selection from Mod Workshop"
     ],
     "Fixed": [
-      "Launch failures no longer show only a generic error",
-      "Missing version metadata, missing client JAR, Java startup failures, and unsupported authenticated launching are reported separately",
-      "Mod Workshop no longer depends on the user supplying a local JAR"
+      "Workshop installation flow restored without requiring a local JAR picker"
     ]
   }
 }
