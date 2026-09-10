@@ -3,24 +3,17 @@
   "beta": true,
   "notes": {
     "Added": [
-      "500-feature Villager Launcher registry",
-      "Searchable 500-feature Ideas page",
-      "Local feature enable/disable switches",
-      "Enable all, Disable all, and Reset feature controls",
-      "Hmm button on Home and Ideas pages",
-      "500-feature registry count and enabled-feature display",
-      "Feature-state persistence in AppData\\VillagerLauncher\\features.json"
+      "STOP prompt after repeated Hmm button presses",
+      "Choosing No on the STOP prompt closes Villager Launcher",
+      "Villager Launcher updater loading screen with update stages"
     ],
     "Changed": [
-      "Launcher version bumped to 2.1.0",
-      "Repair Center now reports the expanded launcher feature system",
-      "Updater staging helper now keeps a backup and attempts rollback if replacement fails",
-      "What's New and update messaging now describe staged updates"
+      "Updater no longer uses rollback backups",
+      "Updater directly stages and replaces the launcher, then restarts it"
     ],
-    "Removed": [],
-    "Fixed": [
-      "Update replacement now has safer backup/rollback behavior",
-      "Launcher state now saves feature settings when closing"
-    ]
+    "Removed": [
+      "Update rollback behavior"
+    ],
+    "Fixed": []
   }
 }
