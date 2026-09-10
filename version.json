@@ -1,9 +1,26 @@
 {
-  "version": "1.9.5",
-  "beta": false,
+  "version": "2.1.0",
+  "beta": true,
   "notes": {
-    "Added": ["Villager Launcher 1.9.5 release", "Workshop pre-open full diagnostic check", "Rebuilt Modrinth Workshop flow", "Safe Workshop readiness checks", "Expanded diagnostics and UI improvements"],
-    "Changed": ["Workshop now checks launcher, Minecraft, Java, connectivity, storage, configuration, themes, and UI before opening", "Installer Wizard intentionally deferred to a later update"],
-    "Fixed": ["Workshop opening reliability improvements", "Safer diagnostic handling before Workshop access"]
+    "Added": [
+      "500-feature Villager Launcher registry",
+      "Searchable 500-feature Ideas page",
+      "Local feature enable/disable switches",
+      "Enable all, Disable all, and Reset feature controls",
+      "Hmm button on Home and Ideas pages",
+      "500-feature registry count and enabled-feature display",
+      "Feature-state persistence in AppData\\VillagerLauncher\\features.json"
+    ],
+    "Changed": [
+      "Launcher version bumped to 2.1.0",
+      "Repair Center now reports the expanded launcher feature system",
+      "Updater staging helper now keeps a backup and attempts rollback if replacement fails",
+      "What's New and update messaging now describe staged updates"
+    ],
+    "Removed": [],
+    "Fixed": [
+      "Update replacement now has safer backup/rollback behavior",
+      "Launcher state now saves feature settings when closing"
+    ]
   }
 }
