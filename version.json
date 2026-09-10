@@ -1,1 +1,31 @@
-{"version":"2.1.1","beta":true,"whats_new":{"added":["Improved GitHub update flow","Update loading stages","2.1.1 release archive"],"changed":["Updated launcher version to 2.1.1"],"removed":[],"fixed":["Updater behavior"]}}
+{
+  "version": "2.1.2",
+  "beta": true,
+  "whats_new": {
+    "Added": [
+      "Startup loading screen before the main launcher interface",
+      "Automatic backup of the immediately previous launcher before every update",
+      "One-click rollback to the immediately previous launcher version",
+      "Expanded What's New release notes",
+      "Dedicated rollback control in Settings",
+      "Update loading stages for checking, downloading, backup/installing, and restarting",
+      "Update error handling for empty downloaded launchers",
+      "Previous-version metadata saved alongside the launcher backup"
+    ],
+    "Changed": [
+      "Updater now saves the current launcher before replacing it",
+      "Settings Updates section now includes Rollback",
+      "What's New reads the GitHub whats_new release format",
+      "Startup now shows launcher preparation stages",
+      "Update download requests identify the current Villager Launcher version"
+    ],
+    "Removed": [],
+    "Fixed": [
+      "Previous-version recovery after a successful update",
+      "What's New compatibility with release metadata",
+      "Cleaner update restart handling",
+      "Empty update download detection",
+      "Rollback handling when no previous version has been saved yet"
+    ]
+  }
+}
