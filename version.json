@@ -1,3 +1,18 @@
 {
-  "content": "{\n  \"version\": \"2.1.4\",\n  \"beta\": true,\n  \"whats_new\": {\n    \"Added\": [\n      \"Dashboard UI #6\",\n      \"Loading Screen UI #3\",\n      \"Technical loading screen layout\",\n      \"English and Arabic interface support\"\n    ],\n    \"Changed\": [\n      \"Launcher interface updated while preserving existing functionality\",\n      \"Startup loading presentation updated\"\n    ],\n    \"Removed\": [],\n    \"Fixed\": []\n  }\n}\n"
+  "version": "2.1.4",
+  "beta": true,
+  "whats_new": {
+    "Added": [
+      "Dashboard UI #6",
+      "Loading Screen UI #3",
+      "Technical loading screen layout",
+      "English and Arabic interface support"
+    ],
+    "Changed": [
+      "Launcher interface updated while preserving existing functionality",
+      "Startup loading presentation updated"
+    ],
+    "Removed": [],
+    "Fixed": []
+  }
 }
