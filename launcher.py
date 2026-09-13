@@ -1,2 +1,2 @@
-# Villager Launcher 2.1.2
-# Full 2.1.2 source is being prepared from the generated launcher file.
+# Villager Launcher 2.1.4
+# Full launcher source from the 2.1.4 update is provided in the release package.
