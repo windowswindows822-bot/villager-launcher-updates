@@ -1,18 +1,47 @@
 {
-  "version": "2.1.4",
+  "version": "2.2.0",
   "beta": true,
   "whats_new": {
     "Added": [
-      "Dashboard UI #6",
-      "Loading Screen UI #3",
-      "Technical loading screen layout",
-      "English and Arabic interface support"
+      "Villager Launcher 2.2.0 major UI architecture",
+      "Scrollable left sidebar with 10 main navigation sections: Home, Play, Versions, Mods, Modpacks, Worlds, Servers, News, Tools, and Settings",
+      "Compact and expanded sidebar modes with saved state",
+      "Dedicated Play Center with active profile controls and quick launch actions",
+      "Dedicated Version Center for installed Minecraft versions, version selection, folder access, and size information",
+      "Dedicated Modpacks & Packs center for local modpack, resource-pack, and shader folders",
+      "World Center with local world browsing, folder access, last-modified information, and safe ZIP backups",
+      "Local Server Center with saved server names/addresses, copy-address support, and local persistence",
+      "News & Activity center with 2.2.0 highlights, update checking, and release notes access",
+      "Tools Center that preserves access to Diagnostics, Feature Registry, Feedback, Profiles, Villager Bot, Credits, and launcher folders",
+      "Villager OS 1.0 as a separate version identity from the launcher version",
+      "Hidden Villager OS tap Easter egg in About",
+      "S4 Easter egg audio playback using exactly assets/s4.mp3 through the existing MPV dependency",
+      "Full 1500-item Villager Launcher 2.2.0 master idea registry from the project plan",
+      "Improved Arabic navigation translations and RTL-aware sidebar/header layout",
+      "Local server data file stored separately from existing launcher settings and profiles"
     ],
     "Changed": [
-      "Launcher interface updated while preserving existing functionality",
-      "Startup loading presentation updated"
+      "Launcher version updated from 2.1.4 to 2.2.0",
+      "Main navigation moved from the 2.1.4 bottom navigation dock to the requested scrollable left sidebar",
+      "Dashboard redesigned as a cleaner technical overview with profile, launcher, Java, Minecraft, and version status",
+      "Existing Profiles, Repair, Feedback, Feature Registry, Villager Bot, and Credits systems are now organized as sub-pages/tools instead of extra main navigation buttons",
+      "Feature Registry expanded from 500 entries to the 1500-item 2.2.0 master list",
+      "Feature Registry limits the unfiltered on-screen list for performance while category filtering still exposes the complete registry",
+      "About/Credits panel now includes Villager OS information and the hidden interaction",
+      "Arabic page headers and section headers now use improved RTL alignment",
+      "Startup screen now also displays the separate Villager OS version while preserving the existing villagernews.mp4 startup video"
     ],
-    "Removed": [],
-    "Fixed": []
+    "Removed": [
+      "Bottom navigation dock as the primary launcher navigation design",
+      "500-entry placeholder expansion registry used by the previous launcher version"
+    ],
+    "Fixed": [
+      "Preserved existing updater, rollback, Workshop, profiles, settings, diagnostics, feedback, localization, Hrmm, Villager Bot, themes, and MPV video systems during the 2.2.0 redesign",
+      "Preserved safe initialization order so LOADERS, settings, feature data, and server data are defined before dependent startup code executes",
+      "Fixed the offline bot diagnostic threshold so the built-in knowledge pack no longer causes a false diagnostic failure",
+      "Kept assets/villagernews.mp4 as the normal startup video and assets/s4.mp3 as the separate S4 Easter egg audio asset",
+      "Added safe error handling for missing S4 audio, missing folders, world backup failures, and local server persistence",
+      "Verified the complete 2.2.0 Python source compiles successfully and its pre-GUI startup initialization executes without definition-order errors"
+    ]
   }
 }
