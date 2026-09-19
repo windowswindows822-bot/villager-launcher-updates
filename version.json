@@ -1,47 +1,30 @@
 {
-    "version":  "2.2.4",
+    "version":  "2.2.3",
     "beta":  true,
+    "download_url":  "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/releases/2.2.3/VillagerLauncher-2.2.3-Updater.exe",
+    "installer_url":  "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/releases/2.2.3/VillagerLauncher-2.2.3-Updater.exe",
+    "sha256":  "43B874D5A837C938636E14355BD36CEB07282E7B0D06165BE9B8A9A84A66E749",
+    "package_url":  "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/releases/2.2.3/VillagerLauncher-2.2.3.zip",
+    "package_sha256":  "EFE987A1B06E7D7C1B57173E683C1555835E1D1FC0586B43AA6FB60CE745B59F",
     "whats_new":  {
                       "Added":  [
-                                    "Villager Launcher 2.2.0 major UI architecture",
-                                    "Scrollable left sidebar with 10 main navigation sections: Home, Play, Versions, Mods, Modpacks, Worlds, Servers, News, Tools, and Settings",
-                                    "Compact and expanded sidebar modes with saved state",
-                                    "Dedicated Play Center with active profile controls and quick launch actions",
-                                    "Dedicated Version Center for installed Minecraft versions, version selection, folder access, and size information",
-                                    "Dedicated Modpacks \u0026 Packs center for local modpack, resource-pack, and shader folders",
-                                    "World Center with local world browsing, folder access, last-modified information, and safe ZIP backups",
-                                    "Local Server Center with saved server names/addresses, copy-address support, and local persistence",
-                                    "News \u0026 Activity center with 2.2.0 highlights, update checking, and release notes access",
-                                    "Tools Center that preserves access to Diagnostics, Feature Registry, Feedback, Profiles, Villager Bot, Credits, and launcher folders",
-                                    "Villager OS 1.0 as a separate version identity from the launcher version",
-                                    "Hidden Villager OS tap Easter egg in About",
-                                    "S4 Easter egg audio playback using exactly assets/s4.mp3 through the existing MPV dependency",
-                                    "Full 1500-item Villager Launcher 2.2.0 master idea registry from the project plan",
-                                    "Improved Arabic navigation translations and RTL-aware sidebar/header layout",
-                                    "Local server data file stored separately from existing launcher settings and profiles"
+                                    "Villager Launcher 2.2.3 update package",
+                                    "Dedicated updater window",
+                                    "100 rotating random villager facts while updating",
+                                    "Live download and installation progress",
+                                    "Automatic launcher file backup before replacement"
                                 ],
                       "Changed":  [
-                                      "Launcher version updated from 2.1.4 to 2.2.0",
-                                      "Main navigation moved from the 2.1.4 bottom navigation dock to the requested scrollable left sidebar",
-                                      "Dashboard redesigned as a cleaner technical overview with profile, launcher, Java, Minecraft, and version status",
-                                      "Existing Profiles, Repair, Feedback, Feature Registry, Villager Bot, and Credits systems are now organized as sub-pages/tools instead of extra main navigation buttons",
-                                      "Feature Registry expanded from 500 entries to the 1500-item 2.2.0 master list",
-                                      "Feature Registry limits the unfiltered on-screen list for performance while category filtering still exposes the complete registry",
-                                      "About/Credits panel now includes Villager OS information and the hidden interaction",
-                                      "Arabic page headers and section headers now use improved RTL alignment",
-                                      "Startup screen now also displays the separate Villager OS version while preserving the existing villagernews.mp4 startup video"
-                                  ],
-                      "Removed":  [
-                                      "Bottom navigation dock as the primary launcher navigation design",
-                                      "500-entry placeholder expansion registry used by the previous launcher version"
+                                      "Launcher version updated from 2.2.2 to 2.2.3",
+                                      "Updater now uses a real downloadable update package",
+                                      "At 50 percent the updater shows Installing system - Removing old system"
                                   ],
                       "Fixed":  [
-                                    "Preserved existing updater, rollback, Workshop, profiles, settings, diagnostics, feedback, localization, Hrmm, Villager Bot, themes, and MPV video systems during the 2.2.0 redesign",
-                                    "Preserved safe initialization order so LOADERS, settings, feature data, and server data are defined before dependent startup code executes",
-                                    "Fixed the offline bot diagnostic threshold so the built-in knowledge pack no longer causes a false diagnostic failure",
-                                    "Kept assets/villagernews.mp4 as the normal startup video and assets/s4.mp3 as the separate S4 Easter egg audio asset",
-                                    "Added safe error handling for missing S4 audio, missing folders, world backup failures, and local server persistence",
-                                    "Verified the complete 2.2.0 Python source compiles successfully and its pre-GUI startup initialization executes without definition-order errors"
-                                ]
+                                    "Updater package now verifies SHA-256 before installation",
+                                    "Old launcher files are replaced safely while a backup is kept"
+                                ],
+                      "Removed":  [
+
+                                  ]
                   }
 }
