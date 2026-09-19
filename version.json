@@ -3,9 +3,9 @@
     "beta":  true,
     "download_url":  "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/releases/2.2.4/VillagerLauncher-2.2.4-Updater.exe",
     "installer_url":  "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/releases/2.2.4/VillagerLauncher-2.2.4-Updater.exe",
-    "sha256":  "97248C162D50F6C7D7AAD6FD34FEB7C2B61D7D503EFB8065E69B316D31B39B4B",
+    "sha256":  "3D32289328007613B29397CEF02629DBA4AA36F32076AD6B2625FAC7A293ABA9",
     "package_url":  "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/releases/2.2.4/VillagerLauncher-2.2.4.zip",
-    "package_sha256":  "4051E5D35FB7C884EB8AECBB19B70B2C272209F9612CF524705FF2E2A2AFE0ED",
+    "package_sha256":  "96D42F501B87B8322BA9731D1A0D3ED4F712997965ACDD68A5BD8482E314001B",
     "whats_new":  {
                       "Added":  [
                                     "Villager Launcher 2.2.4 update package",
@@ -26,7 +26,8 @@
                                   ],
                       "Fixed":  [
                                     "Updater package now verifies SHA-256 before installation",
-                                    "Old launcher files are replaced safely while a backup is kept"
+                                    "Old launcher files are replaced safely while a backup is kept",
+                                    "Fixed updater file-lock issue that could stop update verification at 65 percent"
                                 ],
                       "Removed":  [
 
