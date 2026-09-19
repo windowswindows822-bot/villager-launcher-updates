@@ -3,9 +3,9 @@
     "beta":  true,
     "download_url":  "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/releases/2.2.4/VillagerLauncher-2.2.4-Updater.exe",
     "installer_url":  "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/releases/2.2.4/VillagerLauncher-2.2.4-Updater.exe",
-    "sha256":  "1A2D1E2EB33F2AAE928BA6F861816A526597302CF814E7195CE802B1BC505B21",
+    "sha256":  "3801E7021FE2DB228B49962075F3C04F55CF6DE9919937BB789D9A60EF2D45FE",
     "package_url":  "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/releases/2.2.4/VillagerLauncher-2.2.4.zip",
-    "package_sha256":  "BCB1C1B36FE4715EBF00214B8BC1DDFF589A4A47A1EEA6DD6BB7EC1C24FFDC95",
+    "package_sha256":  "A22D2439192A296AF72327B871D857780844A8557831B6373E4C58BD589DF205",
     "whats_new":  {
                       "Added":  [
                                     "Villager Launcher 2.2.4 update package",
