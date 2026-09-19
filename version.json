@@ -3,21 +3,26 @@
     "beta":  true,
     "download_url":  "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/releases/2.2.4/VillagerLauncher-2.2.4-Updater.exe",
     "installer_url":  "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/releases/2.2.4/VillagerLauncher-2.2.4-Updater.exe",
-    "sha256":  "3801E7021FE2DB228B49962075F3C04F55CF6DE9919937BB789D9A60EF2D45FE",
+    "sha256":  "97248C162D50F6C7D7AAD6FD34FEB7C2B61D7D503EFB8065E69B316D31B39B4B",
     "package_url":  "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/releases/2.2.4/VillagerLauncher-2.2.4.zip",
-    "package_sha256":  "A22D2439192A296AF72327B871D857780844A8557831B6373E4C58BD589DF205",
+    "package_sha256":  "4051E5D35FB7C884EB8AECBB19B70B2C272209F9612CF524705FF2E2A2AFE0ED",
     "whats_new":  {
                       "Added":  [
                                     "Villager Launcher 2.2.4 update package",
                                     "Dedicated updater window",
                                     "100 rotating random villager facts while updating",
                                     "Live download and installation progress",
-                                    "Automatic launcher file backup before replacement"
+                                    "Automatic launcher file backup before replacement",
+                                    "100-theme working theme engine with Apply button and saved selection",
+                                    "Aero Glass theme",
+                                    "All existing 2.2.3 feature registry entries carried into 2.2.4",
+                                    "1500-item master feature pool carried into 2.2.4 when present"
                                 ],
                       "Changed":  [
                                       "Launcher version updated from 2.2.3 to 2.2.4",
                                       "Updater now uses a real downloadable update package",
-                                      "At 50 percent the updater shows Installing system - Removing old system"
+                                      "At 50 percent the updater shows Installing system - Removing old system",
+                                      "Theme Gallery now applies the selected theme instead of previewing only"
                                   ],
                       "Fixed":  [
                                     "Updater package now verifies SHA-256 before installation",
