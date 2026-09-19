@@ -1,21 +1,21 @@
 {
-    "version":  "2.2.3",
+    "version":  "2.2.4",
     "beta":  true,
-    "download_url":  "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/releases/2.2.3/VillagerLauncher-2.2.3-Updater.exe",
-    "installer_url":  "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/releases/2.2.3/VillagerLauncher-2.2.3-Updater.exe",
-    "sha256":  "43B874D5A837C938636E14355BD36CEB07282E7B0D06165BE9B8A9A84A66E749",
-    "package_url":  "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/releases/2.2.3/VillagerLauncher-2.2.3.zip",
-    "package_sha256":  "EFE987A1B06E7D7C1B57173E683C1555835E1D1FC0586B43AA6FB60CE745B59F",
+    "download_url":  "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/releases/2.2.4/VillagerLauncher-2.2.4-Updater.exe",
+    "installer_url":  "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/releases/2.2.4/VillagerLauncher-2.2.4-Updater.exe",
+    "sha256":  "1A2D1E2EB33F2AAE928BA6F861816A526597302CF814E7195CE802B1BC505B21",
+    "package_url":  "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/releases/2.2.4/VillagerLauncher-2.2.4.zip",
+    "package_sha256":  "BCB1C1B36FE4715EBF00214B8BC1DDFF589A4A47A1EEA6DD6BB7EC1C24FFDC95",
     "whats_new":  {
                       "Added":  [
-                                    "Villager Launcher 2.2.3 update package",
+                                    "Villager Launcher 2.2.4 update package",
                                     "Dedicated updater window",
                                     "100 rotating random villager facts while updating",
                                     "Live download and installation progress",
                                     "Automatic launcher file backup before replacement"
                                 ],
                       "Changed":  [
-                                      "Launcher version updated from 2.2.2 to 2.2.3",
+                                      "Launcher version updated from 2.2.3 to 2.2.4",
                                       "Updater now uses a real downloadable update package",
                                       "At 50 percent the updater shows Installing system - Removing old system"
                                   ],
