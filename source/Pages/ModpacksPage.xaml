@@ -1,0 +1,64 @@
+
+<Page
+    x:Class="villagerlauncher.Pages.ModpacksPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ScrollViewer>
+        <StackPanel Padding="30" Spacing="16">
+            <StackPanel>
+                <TextBlock Text="Modpacks &amp; Packs" FontSize="32" FontWeight="SemiBold"/>
+                <TextBlock Text="Keep gameplay packs, resource packs, and shaders clearly separated."
+                           Opacity="0.6"/>
+            </StackPanel>
+
+            <Grid ColumnSpacing="14">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Border Grid.Column="0" Padding="22" CornerRadius="16" BorderThickness="1"
+                        BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}">
+                    <StackPanel Spacing="8">
+                        <TextBlock Text="Modpacks" FontSize="20" FontWeight="SemiBold"/>
+                        <TextBlock Text="0 detected" Opacity="0.55"/>
+                        <TextBlock Text="Profiles containing curated mods, configs, and versions."
+                                   TextWrapping="Wrap"/>
+                        <Button Content="Open Modpacks" HorizontalAlignment="Left"/>
+                    </StackPanel>
+                </Border>
+                <Border Grid.Column="1" Padding="22" CornerRadius="16" BorderThickness="1"
+                        BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}">
+                    <StackPanel Spacing="8">
+                        <TextBlock Text="Resource Packs" FontSize="20" FontWeight="SemiBold"/>
+                        <TextBlock Text="0 detected" Opacity="0.55"/>
+                        <TextBlock Text="Textures, sounds, language assets, and visual resources."
+                                   TextWrapping="Wrap"/>
+                        <Button Content="Open Resource Packs" HorizontalAlignment="Left"/>
+                    </StackPanel>
+                </Border>
+                <Border Grid.Column="2" Padding="22" CornerRadius="16" BorderThickness="1"
+                        BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}">
+                    <StackPanel Spacing="8">
+                        <TextBlock Text="Shaders" FontSize="20" FontWeight="SemiBold"/>
+                        <TextBlock Text="0 detected" Opacity="0.55"/>
+                        <TextBlock Text="Shader packs and rendering presets."
+                                   TextWrapping="Wrap"/>
+                        <Button Content="Open Shaders" HorizontalAlignment="Left"/>
+                    </StackPanel>
+                </Border>
+            </Grid>
+
+            <Border Padding="22" CornerRadius="16" BorderThickness="1"
+                    BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}">
+                <StackPanel Spacing="8">
+                    <TextBlock Text="Pack Workspace" FontSize="19" FontWeight="SemiBold"/>
+                    <TextBlock Text="Future redesign: drag packs between profiles, preview metadata, and validate compatibility before enabling them."
+                               TextWrapping="Wrap"
+                               Opacity="0.7"/>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

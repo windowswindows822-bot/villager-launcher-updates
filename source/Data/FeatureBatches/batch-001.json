@@ -1,0 +1,4002 @@
+[
+  {
+    "id": 1,
+    "sourceNumber": 1,
+    "title": "WINUI 3 FOUNDATION — 1-100",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 2,
+    "sourceNumber": 2,
+    "title": "Native WinUI 3 main window",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 3,
+    "sourceNumber": 3,
+    "title": "Windows 11-style navigation",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 4,
+    "sourceNumber": 4,
+    "title": "NavigationView sidebar",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 5,
+    "sourceNumber": 5,
+    "title": "Scrollable sidebar",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 6,
+    "sourceNumber": 6,
+    "title": "Collapsible sidebar",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 7,
+    "sourceNumber": 7,
+    "title": "Expanded sidebar mode",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 8,
+    "sourceNumber": 8,
+    "title": "Compact sidebar mode",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 9,
+    "sourceNumber": 9,
+    "title": "Keyboard sidebar navigation",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 10,
+    "sourceNumber": 10,
+    "title": "Sidebar tooltips",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 11,
+    "sourceNumber": 11,
+    "title": "Sidebar selection animation",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 12,
+    "sourceNumber": 12,
+    "title": "Smooth page transitions",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 13,
+    "sourceNumber": 13,
+    "title": "WinUI 3 buttons",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 14,
+    "sourceNumber": 14,
+    "title": "WinUI 3 cards",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 15,
+    "sourceNumber": 15,
+    "title": "WinUI 3 dialogs",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 16,
+    "sourceNumber": 16,
+    "title": "WinUI 3 InfoBars",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 17,
+    "sourceNumber": 17,
+    "title": "WinUI 3 TeachingTips",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 18,
+    "sourceNumber": 18,
+    "title": "WinUI 3 flyouts",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 19,
+    "sourceNumber": 19,
+    "title": "WinUI 3 menus",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 20,
+    "sourceNumber": 20,
+    "title": "WinUI 3 command bars",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 21,
+    "sourceNumber": 21,
+    "title": "WinUI 3 progress rings",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 22,
+    "sourceNumber": 22,
+    "title": "WinUI 3 progress bars",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 23,
+    "sourceNumber": 23,
+    "title": "WinUI 3 toggles",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 24,
+    "sourceNumber": 24,
+    "title": "WinUI 3 ComboBoxes",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 25,
+    "sourceNumber": 25,
+    "title": "WinUI 3 AutoSuggestBox",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 26,
+    "sourceNumber": 26,
+    "title": "WinUI 3 Expander controls",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 27,
+    "sourceNumber": 27,
+    "title": "WinUI 3 NumberBox controls",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 28,
+    "sourceNumber": 28,
+    "title": "WinUI 3 color picker",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 29,
+    "sourceNumber": 29,
+    "title": "WinUI 3 date controls",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 30,
+    "sourceNumber": 30,
+    "title": "WinUI 3 responsive layouts",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 31,
+    "sourceNumber": 31,
+    "title": "High-DPI support",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 32,
+    "sourceNumber": 32,
+    "title": "Windows scaling support",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 33,
+    "sourceNumber": 33,
+    "title": "Window resizing support",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 34,
+    "sourceNumber": 34,
+    "title": "Maximized layout",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 35,
+    "sourceNumber": 35,
+    "title": "Minimized behavior",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 36,
+    "sourceNumber": 36,
+    "title": "Remember window size",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 37,
+    "sourceNumber": 37,
+    "title": "Remember window position",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 38,
+    "sourceNumber": 38,
+    "title": "Full-screen launcher mode",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 39,
+    "sourceNumber": 39,
+    "title": "Compact launcher mode",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 40,
+    "sourceNumber": 40,
+    "title": "System title bar integration",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 41,
+    "sourceNumber": 41,
+    "title": "Custom title-bar buttons",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 42,
+    "sourceNumber": 42,
+    "title": "Windows 11 spacing",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 43,
+    "sourceNumber": 43,
+    "title": "Consistent card padding",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 44,
+    "sourceNumber": 44,
+    "title": "Consistent button sizing",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 45,
+    "sourceNumber": 45,
+    "title": "UI animation preferences",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 46,
+    "sourceNumber": 46,
+    "title": "Reduced-motion support",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 47,
+    "sourceNumber": 47,
+    "title": "Keyboard shortcuts",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 48,
+    "sourceNumber": 48,
+    "title": "Focus indicators",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 49,
+    "sourceNumber": 49,
+    "title": "Accessibility labels",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 50,
+    "sourceNumber": 50,
+    "title": "Screen-reader-friendly controls",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 51,
+    "sourceNumber": 51,
+    "title": "Better tab navigation",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 52,
+    "sourceNumber": 52,
+    "title": "Native context menus",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 53,
+    "sourceNumber": 53,
+    "title": "Right-click support",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 54,
+    "sourceNumber": 54,
+    "title": "Double-click support",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 55,
+    "sourceNumber": 55,
+    "title": "Drag-and-drop support",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 56,
+    "sourceNumber": 56,
+    "title": "File picker integration",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 57,
+    "sourceNumber": 57,
+    "title": "Folder picker integration",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 58,
+    "sourceNumber": 58,
+    "title": "Native notification support",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 59,
+    "sourceNumber": 59,
+    "title": "Windows toast integration",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 60,
+    "sourceNumber": 60,
+    "title": "Windows clipboard integration",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 61,
+    "sourceNumber": 61,
+    "title": "Native file opening",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 62,
+    "sourceNumber": 62,
+    "title": "Native folder opening",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 63,
+    "sourceNumber": 63,
+    "title": "Native error dialogs",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 64,
+    "sourceNumber": 64,
+    "title": "Native confirmation dialogs",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 65,
+    "sourceNumber": 65,
+    "title": "Native loading states",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 66,
+    "sourceNumber": 66,
+    "title": "Native empty states",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 67,
+    "sourceNumber": 67,
+    "title": "Native error states",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 68,
+    "sourceNumber": 68,
+    "title": "Native success states",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 69,
+    "sourceNumber": 69,
+    "title": "Native warning states",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 70,
+    "sourceNumber": 70,
+    "title": "Consistent icons",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 71,
+    "sourceNumber": 71,
+    "title": "Icon hover animations",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 72,
+    "sourceNumber": 72,
+    "title": "Icon pressed animations",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 73,
+    "sourceNumber": 73,
+    "title": "Icon selection states",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 74,
+    "sourceNumber": 74,
+    "title": "Better spacing on small displays",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 75,
+    "sourceNumber": 75,
+    "title": "Better spacing on large displays",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 76,
+    "sourceNumber": 76,
+    "title": "Multi-monitor support",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 77,
+    "sourceNumber": 77,
+    "title": "Monitor-aware window placement",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 78,
+    "sourceNumber": 78,
+    "title": "Theme-aware controls",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 79,
+    "sourceNumber": 79,
+    "title": "Dynamic accent colors",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 80,
+    "sourceNumber": 80,
+    "title": "System theme detection",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 81,
+    "sourceNumber": 81,
+    "title": "Better startup initialization",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 82,
+    "sourceNumber": 82,
+    "title": "Faster UI initialization",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 83,
+    "sourceNumber": 83,
+    "title": "UI loading skeletons",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 84,
+    "sourceNumber": 84,
+    "title": "Page caching",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 85,
+    "sourceNumber": 85,
+    "title": "Navigation state preservation",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 86,
+    "sourceNumber": 86,
+    "title": "Scroll-position preservation",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 87,
+    "sourceNumber": 87,
+    "title": "Better page lifecycle handling",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 88,
+    "sourceNumber": 88,
+    "title": "Background task indicators",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 89,
+    "sourceNumber": 89,
+    "title": "UI status indicators",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 90,
+    "sourceNumber": 90,
+    "title": "Better crash recovery",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 91,
+    "sourceNumber": 91,
+    "title": "Better startup recovery",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 92,
+    "sourceNumber": 92,
+    "title": "UI diagnostics",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 93,
+    "sourceNumber": 93,
+    "title": "Control validation",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 94,
+    "sourceNumber": 94,
+    "title": "Input validation",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 95,
+    "sourceNumber": 95,
+    "title": "Better empty-state messages",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 96,
+    "sourceNumber": 96,
+    "title": "Better tooltips",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 97,
+    "sourceNumber": 97,
+    "title": "Better hover descriptions",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 98,
+    "sourceNumber": 98,
+    "title": "Better keyboard navigation",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 99,
+    "sourceNumber": 99,
+    "title": "Better focus restoration",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 100,
+    "sourceNumber": 100,
+    "title": "Better WinUI error handling",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 101,
+    "sourceNumber": 101,
+    "title": "Unified WinUI design system",
+    "category": "WINUI 3 FOUNDATION",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 102,
+    "sourceNumber": 101,
+    "title": "Minecraft welcome screen",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 103,
+    "sourceNumber": 102,
+    "title": "Last played Minecraft version",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 104,
+    "sourceNumber": 103,
+    "title": "Last played profile",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 105,
+    "sourceNumber": 104,
+    "title": "Play button",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 106,
+    "sourceNumber": 105,
+    "title": "Quick Play button",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 107,
+    "sourceNumber": 106,
+    "title": "Recently played list",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 108,
+    "sourceNumber": 107,
+    "title": "Favorite versions",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 109,
+    "sourceNumber": 108,
+    "title": "Favorite servers",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 110,
+    "sourceNumber": 109,
+    "title": "Recent worlds",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 111,
+    "sourceNumber": 110,
+    "title": "Recent modpacks",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 112,
+    "sourceNumber": 111,
+    "title": "Recent screenshots",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 113,
+    "sourceNumber": 112,
+    "title": "Playtime statistics",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 114,
+    "sourceNumber": 113,
+    "title": "Launch count",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 115,
+    "sourceNumber": 114,
+    "title": "Installed version count",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 116,
+    "sourceNumber": 115,
+    "title": "Installed mod count",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 117,
+    "sourceNumber": 116,
+    "title": "Installed world count",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 118,
+    "sourceNumber": 117,
+    "title": "Installed modpack count",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 119,
+    "sourceNumber": 118,
+    "title": "Storage usage",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 120,
+    "sourceNumber": 119,
+    "title": "Java status",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 121,
+    "sourceNumber": 120,
+    "title": "Minecraft status",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 122,
+    "sourceNumber": 121,
+    "title": "Launcher status",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 123,
+    "sourceNumber": 122,
+    "title": "Update status",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 124,
+    "sourceNumber": 123,
+    "title": "Download status",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 125,
+    "sourceNumber": 124,
+    "title": "Active profile card",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 126,
+    "sourceNumber": 125,
+    "title": "Active version card",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 127,
+    "sourceNumber": 126,
+    "title": "Active Java card",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 128,
+    "sourceNumber": 127,
+    "title": "Quick settings",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 129,
+    "sourceNumber": 128,
+    "title": "Quick language switch",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 130,
+    "sourceNumber": 129,
+    "title": "Quick theme switch",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 131,
+    "sourceNumber": 130,
+    "title": "Quick memory control",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 132,
+    "sourceNumber": 131,
+    "title": "Quick Java selection",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 133,
+    "sourceNumber": 132,
+    "title": "Quick mod loader selection",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 134,
+    "sourceNumber": 133,
+    "title": "Quick world selection",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 135,
+    "sourceNumber": 134,
+    "title": "Quick server selection",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 136,
+    "sourceNumber": 135,
+    "title": "Search launcher button",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 137,
+    "sourceNumber": 136,
+    "title": "Open Minecraft folder",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 138,
+    "sourceNumber": 137,
+    "title": "Open logs",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 139,
+    "sourceNumber": 138,
+    "title": "Open screenshots",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 140,
+    "sourceNumber": 139,
+    "title": "Open saves",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 141,
+    "sourceNumber": 140,
+    "title": "Open mods folder",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 142,
+    "sourceNumber": 141,
+    "title": "Open resource packs",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 143,
+    "sourceNumber": 142,
+    "title": "Open shaderpacks",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 144,
+    "sourceNumber": 143,
+    "title": "Open config",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 145,
+    "sourceNumber": 144,
+    "title": "Open backups",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 146,
+    "sourceNumber": 145,
+    "title": "News preview",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 147,
+    "sourceNumber": 146,
+    "title": "Activity preview",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 148,
+    "sourceNumber": 147,
+    "title": "Download preview",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 149,
+    "sourceNumber": 148,
+    "title": "Error preview",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 150,
+    "sourceNumber": 149,
+    "title": "Diagnostic preview",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 151,
+    "sourceNumber": 150,
+    "title": "Server status preview",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 152,
+    "sourceNumber": 151,
+    "title": "Favorite server status",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 153,
+    "sourceNumber": 152,
+    "title": "Minecraft news card",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 154,
+    "sourceNumber": 153,
+    "title": "Version release card",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 155,
+    "sourceNumber": 154,
+    "title": "Mod update card",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 156,
+    "sourceNumber": 155,
+    "title": "Modpack update card",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 157,
+    "sourceNumber": 156,
+    "title": "World backup reminder",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 158,
+    "sourceNumber": 157,
+    "title": "Storage warning",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 159,
+    "sourceNumber": 158,
+    "title": "Java warning",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 160,
+    "sourceNumber": 159,
+    "title": "Broken installation warning",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 161,
+    "sourceNumber": 160,
+    "title": "Missing dependency warning",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 162,
+    "sourceNumber": 161,
+    "title": "First-launch guide",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 163,
+    "sourceNumber": 162,
+    "title": "Setup wizard",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 164,
+    "sourceNumber": 163,
+    "title": "Launcher tips",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 165,
+    "sourceNumber": 164,
+    "title": "Minecraft tips",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 166,
+    "sourceNumber": 165,
+    "title": "Random villager message",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 167,
+    "sourceNumber": 166,
+    "title": "Daily villager message",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 168,
+    "sourceNumber": 167,
+    "title": "Random Minecraft fact",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 169,
+    "sourceNumber": 168,
+    "title": "Launcher statistics",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 170,
+    "sourceNumber": 169,
+    "title": "Session statistics",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 171,
+    "sourceNumber": 170,
+    "title": "Current session timer",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 172,
+    "sourceNumber": 171,
+    "title": "Last launch timestamp",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 173,
+    "sourceNumber": 172,
+    "title": "Total launcher runtime",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 174,
+    "sourceNumber": 173,
+    "title": "Total Minecraft runtime",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 175,
+    "sourceNumber": 174,
+    "title": "Most-used version",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 176,
+    "sourceNumber": 175,
+    "title": "Most-used profile",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 177,
+    "sourceNumber": 176,
+    "title": "Most-used modpack",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 178,
+    "sourceNumber": 177,
+    "title": "Favorite world",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 179,
+    "sourceNumber": 178,
+    "title": "Favorite server",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 180,
+    "sourceNumber": 179,
+    "title": "Favorite mod",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 181,
+    "sourceNumber": 180,
+    "title": "Favorite resource pack",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 182,
+    "sourceNumber": 181,
+    "title": "Favorite shader",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 183,
+    "sourceNumber": 182,
+    "title": "Quick repair",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 184,
+    "sourceNumber": 183,
+    "title": "Quick backup",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 185,
+    "sourceNumber": 184,
+    "title": "Quick restore",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 186,
+    "sourceNumber": 185,
+    "title": "Quick log export",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 187,
+    "sourceNumber": 186,
+    "title": "Quick error scan",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 188,
+    "sourceNumber": 187,
+    "title": "Quick Java scan",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 189,
+    "sourceNumber": 188,
+    "title": "Quick Minecraft scan",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 190,
+    "sourceNumber": 189,
+    "title": "Quick mod scan",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 191,
+    "sourceNumber": 190,
+    "title": "Quick world scan",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 192,
+    "sourceNumber": 191,
+    "title": "Quick server scan",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 193,
+    "sourceNumber": 192,
+    "title": "Dashboard customization",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 194,
+    "sourceNumber": 193,
+    "title": "Dashboard card rearrangement",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 195,
+    "sourceNumber": 194,
+    "title": "Hide dashboard cards",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 196,
+    "sourceNumber": 195,
+    "title": "Restore dashboard layout",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 197,
+    "sourceNumber": 196,
+    "title": "Compact dashboard",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 198,
+    "sourceNumber": 197,
+    "title": "Large dashboard",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 199,
+    "sourceNumber": 198,
+    "title": "Minecraft-themed dashboard",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 200,
+    "sourceNumber": 199,
+    "title": "Windows-themed dashboard",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 201,
+    "sourceNumber": 200,
+    "title": "Clean dashboard mode",
+    "category": "HOME / DASHBOARD",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 202,
+    "sourceNumber": 201,
+    "title": "One-click Minecraft launch",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 203,
+    "sourceNumber": 202,
+    "title": "Launch selected profile",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 204,
+    "sourceNumber": 203,
+    "title": "Launch selected version",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 205,
+    "sourceNumber": 204,
+    "title": "Launch selected world",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 206,
+    "sourceNumber": 205,
+    "title": "Launch selected server",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 207,
+    "sourceNumber": 206,
+    "title": "Launch with selected Java",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 208,
+    "sourceNumber": 207,
+    "title": "Launch with selected memory",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 209,
+    "sourceNumber": 208,
+    "title": "Launch with selected mod loader",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 210,
+    "sourceNumber": 209,
+    "title": "Launch with custom JVM arguments",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 211,
+    "sourceNumber": 210,
+    "title": "Launch with custom game arguments",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 212,
+    "sourceNumber": 211,
+    "title": "Launch with custom resolution",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 213,
+    "sourceNumber": 212,
+    "title": "Launch windowed",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 214,
+    "sourceNumber": 213,
+    "title": "Launch maximized",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 215,
+    "sourceNumber": 214,
+    "title": "Launch borderless",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 216,
+    "sourceNumber": 215,
+    "title": "Launch fullscreen",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 217,
+    "sourceNumber": 216,
+    "title": "Remember launch settings",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 218,
+    "sourceNumber": 217,
+    "title": "Per-profile launch settings",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 219,
+    "sourceNumber": 218,
+    "title": "Per-version launch settings",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 220,
+    "sourceNumber": 219,
+    "title": "Per-modpack launch settings",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 221,
+    "sourceNumber": 220,
+    "title": "Pre-launch validation",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 222,
+    "sourceNumber": 221,
+    "title": "Missing Java detection",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 223,
+    "sourceNumber": 222,
+    "title": "Missing libraries detection",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 224,
+    "sourceNumber": 223,
+    "title": "Missing assets detection",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 225,
+    "sourceNumber": 224,
+    "title": "Missing natives detection",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 226,
+    "sourceNumber": 225,
+    "title": "Missing version detection",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 227,
+    "sourceNumber": 226,
+    "title": "Missing mod loader detection",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 228,
+    "sourceNumber": 227,
+    "title": "Missing mod detection",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 229,
+    "sourceNumber": 228,
+    "title": "Invalid argument detection",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 230,
+    "sourceNumber": 229,
+    "title": "Invalid memory detection",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 231,
+    "sourceNumber": 230,
+    "title": "Invalid Java path detection",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 232,
+    "sourceNumber": 231,
+    "title": "Launch cancellation",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 233,
+    "sourceNumber": 232,
+    "title": "Launch progress",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 234,
+    "sourceNumber": 233,
+    "title": "Download progress",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 235,
+    "sourceNumber": 234,
+    "title": "Library download progress",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 236,
+    "sourceNumber": 235,
+    "title": "Asset download progress",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 237,
+    "sourceNumber": 236,
+    "title": "Native download progress",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 238,
+    "sourceNumber": 237,
+    "title": "Version download progress",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 239,
+    "sourceNumber": 238,
+    "title": "Mod loader installation progress",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 240,
+    "sourceNumber": 239,
+    "title": "Launch log viewer",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 241,
+    "sourceNumber": 240,
+    "title": "Live console output",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 242,
+    "sourceNumber": 241,
+    "title": "Console search",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 243,
+    "sourceNumber": 242,
+    "title": "Console filtering",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 244,
+    "sourceNumber": 243,
+    "title": "Error highlighting",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 245,
+    "sourceNumber": 244,
+    "title": "Warning highlighting",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 246,
+    "sourceNumber": 245,
+    "title": "Info highlighting",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 247,
+    "sourceNumber": 246,
+    "title": "Copy console output",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 248,
+    "sourceNumber": 247,
+    "title": "Save console output",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 249,
+    "sourceNumber": 248,
+    "title": "Save launch log",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 250,
+    "sourceNumber": 249,
+    "title": "Open launch log folder",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 251,
+    "sourceNumber": 250,
+    "title": "Launch history",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 252,
+    "sourceNumber": 251,
+    "title": "Launch timestamps",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 253,
+    "sourceNumber": 252,
+    "title": "Launch duration",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 254,
+    "sourceNumber": 253,
+    "title": "Launch success history",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 255,
+    "sourceNumber": 254,
+    "title": "Launch failure history",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 256,
+    "sourceNumber": 255,
+    "title": "Last launch recovery",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 257,
+    "sourceNumber": 256,
+    "title": "Retry failed launch",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 258,
+    "sourceNumber": 257,
+    "title": "Safe launch mode",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 259,
+    "sourceNumber": 258,
+    "title": "Clean launch mode",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 260,
+    "sourceNumber": 259,
+    "title": "Vanilla launch mode",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 261,
+    "sourceNumber": 260,
+    "title": "Disable mods temporarily",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 262,
+    "sourceNumber": 261,
+    "title": "Disable shaders temporarily",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 263,
+    "sourceNumber": 262,
+    "title": "Disable resource packs temporarily",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 264,
+    "sourceNumber": 263,
+    "title": "Reset temporary JVM arguments",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 265,
+    "sourceNumber": 264,
+    "title": "Reset temporary game arguments",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 266,
+    "sourceNumber": 265,
+    "title": "Repair before launch",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 267,
+    "sourceNumber": 266,
+    "title": "Backup before launch",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 268,
+    "sourceNumber": 267,
+    "title": "Confirm risky launch",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 269,
+    "sourceNumber": 268,
+    "title": "Auto-close launcher after launch",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 270,
+    "sourceNumber": 269,
+    "title": "Keep launcher open",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 271,
+    "sourceNumber": 270,
+    "title": "Minimize launcher after launch",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 272,
+    "sourceNumber": 271,
+    "title": "Restore launcher after Minecraft closes",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 273,
+    "sourceNumber": 272,
+    "title": "Detect Minecraft process",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 274,
+    "sourceNumber": 273,
+    "title": "Detect Minecraft crash",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 275,
+    "sourceNumber": 274,
+    "title": "Detect Minecraft exit",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 276,
+    "sourceNumber": 275,
+    "title": "Detect Minecraft hang",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 277,
+    "sourceNumber": 276,
+    "title": "Detect Java crash",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 278,
+    "sourceNumber": 277,
+    "title": "Detect mod crash",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 279,
+    "sourceNumber": 278,
+    "title": "Detect missing dependency",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 280,
+    "sourceNumber": 279,
+    "title": "Detect incompatible mod",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 281,
+    "sourceNumber": 280,
+    "title": "Detect incompatible Java",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 282,
+    "sourceNumber": 281,
+    "title": "Detect incompatible version",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 283,
+    "sourceNumber": 282,
+    "title": "Detect invalid Forge setup",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 284,
+    "sourceNumber": 283,
+    "title": "Detect invalid Fabric setup",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 285,
+    "sourceNumber": 284,
+    "title": "Detect invalid NeoForge setup",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 286,
+    "sourceNumber": 285,
+    "title": "Detect invalid Quilt setup",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 287,
+    "sourceNumber": 286,
+    "title": "Detect corrupted installation",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 288,
+    "sourceNumber": 287,
+    "title": "Detect corrupted libraries",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 289,
+    "sourceNumber": 288,
+    "title": "Detect corrupted assets",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 290,
+    "sourceNumber": 289,
+    "title": "Detect corrupted natives",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 291,
+    "sourceNumber": 290,
+    "title": "Launch repair wizard",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 292,
+    "sourceNumber": 291,
+    "title": "Launch troubleshooting wizard",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 293,
+    "sourceNumber": 292,
+    "title": "Crash report assistant",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 294,
+    "sourceNumber": 293,
+    "title": "Crash report export",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 295,
+    "sourceNumber": 294,
+    "title": "Crash report analysis",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 296,
+    "sourceNumber": 295,
+    "title": "Launch diagnostics",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 297,
+    "sourceNumber": 296,
+    "title": "Launch performance report",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 298,
+    "sourceNumber": 297,
+    "title": "Launch environment report",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 299,
+    "sourceNumber": 298,
+    "title": "Launch configuration snapshot",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 300,
+    "sourceNumber": 299,
+    "title": "Launch session report",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 301,
+    "sourceNumber": 300,
+    "title": "Minecraft launch center",
+    "category": "MINECRAFT LAUNCHING",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 302,
+    "sourceNumber": 301,
+    "title": "Version browser",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 303,
+    "sourceNumber": 302,
+    "title": "Installed versions list",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 304,
+    "sourceNumber": 303,
+    "title": "Available versions list",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 305,
+    "sourceNumber": 304,
+    "title": "Latest release",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 306,
+    "sourceNumber": 305,
+    "title": "Latest snapshot",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 307,
+    "sourceNumber": 306,
+    "title": "Old releases",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 308,
+    "sourceNumber": 307,
+    "title": "Release history",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 309,
+    "sourceNumber": 308,
+    "title": "Version search",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 310,
+    "sourceNumber": 309,
+    "title": "Version filtering",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 311,
+    "sourceNumber": 310,
+    "title": "Version sorting",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 312,
+    "sourceNumber": 311,
+    "title": "Version favorites",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 313,
+    "sourceNumber": 312,
+    "title": "Version categories",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 314,
+    "sourceNumber": 313,
+    "title": "Vanilla versions",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 315,
+    "sourceNumber": 314,
+    "title": "Forge versions",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 316,
+    "sourceNumber": 315,
+    "title": "Fabric versions",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 317,
+    "sourceNumber": 316,
+    "title": "NeoForge versions",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 318,
+    "sourceNumber": 317,
+    "title": "Quilt versions",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 319,
+    "sourceNumber": 318,
+    "title": "LiteLoader legacy support",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 320,
+    "sourceNumber": 319,
+    "title": "Custom version profiles",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 321,
+    "sourceNumber": 320,
+    "title": "Version cloning",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 322,
+    "sourceNumber": 321,
+    "title": "Version duplication",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 323,
+    "sourceNumber": 322,
+    "title": "Version renaming",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 324,
+    "sourceNumber": 323,
+    "title": "Version deletion",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 325,
+    "sourceNumber": 324,
+    "title": "Version backup",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 326,
+    "sourceNumber": 325,
+    "title": "Version restore",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 327,
+    "sourceNumber": 326,
+    "title": "Version repair",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 328,
+    "sourceNumber": 327,
+    "title": "Version verification",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 329,
+    "sourceNumber": 328,
+    "title": "Version metadata viewer",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 330,
+    "sourceNumber": 329,
+    "title": "Version JSON viewer",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 331,
+    "sourceNumber": 330,
+    "title": "Version libraries viewer",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 332,
+    "sourceNumber": 331,
+    "title": "Version assets viewer",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 333,
+    "sourceNumber": 332,
+    "title": "Version natives viewer",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 334,
+    "sourceNumber": 333,
+    "title": "Version Java requirement",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 335,
+    "sourceNumber": 334,
+    "title": "Version game directory",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 336,
+    "sourceNumber": 335,
+    "title": "Version memory settings",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 337,
+    "sourceNumber": 336,
+    "title": "Version JVM arguments",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 338,
+    "sourceNumber": 337,
+    "title": "Version game arguments",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 339,
+    "sourceNumber": 338,
+    "title": "Version resolution",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 340,
+    "sourceNumber": 339,
+    "title": "Version server settings",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 341,
+    "sourceNumber": 340,
+    "title": "Version mod settings",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 342,
+    "sourceNumber": 341,
+    "title": "Version resource-pack settings",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 343,
+    "sourceNumber": 342,
+    "title": "Version shader settings",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 344,
+    "sourceNumber": 343,
+    "title": "Version screenshot folder",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 345,
+    "sourceNumber": 344,
+    "title": "Version save folder",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 346,
+    "sourceNumber": 345,
+    "title": "Version logs folder",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 347,
+    "sourceNumber": 346,
+    "title": "Version config folder",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 348,
+    "sourceNumber": 347,
+    "title": "Version mods folder",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 349,
+    "sourceNumber": 348,
+    "title": "Version resource-pack folder",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 350,
+    "sourceNumber": 349,
+    "title": "Version shaderpack folder",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 351,
+    "sourceNumber": 350,
+    "title": "Version launch test",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 352,
+    "sourceNumber": 351,
+    "title": "Version compatibility check",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 353,
+    "sourceNumber": 352,
+    "title": "Version Java compatibility",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 354,
+    "sourceNumber": 353,
+    "title": "Version mod compatibility",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 355,
+    "sourceNumber": 354,
+    "title": "Version modpack compatibility",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 356,
+    "sourceNumber": 355,
+    "title": "Version world compatibility",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 357,
+    "sourceNumber": 356,
+    "title": "Version server compatibility",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 358,
+    "sourceNumber": 357,
+    "title": "Version migration assistant",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 359,
+    "sourceNumber": 358,
+    "title": "Version upgrade assistant",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 360,
+    "sourceNumber": 359,
+    "title": "Version downgrade assistant",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 361,
+    "sourceNumber": 360,
+    "title": "Version import",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 362,
+    "sourceNumber": 361,
+    "title": "Version export",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 363,
+    "sourceNumber": 362,
+    "title": "Version package export",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 364,
+    "sourceNumber": 363,
+    "title": "Version package import",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 365,
+    "sourceNumber": 364,
+    "title": "Version installation queue",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 366,
+    "sourceNumber": 365,
+    "title": "Version download queue",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 367,
+    "sourceNumber": 366,
+    "title": "Version download pause",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 368,
+    "sourceNumber": 367,
+    "title": "Version download resume",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 369,
+    "sourceNumber": 368,
+    "title": "Version download cancellation",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 370,
+    "sourceNumber": 369,
+    "title": "Version download retry",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 371,
+    "sourceNumber": 370,
+    "title": "Version checksum verification",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 372,
+    "sourceNumber": 371,
+    "title": "Version file verification",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 373,
+    "sourceNumber": 372,
+    "title": "Version missing-file repair",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 374,
+    "sourceNumber": 373,
+    "title": "Version library repair",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 375,
+    "sourceNumber": 374,
+    "title": "Version asset repair",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 376,
+    "sourceNumber": 375,
+    "title": "Version native repair",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 377,
+    "sourceNumber": 376,
+    "title": "Version cleanup",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 378,
+    "sourceNumber": 377,
+    "title": "Unused version detection",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 379,
+    "sourceNumber": 378,
+    "title": "Duplicate version detection",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 380,
+    "sourceNumber": 379,
+    "title": "Broken version detection",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 381,
+    "sourceNumber": 380,
+    "title": "Orphaned version detection",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 382,
+    "sourceNumber": 381,
+    "title": "Version storage usage",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 383,
+    "sourceNumber": 382,
+    "title": "Version size display",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 384,
+    "sourceNumber": 383,
+    "title": "Version install date",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 385,
+    "sourceNumber": 384,
+    "title": "Version last-used date",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 386,
+    "sourceNumber": 385,
+    "title": "Version playtime",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 387,
+    "sourceNumber": 386,
+    "title": "Version launch count",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 388,
+    "sourceNumber": 387,
+    "title": "Version favorite marker",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 389,
+    "sourceNumber": 388,
+    "title": "Version notes",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 390,
+    "sourceNumber": 389,
+    "title": "Version custom icon",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 391,
+    "sourceNumber": 390,
+    "title": "Version color accent",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 392,
+    "sourceNumber": 391,
+    "title": "Version tags",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 393,
+    "sourceNumber": 392,
+    "title": "Version descriptions",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 394,
+    "sourceNumber": 393,
+    "title": "Version screenshots",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 395,
+    "sourceNumber": 394,
+    "title": "Version world associations",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 396,
+    "sourceNumber": 395,
+    "title": "Version server associations",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 397,
+    "sourceNumber": 396,
+    "title": "Version modpack associations",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 398,
+    "sourceNumber": 397,
+    "title": "Version profile associations",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 399,
+    "sourceNumber": 398,
+    "title": "Version quick-launch",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 400,
+    "sourceNumber": 399,
+    "title": "Version context menu",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 401,
+    "sourceNumber": 400,
+    "title": "Version management center",
+    "category": "MINECRAFT VERSIONS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 402,
+    "sourceNumber": 401,
+    "title": "Mod browser",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 403,
+    "sourceNumber": 402,
+    "title": "Installed mods",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 404,
+    "sourceNumber": 403,
+    "title": "Mod search",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 405,
+    "sourceNumber": 404,
+    "title": "Mod filtering",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 406,
+    "sourceNumber": 405,
+    "title": "Mod sorting",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 407,
+    "sourceNumber": 406,
+    "title": "Mod favorites",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 408,
+    "sourceNumber": 407,
+    "title": "Mod categories",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 409,
+    "sourceNumber": 408,
+    "title": "Mod version selection",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 410,
+    "sourceNumber": 409,
+    "title": "Mod loader detection",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 411,
+    "sourceNumber": 410,
+    "title": "Forge detection",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 412,
+    "sourceNumber": 411,
+    "title": "Fabric detection",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 413,
+    "sourceNumber": 412,
+    "title": "NeoForge detection",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 414,
+    "sourceNumber": 413,
+    "title": "Quilt detection",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 415,
+    "sourceNumber": 414,
+    "title": "Mod dependency detection",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 416,
+    "sourceNumber": 415,
+    "title": "Mod conflict detection",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 417,
+    "sourceNumber": 416,
+    "title": "Mod compatibility detection",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 418,
+    "sourceNumber": 417,
+    "title": "Mod duplicate detection",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 419,
+    "sourceNumber": 418,
+    "title": "Broken mod detection",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 420,
+    "sourceNumber": 419,
+    "title": "Missing dependency detection",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 421,
+    "sourceNumber": 420,
+    "title": "Mod update detection",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 422,
+    "sourceNumber": 421,
+    "title": "Mod update checker",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 423,
+    "sourceNumber": 422,
+    "title": "Mod download manager",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 424,
+    "sourceNumber": 423,
+    "title": "Mod download progress",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 425,
+    "sourceNumber": 424,
+    "title": "Mod download cancellation",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 426,
+    "sourceNumber": 425,
+    "title": "Mod download retry",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 427,
+    "sourceNumber": 426,
+    "title": "Mod installation",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 428,
+    "sourceNumber": 427,
+    "title": "Mod uninstallation",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 429,
+    "sourceNumber": 428,
+    "title": "Mod enable/disable",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 430,
+    "sourceNumber": 429,
+    "title": "Mod temporary disable",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 431,
+    "sourceNumber": 430,
+    "title": "Mod profile assignment",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 432,
+    "sourceNumber": 431,
+    "title": "Modpack assignment",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 433,
+    "sourceNumber": 432,
+    "title": "Mod version history",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 434,
+    "sourceNumber": 433,
+    "title": "Mod metadata",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 435,
+    "sourceNumber": 434,
+    "title": "Mod description",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 436,
+    "sourceNumber": 435,
+    "title": "Mod author",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 437,
+    "sourceNumber": 436,
+    "title": "Mod license",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 438,
+    "sourceNumber": 437,
+    "title": "Mod dependencies",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 439,
+    "sourceNumber": 438,
+    "title": "Mod optional dependencies",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 440,
+    "sourceNumber": 439,
+    "title": "Mod file size",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 441,
+    "sourceNumber": 440,
+    "title": "Mod installation date",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 442,
+    "sourceNumber": 441,
+    "title": "Mod last-used date",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 443,
+    "sourceNumber": 442,
+    "title": "Mod launch count",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 444,
+    "sourceNumber": 443,
+    "title": "Mod backup",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 445,
+    "sourceNumber": 444,
+    "title": "Mod restore",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 446,
+    "sourceNumber": 445,
+    "title": "Mod export",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 447,
+    "sourceNumber": 446,
+    "title": "Mod import",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 448,
+    "sourceNumber": 447,
+    "title": "Modpack conversion",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 449,
+    "sourceNumber": 448,
+    "title": "Mod list export",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 450,
+    "sourceNumber": 449,
+    "title": "Mod list import",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 451,
+    "sourceNumber": 450,
+    "title": "Mod list sharing file",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 452,
+    "sourceNumber": 451,
+    "title": "Mod configuration folder",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 453,
+    "sourceNumber": 452,
+    "title": "Mod config viewer",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 454,
+    "sourceNumber": 453,
+    "title": "Mod config backup",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 455,
+    "sourceNumber": 454,
+    "title": "Mod config restore",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 456,
+    "sourceNumber": 455,
+    "title": "Mod config repair",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 457,
+    "sourceNumber": 456,
+    "title": "Mod log detection",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 458,
+    "sourceNumber": 457,
+    "title": "Mod crash detection",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 459,
+    "sourceNumber": 458,
+    "title": "Mod crash explanation",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 460,
+    "sourceNumber": 459,
+    "title": "Mod crash report",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 461,
+    "sourceNumber": 460,
+    "title": "Mod troubleshooting",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 462,
+    "sourceNumber": 461,
+    "title": "Mod compatibility matrix",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 463,
+    "sourceNumber": 462,
+    "title": "Mod loader compatibility matrix",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 464,
+    "sourceNumber": 463,
+    "title": "Mod version recommendations",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 465,
+    "sourceNumber": 464,
+    "title": "Recommended mods",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 466,
+    "sourceNumber": 465,
+    "title": "Recently added mods",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 467,
+    "sourceNumber": 466,
+    "title": "Recently updated mods",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 468,
+    "sourceNumber": 467,
+    "title": "Recently removed mods",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 469,
+    "sourceNumber": 468,
+    "title": "Most-used mods",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 470,
+    "sourceNumber": 469,
+    "title": "Favorite mods",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 471,
+    "sourceNumber": 470,
+    "title": "Mod collections",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 472,
+    "sourceNumber": 471,
+    "title": "Mod tags",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 473,
+    "sourceNumber": 472,
+    "title": "Mod notes",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 474,
+    "sourceNumber": 473,
+    "title": "Mod custom icons",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 475,
+    "sourceNumber": 474,
+    "title": "Mod color labels",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 476,
+    "sourceNumber": 475,
+    "title": "Mod search history",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 477,
+    "sourceNumber": 476,
+    "title": "Mod download history",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 478,
+    "sourceNumber": 477,
+    "title": "Mod installation history",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 479,
+    "sourceNumber": 478,
+    "title": "Mod removal history",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 480,
+    "sourceNumber": 479,
+    "title": "Mod repair history",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 481,
+    "sourceNumber": 480,
+    "title": "Mod update history",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 482,
+    "sourceNumber": 481,
+    "title": "Mod dependency tree",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 483,
+    "sourceNumber": 482,
+    "title": "Mod conflict graph",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 484,
+    "sourceNumber": 483,
+    "title": "Mod load-order viewer",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 485,
+    "sourceNumber": 484,
+    "title": "Mod startup timing",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 486,
+    "sourceNumber": 485,
+    "title": "Mod performance impact",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 487,
+    "sourceNumber": 486,
+    "title": "Mod memory impact",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 488,
+    "sourceNumber": 487,
+    "title": "Mod CPU impact",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 489,
+    "sourceNumber": 488,
+    "title": "Mod warning detector",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 490,
+    "sourceNumber": 489,
+    "title": "Mod outdated warning",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 491,
+    "sourceNumber": 490,
+    "title": "Mod incompatible warning",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 492,
+    "sourceNumber": 491,
+    "title": "Mod security warning",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 493,
+    "sourceNumber": 492,
+    "title": "Mod file integrity check",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 494,
+    "sourceNumber": 493,
+    "title": "Mod checksum",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 495,
+    "sourceNumber": 494,
+    "title": "Mod folder cleanup",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 496,
+    "sourceNumber": 495,
+    "title": "Orphan config detection",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 497,
+    "sourceNumber": 496,
+    "title": "Orphan library detection",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 498,
+    "sourceNumber": 497,
+    "title": "Mod diagnostics",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 499,
+    "sourceNumber": 498,
+    "title": "Mod repair center",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  },
+  {
+    "id": 500,
+    "sourceNumber": 499,
+    "title": "Mod management shortcuts",
+    "category": "MOD LOADERS / MODS",
+    "batch": 1,
+    "isHidden": false
+  }
+]

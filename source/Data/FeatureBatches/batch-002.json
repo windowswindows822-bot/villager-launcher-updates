@@ -1,0 +1,4002 @@
+[
+  {
+    "id": 501,
+    "sourceNumber": 500,
+    "title": "Mod center",
+    "category": "MOD LOADERS / MODS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 502,
+    "sourceNumber": 501,
+    "title": "Modpack browser",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 503,
+    "sourceNumber": 502,
+    "title": "Installed modpacks",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 504,
+    "sourceNumber": 503,
+    "title": "Modpack search",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 505,
+    "sourceNumber": 504,
+    "title": "Modpack filtering",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 506,
+    "sourceNumber": 505,
+    "title": "Modpack sorting",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 507,
+    "sourceNumber": 506,
+    "title": "Modpack favorites",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 508,
+    "sourceNumber": 507,
+    "title": "Modpack profiles",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 509,
+    "sourceNumber": 508,
+    "title": "Modpack installation",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 510,
+    "sourceNumber": 509,
+    "title": "Modpack removal",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 511,
+    "sourceNumber": 510,
+    "title": "Modpack update",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 512,
+    "sourceNumber": 511,
+    "title": "Modpack repair",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 513,
+    "sourceNumber": 512,
+    "title": "Modpack backup",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 514,
+    "sourceNumber": 513,
+    "title": "Modpack restore",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 515,
+    "sourceNumber": 514,
+    "title": "Modpack import",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 516,
+    "sourceNumber": 515,
+    "title": "Modpack export",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 517,
+    "sourceNumber": 516,
+    "title": "Modpack cloning",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 518,
+    "sourceNumber": 517,
+    "title": "Modpack renaming",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 519,
+    "sourceNumber": 518,
+    "title": "Modpack duplication",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 520,
+    "sourceNumber": 519,
+    "title": "Modpack version history",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 521,
+    "sourceNumber": 520,
+    "title": "Modpack dependency detection",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 522,
+    "sourceNumber": 521,
+    "title": "Modpack compatibility detection",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 523,
+    "sourceNumber": 522,
+    "title": "Modpack conflict detection",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 524,
+    "sourceNumber": 523,
+    "title": "Modpack Java detection",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 525,
+    "sourceNumber": 524,
+    "title": "Modpack loader detection",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 526,
+    "sourceNumber": 525,
+    "title": "Modpack memory recommendation",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 527,
+    "sourceNumber": 526,
+    "title": "Modpack performance estimate",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 528,
+    "sourceNumber": 527,
+    "title": "Modpack storage estimate",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 529,
+    "sourceNumber": 528,
+    "title": "Modpack installation progress",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 530,
+    "sourceNumber": 529,
+    "title": "Modpack download queue",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 531,
+    "sourceNumber": 530,
+    "title": "Modpack download retry",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 532,
+    "sourceNumber": 531,
+    "title": "Modpack download pause",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 533,
+    "sourceNumber": 532,
+    "title": "Modpack download resume",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 534,
+    "sourceNumber": 533,
+    "title": "Modpack logs",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 535,
+    "sourceNumber": 534,
+    "title": "Modpack crash analysis",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 536,
+    "sourceNumber": 535,
+    "title": "Modpack troubleshooting",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 537,
+    "sourceNumber": 536,
+    "title": "Resource pack browser",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 538,
+    "sourceNumber": 537,
+    "title": "Installed resource packs",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 539,
+    "sourceNumber": 538,
+    "title": "Resource pack search",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 540,
+    "sourceNumber": 539,
+    "title": "Resource pack favorites",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 541,
+    "sourceNumber": 540,
+    "title": "Resource pack installation",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 542,
+    "sourceNumber": 541,
+    "title": "Resource pack removal",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 543,
+    "sourceNumber": 542,
+    "title": "Resource pack backup",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 544,
+    "sourceNumber": 543,
+    "title": "Resource pack restore",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 545,
+    "sourceNumber": 544,
+    "title": "Resource pack preview",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 546,
+    "sourceNumber": 545,
+    "title": "Resource pack resolution display",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 547,
+    "sourceNumber": 546,
+    "title": "Resource pack compatibility",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 548,
+    "sourceNumber": 547,
+    "title": "Resource pack version matching",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 549,
+    "sourceNumber": 548,
+    "title": "Shader browser",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 550,
+    "sourceNumber": 549,
+    "title": "Installed shaders",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 551,
+    "sourceNumber": 550,
+    "title": "Shader search",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 552,
+    "sourceNumber": 551,
+    "title": "Shader favorites",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 553,
+    "sourceNumber": 552,
+    "title": "Shader installation",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 554,
+    "sourceNumber": 553,
+    "title": "Shader removal",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 555,
+    "sourceNumber": 554,
+    "title": "Shader backup",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 556,
+    "sourceNumber": 555,
+    "title": "Shader restore",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 557,
+    "sourceNumber": 556,
+    "title": "Shader compatibility",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 558,
+    "sourceNumber": 557,
+    "title": "Shader GPU requirements",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 559,
+    "sourceNumber": 558,
+    "title": "Shader performance estimate",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 560,
+    "sourceNumber": 559,
+    "title": "Shader profile assignment",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 561,
+    "sourceNumber": 560,
+    "title": "Shader enable/disable",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 562,
+    "sourceNumber": 561,
+    "title": "Shader preview",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 563,
+    "sourceNumber": 562,
+    "title": "Shader configuration backup",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 564,
+    "sourceNumber": 563,
+    "title": "Shader configuration restore",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 565,
+    "sourceNumber": 564,
+    "title": "Shader troubleshooting",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 566,
+    "sourceNumber": 565,
+    "title": "Shader crash detection",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 567,
+    "sourceNumber": 566,
+    "title": "Shader incompatibility detection",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 568,
+    "sourceNumber": 567,
+    "title": "Resource pack compatibility warning",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 569,
+    "sourceNumber": 568,
+    "title": "Shader compatibility warning",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 570,
+    "sourceNumber": 569,
+    "title": "Modpack compatibility warning",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 571,
+    "sourceNumber": 570,
+    "title": "Modpack update history",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 572,
+    "sourceNumber": 571,
+    "title": "Modpack launch history",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 573,
+    "sourceNumber": 572,
+    "title": "Modpack notes",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 574,
+    "sourceNumber": 573,
+    "title": "Modpack tags",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 575,
+    "sourceNumber": 574,
+    "title": "Modpack custom icons",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 576,
+    "sourceNumber": 575,
+    "title": "Modpack color labels",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 577,
+    "sourceNumber": 576,
+    "title": "Pack storage usage",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 578,
+    "sourceNumber": 577,
+    "title": "Pack cleanup",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 579,
+    "sourceNumber": 578,
+    "title": "Duplicate pack detection",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 580,
+    "sourceNumber": 579,
+    "title": "Broken pack detection",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 581,
+    "sourceNumber": 580,
+    "title": "Orphan pack detection",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 582,
+    "sourceNumber": 581,
+    "title": "Pack file verification",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 583,
+    "sourceNumber": 582,
+    "title": "Pack checksum",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 584,
+    "sourceNumber": 583,
+    "title": "Pack dependency tree",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 585,
+    "sourceNumber": 584,
+    "title": "Pack mod list",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 586,
+    "sourceNumber": 585,
+    "title": "Pack resource list",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 587,
+    "sourceNumber": 586,
+    "title": "Pack shader list",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 588,
+    "sourceNumber": 587,
+    "title": "Pack configuration list",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 589,
+    "sourceNumber": 588,
+    "title": "Pack export report",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 590,
+    "sourceNumber": 589,
+    "title": "Pack installation report",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 591,
+    "sourceNumber": 590,
+    "title": "Pack repair report",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 592,
+    "sourceNumber": 591,
+    "title": "Pack diagnostic report",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 593,
+    "sourceNumber": 592,
+    "title": "Recommended modpacks",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 594,
+    "sourceNumber": 593,
+    "title": "Recently installed packs",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 595,
+    "sourceNumber": 594,
+    "title": "Recently updated packs",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 596,
+    "sourceNumber": 595,
+    "title": "Favorite packs",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 597,
+    "sourceNumber": 596,
+    "title": "Pack search history",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 598,
+    "sourceNumber": 597,
+    "title": "Pack download history",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 599,
+    "sourceNumber": 598,
+    "title": "Pack management shortcuts",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 600,
+    "sourceNumber": 599,
+    "title": "Pack center",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 601,
+    "sourceNumber": 600,
+    "title": "Packs quality-of-life system",
+    "category": "MODPACKS / RESOURCE PACKS / SHADERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 602,
+    "sourceNumber": 601,
+    "title": "World browser",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 603,
+    "sourceNumber": 602,
+    "title": "Installed worlds",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 604,
+    "sourceNumber": 603,
+    "title": "World search",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 605,
+    "sourceNumber": 604,
+    "title": "World filtering",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 606,
+    "sourceNumber": 605,
+    "title": "World sorting",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 607,
+    "sourceNumber": 606,
+    "title": "World favorites",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 608,
+    "sourceNumber": 607,
+    "title": "World thumbnails",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 609,
+    "sourceNumber": 608,
+    "title": "World screenshots",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 610,
+    "sourceNumber": 609,
+    "title": "World playtime",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 611,
+    "sourceNumber": 610,
+    "title": "World last-played date",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 612,
+    "sourceNumber": 611,
+    "title": "World creation date",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 613,
+    "sourceNumber": 612,
+    "title": "World size",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 614,
+    "sourceNumber": 613,
+    "title": "World version",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 615,
+    "sourceNumber": 614,
+    "title": "World seed display",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 616,
+    "sourceNumber": 615,
+    "title": "World game mode",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 617,
+    "sourceNumber": 616,
+    "title": "World difficulty",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 618,
+    "sourceNumber": 617,
+    "title": "World player count",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 619,
+    "sourceNumber": 618,
+    "title": "World folder",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 620,
+    "sourceNumber": 619,
+    "title": "Open world folder",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 621,
+    "sourceNumber": 620,
+    "title": "World backup",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 622,
+    "sourceNumber": 621,
+    "title": "Automatic world backups",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 623,
+    "sourceNumber": 622,
+    "title": "Manual world backup",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 624,
+    "sourceNumber": 623,
+    "title": "Scheduled world backup",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 625,
+    "sourceNumber": 624,
+    "title": "World backup history",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 626,
+    "sourceNumber": 625,
+    "title": "World restore",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 627,
+    "sourceNumber": 626,
+    "title": "World restore preview",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 628,
+    "sourceNumber": 627,
+    "title": "World backup verification",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 629,
+    "sourceNumber": 628,
+    "title": "World backup compression",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 630,
+    "sourceNumber": 629,
+    "title": "World backup cleanup",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 631,
+    "sourceNumber": 630,
+    "title": "World duplicate detection",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 632,
+    "sourceNumber": 631,
+    "title": "World corruption detection",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 633,
+    "sourceNumber": 632,
+    "title": "World repair assistance",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 634,
+    "sourceNumber": 633,
+    "title": "World migration assistant",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 635,
+    "sourceNumber": 634,
+    "title": "World version warning",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 636,
+    "sourceNumber": 635,
+    "title": "World mod warning",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 637,
+    "sourceNumber": 636,
+    "title": "World loader warning",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 638,
+    "sourceNumber": 637,
+    "title": "World Java warning",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 639,
+    "sourceNumber": 638,
+    "title": "World export",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 640,
+    "sourceNumber": 639,
+    "title": "World import",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 641,
+    "sourceNumber": 640,
+    "title": "World archive",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 642,
+    "sourceNumber": 641,
+    "title": "World rename",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 643,
+    "sourceNumber": 642,
+    "title": "World delete",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 644,
+    "sourceNumber": 643,
+    "title": "World favorite",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 645,
+    "sourceNumber": 644,
+    "title": "World tags",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 646,
+    "sourceNumber": 645,
+    "title": "World notes",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 647,
+    "sourceNumber": 646,
+    "title": "World custom icon",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 648,
+    "sourceNumber": 647,
+    "title": "World color label",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 649,
+    "sourceNumber": 648,
+    "title": "World launch shortcut",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 650,
+    "sourceNumber": 649,
+    "title": "World launch profile",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 651,
+    "sourceNumber": 650,
+    "title": "World associated version",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 652,
+    "sourceNumber": 651,
+    "title": "World associated modpack",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 653,
+    "sourceNumber": 652,
+    "title": "World associated server",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 654,
+    "sourceNumber": 653,
+    "title": "World statistics",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 655,
+    "sourceNumber": 654,
+    "title": "World session history",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 656,
+    "sourceNumber": 655,
+    "title": "World launch history",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 657,
+    "sourceNumber": 656,
+    "title": "World crash history",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 658,
+    "sourceNumber": 657,
+    "title": "World backup reminders",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 659,
+    "sourceNumber": 658,
+    "title": "World storage warnings",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 660,
+    "sourceNumber": 659,
+    "title": "World storage statistics",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 661,
+    "sourceNumber": 660,
+    "title": "World backup size",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 662,
+    "sourceNumber": 661,
+    "title": "World backup timestamp",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 663,
+    "sourceNumber": 662,
+    "title": "World backup notes",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 664,
+    "sourceNumber": 663,
+    "title": "World backup labels",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 665,
+    "sourceNumber": 664,
+    "title": "World backup search",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 666,
+    "sourceNumber": 665,
+    "title": "World backup sorting",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 667,
+    "sourceNumber": 666,
+    "title": "World backup filtering",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 668,
+    "sourceNumber": 667,
+    "title": "World backup verification",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 669,
+    "sourceNumber": 668,
+    "title": "World restore history",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 670,
+    "sourceNumber": 669,
+    "title": "World restore rollback",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 671,
+    "sourceNumber": 670,
+    "title": "World recovery assistant",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 672,
+    "sourceNumber": 671,
+    "title": "World diagnostic report",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 673,
+    "sourceNumber": 672,
+    "title": "World log association",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 674,
+    "sourceNumber": 673,
+    "title": "World crash report association",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 675,
+    "sourceNumber": 674,
+    "title": "World screenshot association",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 676,
+    "sourceNumber": 675,
+    "title": "World resource-pack association",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 677,
+    "sourceNumber": 676,
+    "title": "World shader association",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 678,
+    "sourceNumber": 677,
+    "title": "World mod association",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 679,
+    "sourceNumber": 678,
+    "title": "World dependency association",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 680,
+    "sourceNumber": 679,
+    "title": "World quick backup",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 681,
+    "sourceNumber": 680,
+    "title": "World quick restore",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 682,
+    "sourceNumber": 681,
+    "title": "World quick launch",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 683,
+    "sourceNumber": 682,
+    "title": "World context menu",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 684,
+    "sourceNumber": 683,
+    "title": "World drag-and-drop import",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 685,
+    "sourceNumber": 684,
+    "title": "World file validation",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 686,
+    "sourceNumber": 685,
+    "title": "World folder validation",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 687,
+    "sourceNumber": 686,
+    "title": "World metadata validation",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 688,
+    "sourceNumber": 687,
+    "title": "World save-state viewer",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 689,
+    "sourceNumber": 688,
+    "title": "World backup encryption option",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 690,
+    "sourceNumber": 689,
+    "title": "World backup naming templates",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 691,
+    "sourceNumber": 690,
+    "title": "World backup retention rules",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 692,
+    "sourceNumber": 691,
+    "title": "World backup storage limit",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 693,
+    "sourceNumber": 692,
+    "title": "World backup warning",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 694,
+    "sourceNumber": 693,
+    "title": "World backup success notification",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 695,
+    "sourceNumber": 694,
+    "title": "World backup failure notification",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 696,
+    "sourceNumber": 695,
+    "title": "World restore success notification",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 697,
+    "sourceNumber": 696,
+    "title": "World restore failure notification",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 698,
+    "sourceNumber": 697,
+    "title": "World manager",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 699,
+    "sourceNumber": 698,
+    "title": "World recovery center",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 700,
+    "sourceNumber": 699,
+    "title": "World backup center",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 701,
+    "sourceNumber": 700,
+    "title": "World center",
+    "category": "WORLDS / SAVES",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 702,
+    "sourceNumber": 701,
+    "title": "Server browser",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 703,
+    "sourceNumber": 702,
+    "title": "Saved servers",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 704,
+    "sourceNumber": 703,
+    "title": "Server search",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 705,
+    "sourceNumber": 704,
+    "title": "Server favorites",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 706,
+    "sourceNumber": 705,
+    "title": "Server sorting",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 707,
+    "sourceNumber": 706,
+    "title": "Server categories",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 708,
+    "sourceNumber": 707,
+    "title": "Server address storage",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 709,
+    "sourceNumber": 708,
+    "title": "Server icon storage",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 710,
+    "sourceNumber": 709,
+    "title": "Server notes",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 711,
+    "sourceNumber": 710,
+    "title": "Server tags",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 712,
+    "sourceNumber": 711,
+    "title": "Server version",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 713,
+    "sourceNumber": 712,
+    "title": "Server compatibility",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 714,
+    "sourceNumber": 713,
+    "title": "Server ping",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 715,
+    "sourceNumber": 714,
+    "title": "Server status",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 716,
+    "sourceNumber": 715,
+    "title": "Server player count",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 717,
+    "sourceNumber": 716,
+    "title": "Server latency",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 718,
+    "sourceNumber": 717,
+    "title": "Server online/offline state",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 719,
+    "sourceNumber": 718,
+    "title": "Server history",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 720,
+    "sourceNumber": 719,
+    "title": "Recently joined servers",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 721,
+    "sourceNumber": 720,
+    "title": "Favorite servers",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 722,
+    "sourceNumber": 721,
+    "title": "Server quick connect",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 723,
+    "sourceNumber": 722,
+    "title": "Server launch shortcut",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 724,
+    "sourceNumber": 723,
+    "title": "Server address validation",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 725,
+    "sourceNumber": 724,
+    "title": "Server port validation",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 726,
+    "sourceNumber": 725,
+    "title": "Server duplicate detection",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 727,
+    "sourceNumber": 726,
+    "title": "Server connection troubleshooting",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 728,
+    "sourceNumber": 727,
+    "title": "Server connection log",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 729,
+    "sourceNumber": 728,
+    "title": "Server ping diagnostics",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 730,
+    "sourceNumber": 729,
+    "title": "Server DNS diagnostics",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 731,
+    "sourceNumber": 730,
+    "title": "Server Java compatibility",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 732,
+    "sourceNumber": 731,
+    "title": "Server Minecraft compatibility",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 733,
+    "sourceNumber": 732,
+    "title": "Server mod compatibility",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 734,
+    "sourceNumber": 733,
+    "title": "Server modpack compatibility",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 735,
+    "sourceNumber": 734,
+    "title": "Server resource-pack detection",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 736,
+    "sourceNumber": 735,
+    "title": "Server icon preview",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 737,
+    "sourceNumber": 736,
+    "title": "Server icon import",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 738,
+    "sourceNumber": 737,
+    "title": "Server icon export",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 739,
+    "sourceNumber": 738,
+    "title": "Server configuration backup",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 740,
+    "sourceNumber": 739,
+    "title": "Server configuration restore",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 741,
+    "sourceNumber": 740,
+    "title": "Server list export",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 742,
+    "sourceNumber": 741,
+    "title": "Server list import",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 743,
+    "sourceNumber": 742,
+    "title": "Server list backup",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 744,
+    "sourceNumber": 743,
+    "title": "Server list restore",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 745,
+    "sourceNumber": 744,
+    "title": "Server list cleanup",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 746,
+    "sourceNumber": 745,
+    "title": "Broken server entry detection",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 747,
+    "sourceNumber": 746,
+    "title": "Invalid address detection",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 748,
+    "sourceNumber": 747,
+    "title": "Invalid port detection",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 749,
+    "sourceNumber": 748,
+    "title": "Duplicate server detection",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 750,
+    "sourceNumber": 749,
+    "title": "Server metadata",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 751,
+    "sourceNumber": 750,
+    "title": "Server description",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 752,
+    "sourceNumber": 751,
+    "title": "Server website field",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 753,
+    "sourceNumber": 752,
+    "title": "Server Discord field",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 754,
+    "sourceNumber": 753,
+    "title": "Server version notes",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 755,
+    "sourceNumber": 754,
+    "title": "Server launch profile",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 756,
+    "sourceNumber": 755,
+    "title": "Server associated version",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 757,
+    "sourceNumber": 756,
+    "title": "Server associated modpack",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 758,
+    "sourceNumber": 757,
+    "title": "Server associated resource pack",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 759,
+    "sourceNumber": 758,
+    "title": "Server associated shader",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 760,
+    "sourceNumber": 759,
+    "title": "Server associated Java",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 761,
+    "sourceNumber": 760,
+    "title": "Server connection history",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 762,
+    "sourceNumber": 761,
+    "title": "Server last-connected date",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 763,
+    "sourceNumber": 762,
+    "title": "Server first-added date",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 764,
+    "sourceNumber": 763,
+    "title": "Server connection count",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 765,
+    "sourceNumber": 764,
+    "title": "Server playtime estimate",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 766,
+    "sourceNumber": 765,
+    "title": "Server favorite marker",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 767,
+    "sourceNumber": 766,
+    "title": "Server custom color",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 768,
+    "sourceNumber": 767,
+    "title": "Server custom icon",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 769,
+    "sourceNumber": 768,
+    "title": "Server grouping",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 770,
+    "sourceNumber": 769,
+    "title": "Server folder organization",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 771,
+    "sourceNumber": 770,
+    "title": "Server drag-and-drop organization",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 772,
+    "sourceNumber": 771,
+    "title": "Server context menu",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 773,
+    "sourceNumber": 772,
+    "title": "Server copy address",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 774,
+    "sourceNumber": 773,
+    "title": "Server open website",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 775,
+    "sourceNumber": 774,
+    "title": "Server open folder",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 776,
+    "sourceNumber": 775,
+    "title": "Server diagnostics",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 777,
+    "sourceNumber": 776,
+    "title": "Server connection report",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 778,
+    "sourceNumber": 777,
+    "title": "Server ping report",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 779,
+    "sourceNumber": 778,
+    "title": "Server compatibility report",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 780,
+    "sourceNumber": 779,
+    "title": "Server troubleshooting wizard",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 781,
+    "sourceNumber": 780,
+    "title": "Server repair wizard",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 782,
+    "sourceNumber": 781,
+    "title": "Server data export",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 783,
+    "sourceNumber": 782,
+    "title": "Server data import",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 784,
+    "sourceNumber": 783,
+    "title": "Server backup",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 785,
+    "sourceNumber": 784,
+    "title": "Server restore",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 786,
+    "sourceNumber": 785,
+    "title": "Server notification",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 787,
+    "sourceNumber": 786,
+    "title": "Server status notification",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 788,
+    "sourceNumber": 787,
+    "title": "Server offline warning",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 789,
+    "sourceNumber": 788,
+    "title": "Server version warning",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 790,
+    "sourceNumber": 789,
+    "title": "Server mod warning",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 791,
+    "sourceNumber": 790,
+    "title": "Server connection warning",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 792,
+    "sourceNumber": 791,
+    "title": "Server history search",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 793,
+    "sourceNumber": 792,
+    "title": "Server history sorting",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 794,
+    "sourceNumber": 793,
+    "title": "Server history filtering",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 795,
+    "sourceNumber": 794,
+    "title": "Server favorites management",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 796,
+    "sourceNumber": 795,
+    "title": "Server quick-launch settings",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 797,
+    "sourceNumber": 796,
+    "title": "Server center shortcuts",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 798,
+    "sourceNumber": 797,
+    "title": "Server manager",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 799,
+    "sourceNumber": 798,
+    "title": "Server diagnostics center",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 800,
+    "sourceNumber": 799,
+    "title": "Server organization tools",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 801,
+    "sourceNumber": 800,
+    "title": "Server center",
+    "category": "SERVERS",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 802,
+    "sourceNumber": 801,
+    "title": "General settings",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 803,
+    "sourceNumber": 802,
+    "title": "Minecraft settings",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 804,
+    "sourceNumber": 803,
+    "title": "Java settings",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 805,
+    "sourceNumber": 804,
+    "title": "Memory settings",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 806,
+    "sourceNumber": 805,
+    "title": "JVM arguments",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 807,
+    "sourceNumber": 806,
+    "title": "Game arguments",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 808,
+    "sourceNumber": 807,
+    "title": "Resolution settings",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 809,
+    "sourceNumber": 808,
+    "title": "Fullscreen settings",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 810,
+    "sourceNumber": 809,
+    "title": "Launcher startup settings",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 811,
+    "sourceNumber": 810,
+    "title": "Launch behavior",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 812,
+    "sourceNumber": 811,
+    "title": "Download behavior",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 813,
+    "sourceNumber": 812,
+    "title": "Backup behavior",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 814,
+    "sourceNumber": 813,
+    "title": "Logging behavior",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 815,
+    "sourceNumber": 814,
+    "title": "Diagnostics behavior",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 816,
+    "sourceNumber": 815,
+    "title": "Notification behavior",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 817,
+    "sourceNumber": 816,
+    "title": "Theme settings",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 818,
+    "sourceNumber": 817,
+    "title": "Accent color",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 819,
+    "sourceNumber": 818,
+    "title": "Light theme",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 820,
+    "sourceNumber": 819,
+    "title": "Dark theme",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 821,
+    "sourceNumber": 820,
+    "title": "System theme",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 822,
+    "sourceNumber": 821,
+    "title": "Windows-style theme",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 823,
+    "sourceNumber": 822,
+    "title": "Minecraft theme",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 824,
+    "sourceNumber": 823,
+    "title": "Villager theme",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 825,
+    "sourceNumber": 824,
+    "title": "Classic theme",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 826,
+    "sourceNumber": 825,
+    "title": "Retro theme",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 827,
+    "sourceNumber": 826,
+    "title": "Aero-inspired theme",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 828,
+    "sourceNumber": 827,
+    "title": "Custom theme",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 829,
+    "sourceNumber": 828,
+    "title": "Theme import",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 830,
+    "sourceNumber": 829,
+    "title": "Theme export",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 831,
+    "sourceNumber": 830,
+    "title": "Theme preview",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 832,
+    "sourceNumber": 831,
+    "title": "Theme reset",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 833,
+    "sourceNumber": 832,
+    "title": "Sidebar settings",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 834,
+    "sourceNumber": 833,
+    "title": "Sidebar expanded mode",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 835,
+    "sourceNumber": 834,
+    "title": "Sidebar compact mode",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 836,
+    "sourceNumber": 835,
+    "title": "Sidebar icon settings",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 837,
+    "sourceNumber": 836,
+    "title": "Sidebar animation",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 838,
+    "sourceNumber": 837,
+    "title": "Page transition settings",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 839,
+    "sourceNumber": 838,
+    "title": "Animation settings",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 840,
+    "sourceNumber": 839,
+    "title": "Reduced motion",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 841,
+    "sourceNumber": 840,
+    "title": "Transparency settings",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 842,
+    "sourceNumber": 841,
+    "title": "Background settings",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 843,
+    "sourceNumber": 842,
+    "title": "Card style",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 844,
+    "sourceNumber": 843,
+    "title": "Button style",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 845,
+    "sourceNumber": 844,
+    "title": "Corner radius",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 846,
+    "sourceNumber": 845,
+    "title": "Font settings",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 847,
+    "sourceNumber": 846,
+    "title": "UI scale",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 848,
+    "sourceNumber": 847,
+    "title": "High-DPI settings",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 849,
+    "sourceNumber": 848,
+    "title": "Language settings",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 850,
+    "sourceNumber": 849,
+    "title": "English",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 851,
+    "sourceNumber": 850,
+    "title": "Arabic",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 852,
+    "sourceNumber": 851,
+    "title": "RTL mode",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 853,
+    "sourceNumber": 852,
+    "title": "Automatic RTL",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 854,
+    "sourceNumber": 853,
+    "title": "Arabic font handling",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 855,
+    "sourceNumber": 854,
+    "title": "Arabic alignment",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 856,
+    "sourceNumber": 855,
+    "title": "Arabic navigation mirroring",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 857,
+    "sourceNumber": 856,
+    "title": "Arabic dialogs",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 858,
+    "sourceNumber": 857,
+    "title": "Arabic News",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 859,
+    "sourceNumber": 858,
+    "title": "Arabic diagnostics",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 860,
+    "sourceNumber": 859,
+    "title": "Arabic Error Fixer",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 861,
+    "sourceNumber": 860,
+    "title": "Arabic updater",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 862,
+    "sourceNumber": 861,
+    "title": "Mixed-language handling",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 863,
+    "sourceNumber": 862,
+    "title": "File path direction handling",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 864,
+    "sourceNumber": 863,
+    "title": "URL direction handling",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 865,
+    "sourceNumber": 864,
+    "title": "Version number direction handling",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 866,
+    "sourceNumber": 865,
+    "title": "Minecraft name direction handling",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 867,
+    "sourceNumber": 866,
+    "title": "Profile settings",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 868,
+    "sourceNumber": 867,
+    "title": "Account settings",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 869,
+    "sourceNumber": 868,
+    "title": "Profile import",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 870,
+    "sourceNumber": 869,
+    "title": "Profile export",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 871,
+    "sourceNumber": 870,
+    "title": "Profile backup",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 872,
+    "sourceNumber": 871,
+    "title": "Profile restore",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 873,
+    "sourceNumber": 872,
+    "title": "Default profile",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 874,
+    "sourceNumber": 873,
+    "title": "Default Minecraft version",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 875,
+    "sourceNumber": 874,
+    "title": "Default Java",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 876,
+    "sourceNumber": 875,
+    "title": "Default memory",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 877,
+    "sourceNumber": 876,
+    "title": "Default resolution",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 878,
+    "sourceNumber": 877,
+    "title": "Default mod loader",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 879,
+    "sourceNumber": 878,
+    "title": "Default world",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 880,
+    "sourceNumber": 879,
+    "title": "Default server",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 881,
+    "sourceNumber": 880,
+    "title": "Default modpack",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 882,
+    "sourceNumber": 881,
+    "title": "Default resource pack",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 883,
+    "sourceNumber": 882,
+    "title": "Default shader",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 884,
+    "sourceNumber": 883,
+    "title": "Default theme",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 885,
+    "sourceNumber": 884,
+    "title": "Default language",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 886,
+    "sourceNumber": 885,
+    "title": "Default backup location",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 887,
+    "sourceNumber": 886,
+    "title": "Default log location",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 888,
+    "sourceNumber": 887,
+    "title": "Settings search",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 889,
+    "sourceNumber": 888,
+    "title": "Settings categories",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 890,
+    "sourceNumber": 889,
+    "title": "Settings reset",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 891,
+    "sourceNumber": 890,
+    "title": "Reset one category",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 892,
+    "sourceNumber": 891,
+    "title": "Reset one setting",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 893,
+    "sourceNumber": 892,
+    "title": "Settings backup",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 894,
+    "sourceNumber": 893,
+    "title": "Settings restore",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 895,
+    "sourceNumber": 894,
+    "title": "Settings validation",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 896,
+    "sourceNumber": 895,
+    "title": "Settings repair",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 897,
+    "sourceNumber": 896,
+    "title": "Settings diagnostics",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 898,
+    "sourceNumber": 897,
+    "title": "Settings history",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 899,
+    "sourceNumber": 898,
+    "title": "Settings import",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 900,
+    "sourceNumber": 899,
+    "title": "Settings export",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 901,
+    "sourceNumber": 900,
+    "title": "Settings center",
+    "category": "SETTINGS / CONFIGURATION",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 902,
+    "sourceNumber": 901,
+    "title": "Java manager",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 903,
+    "sourceNumber": 902,
+    "title": "Installed Java detection",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 904,
+    "sourceNumber": 903,
+    "title": "Java version detection",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 905,
+    "sourceNumber": 904,
+    "title": "Java path detection",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 906,
+    "sourceNumber": 905,
+    "title": "Java compatibility checker",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 907,
+    "sourceNumber": 906,
+    "title": "Java recommendation",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 908,
+    "sourceNumber": 907,
+    "title": "Java profile assignment",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 909,
+    "sourceNumber": 908,
+    "title": "Java download support",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 910,
+    "sourceNumber": 909,
+    "title": "Java installation detection",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 911,
+    "sourceNumber": 910,
+    "title": "Java executable validation",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 912,
+    "sourceNumber": 911,
+    "title": "Java runtime diagnostics",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 913,
+    "sourceNumber": 912,
+    "title": "Java launch test",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 914,
+    "sourceNumber": 913,
+    "title": "Java crash detection",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 915,
+    "sourceNumber": 914,
+    "title": "Java error analysis",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 916,
+    "sourceNumber": 915,
+    "title": "Java memory analysis",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 917,
+    "sourceNumber": 916,
+    "title": "RAM detection",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 918,
+    "sourceNumber": 917,
+    "title": "Available RAM display",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 919,
+    "sourceNumber": 918,
+    "title": "Recommended RAM",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 920,
+    "sourceNumber": 919,
+    "title": "Maximum safe RAM",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 921,
+    "sourceNumber": 920,
+    "title": "Per-profile RAM",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 922,
+    "sourceNumber": 921,
+    "title": "Per-version RAM",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 923,
+    "sourceNumber": 922,
+    "title": "Per-modpack RAM",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 924,
+    "sourceNumber": 923,
+    "title": "RAM slider",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 925,
+    "sourceNumber": 924,
+    "title": "RAM presets",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 926,
+    "sourceNumber": 925,
+    "title": "Custom RAM",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 927,
+    "sourceNumber": 926,
+    "title": "JVM argument manager",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 928,
+    "sourceNumber": 927,
+    "title": "JVM argument presets",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 929,
+    "sourceNumber": 928,
+    "title": "JVM argument validation",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 930,
+    "sourceNumber": 929,
+    "title": "JVM argument backup",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 931,
+    "sourceNumber": 930,
+    "title": "JVM argument restore",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 932,
+    "sourceNumber": 931,
+    "title": "Performance mode",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 933,
+    "sourceNumber": 932,
+    "title": "Balanced mode",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 934,
+    "sourceNumber": 933,
+    "title": "Compatibility mode",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 935,
+    "sourceNumber": 934,
+    "title": "Low-memory mode",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 936,
+    "sourceNumber": 935,
+    "title": "High-performance mode",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 937,
+    "sourceNumber": 936,
+    "title": "CPU detection",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 938,
+    "sourceNumber": 937,
+    "title": "GPU detection",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 939,
+    "sourceNumber": 938,
+    "title": "GPU model display",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 940,
+    "sourceNumber": 939,
+    "title": "VRAM display",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 941,
+    "sourceNumber": 940,
+    "title": "Storage detection",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 942,
+    "sourceNumber": 941,
+    "title": "Free storage display",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 943,
+    "sourceNumber": 942,
+    "title": "Storage warning",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 944,
+    "sourceNumber": 943,
+    "title": "Minecraft performance report",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 945,
+    "sourceNumber": 944,
+    "title": "Java performance report",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 946,
+    "sourceNumber": 945,
+    "title": "RAM performance report",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 947,
+    "sourceNumber": 946,
+    "title": "GPU compatibility report",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 948,
+    "sourceNumber": 947,
+    "title": "CPU compatibility report",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 949,
+    "sourceNumber": 948,
+    "title": "FPS configuration helper",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 950,
+    "sourceNumber": 949,
+    "title": "Render-distance helper",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 951,
+    "sourceNumber": 950,
+    "title": "Simulation-distance helper",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 952,
+    "sourceNumber": 951,
+    "title": "Resolution helper",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 953,
+    "sourceNumber": 952,
+    "title": "Shader performance helper",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 954,
+    "sourceNumber": 953,
+    "title": "Mod performance helper",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 955,
+    "sourceNumber": 954,
+    "title": "Modpack performance helper",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 956,
+    "sourceNumber": 955,
+    "title": "Startup timing",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 957,
+    "sourceNumber": 956,
+    "title": "Library loading timing",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 958,
+    "sourceNumber": 957,
+    "title": "Mod loading timing",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 959,
+    "sourceNumber": 958,
+    "title": "Java startup timing",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 960,
+    "sourceNumber": 959,
+    "title": "Minecraft startup timing",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 961,
+    "sourceNumber": 960,
+    "title": "Total launch time",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 962,
+    "sourceNumber": 961,
+    "title": "Performance history",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 963,
+    "sourceNumber": 962,
+    "title": "Launch performance comparison",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 964,
+    "sourceNumber": 963,
+    "title": "Profile performance comparison",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 965,
+    "sourceNumber": 964,
+    "title": "Version performance comparison",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 966,
+    "sourceNumber": 965,
+    "title": "Modpack performance comparison",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 967,
+    "sourceNumber": 966,
+    "title": "Memory usage history",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 968,
+    "sourceNumber": 967,
+    "title": "CPU usage history",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 969,
+    "sourceNumber": 968,
+    "title": "GPU usage history",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 970,
+    "sourceNumber": 969,
+    "title": "Java process information",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 971,
+    "sourceNumber": 970,
+    "title": "Minecraft process information",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 972,
+    "sourceNumber": 971,
+    "title": "Process detection",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 973,
+    "sourceNumber": 972,
+    "title": "Crash detection",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 974,
+    "sourceNumber": 973,
+    "title": "Hang detection",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 975,
+    "sourceNumber": 974,
+    "title": "Frozen process warning",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 976,
+    "sourceNumber": 975,
+    "title": "Safe process termination",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 977,
+    "sourceNumber": 976,
+    "title": "Launcher performance mode",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 978,
+    "sourceNumber": 977,
+    "title": "Background task management",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 979,
+    "sourceNumber": 978,
+    "title": "Download performance",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 980,
+    "sourceNumber": 979,
+    "title": "Disk performance checks",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 981,
+    "sourceNumber": 980,
+    "title": "Asset performance checks",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 982,
+    "sourceNumber": 981,
+    "title": "Library performance checks",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 983,
+    "sourceNumber": 982,
+    "title": "Startup optimization",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 984,
+    "sourceNumber": 983,
+    "title": "Launcher cache cleanup",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 985,
+    "sourceNumber": 984,
+    "title": "Minecraft cache cleanup",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 986,
+    "sourceNumber": 985,
+    "title": "Download cache cleanup",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 987,
+    "sourceNumber": 986,
+    "title": "Temporary-file cleanup",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 988,
+    "sourceNumber": 987,
+    "title": "Orphan-file cleanup",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 989,
+    "sourceNumber": 988,
+    "title": "Performance diagnostics",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 990,
+    "sourceNumber": 989,
+    "title": "Performance repair",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 991,
+    "sourceNumber": 990,
+    "title": "Java repair",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 992,
+    "sourceNumber": 991,
+    "title": "Java diagnostics center",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 993,
+    "sourceNumber": 992,
+    "title": "Performance center",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 994,
+    "sourceNumber": 993,
+    "title": "System report",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 995,
+    "sourceNumber": 994,
+    "title": "Hardware report",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 996,
+    "sourceNumber": 995,
+    "title": "Environment report",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 997,
+    "sourceNumber": 996,
+    "title": "Compatibility report",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 998,
+    "sourceNumber": 997,
+    "title": "Optimization recommendations",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 999,
+    "sourceNumber": 998,
+    "title": "Performance history export",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  },
+  {
+    "id": 1000,
+    "sourceNumber": 999,
+    "title": "Diagnostic export",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 2,
+    "isHidden": false
+  }
+]

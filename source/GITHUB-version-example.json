@@ -1,0 +1,25 @@
+{
+  "version": "2.2.2",
+  "beta": true,
+  "download_url": "https://github.com/windowswindows822-bot/villager-launcher-updates/releases/download/v2.2.2/VillagerLauncherSetup.exe",
+  "sha256": "",
+  "whats_new": {
+    "Added": [
+      "C# and WinUI 3 launcher generation",
+      "Modern WinUI navigation and dashboard",
+      "GitHub-connected News and Update center",
+      "Minecraft version, mod, world, server and pack management views",
+      "Diagnostics, Repair All and GPT-friendly launcher log export"
+    ],
+    "Changed": [
+      "Villager Launcher migrated from Python/Tkinter to C# + WinUI 3",
+      "Launcher UI redesigned with native Windows controls"
+    ],
+    "Removed": [],
+    "Fixed": [
+      "Improved startup initialization structure",
+      "Improved Arabic RTL layout handling",
+      "Improved GitHub update error handling"
+    ]
+  }
+}

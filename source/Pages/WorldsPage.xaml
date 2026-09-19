@@ -1,0 +1,57 @@
+
+<Page
+    x:Class="villagerlauncher.Pages.WorldsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Grid Padding="30" RowSpacing="16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <TextBlock Text="Worlds" FontSize="32" FontWeight="SemiBold"/>
+                <TextBlock Text="Worlds deserve previews, backups, metadata, and repair tools."
+                           Opacity="0.6"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="8" VerticalAlignment="Center">
+                <Button Content="Backup Selected"/>
+                <Button Content="Open Saves"/>
+            </StackPanel>
+        </Grid>
+
+        <TextBox Grid.Row="1" PlaceholderText="Search worlds"/>
+
+        <Grid Grid.Row="2" ColumnSpacing="14">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.1*"/>
+                <ColumnDefinition Width="0.9*"/>
+            </Grid.ColumnDefinitions>
+            <Border Padding="20" CornerRadius="16" BorderThickness="1"
+                    BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}">
+                <StackPanel>
+                    <TextBlock Text="World Library" FontSize="19" FontWeight="SemiBold"/>
+                    <TextBlock Text="World scanner not connected yet."
+                               Margin="0,10,0,0"
+                               Opacity="0.65"/>
+                </StackPanel>
+            </Border>
+            <Border Grid.Column="1" Padding="20" CornerRadius="16" BorderThickness="1"
+                    BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}">
+                <StackPanel Spacing="7">
+                    <TextBlock Text="World Details" FontSize="19" FontWeight="SemiBold"/>
+                    <TextBlock Text="Select a world to show version, last played, size, backup status, and screenshot."
+                               TextWrapping="Wrap"
+                               Opacity="0.65"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</Page>

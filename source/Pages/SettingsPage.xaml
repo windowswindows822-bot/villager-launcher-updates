@@ -1,0 +1,65 @@
+
+<Page
+    x:Class="villagerlauncher.Pages.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ScrollViewer>
+        <StackPanel Padding="30" Spacing="16">
+            <StackPanel>
+                <TextBlock Text="Settings" FontSize="32" FontWeight="SemiBold"/>
+                <TextBlock Text="Language, paths, appearance, sound, and launcher identity."
+                           Opacity="0.6"/>
+            </StackPanel>
+
+            <Border Padding="22" CornerRadius="16" BorderThickness="1"
+                    BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}">
+                <StackPanel Spacing="10">
+                    <TextBlock Text="Interface" FontSize="19" FontWeight="SemiBold"/>
+                    <ComboBox Header="Language" SelectedIndex="0" Width="260" HorizontalAlignment="Left">
+                        <ComboBoxItem Content="English"/>
+                        <ComboBoxItem Content="Arabic"/>
+                    </ComboBox>
+                    <ComboBox Header="Theme" SelectedIndex="0" Width="260" HorizontalAlignment="Left">
+                        <ComboBoxItem Content="System"/>
+                        <ComboBoxItem Content="Dark"/>
+                        <ComboBoxItem Content="Light"/>
+                    </ComboBox>
+                    <ToggleSwitch Header="UI Sounds" IsOn="True"/>
+                </StackPanel>
+            </Border>
+
+            <Border Padding="22" CornerRadius="16" BorderThickness="1"
+                    BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}">
+                <StackPanel Spacing="10">
+                    <TextBlock Text="Minecraft" FontSize="19" FontWeight="SemiBold"/>
+                    <TextBox Header="Minecraft Directory"
+                             PlaceholderText="%APPDATA%\.minecraft"
+                             FlowDirection="LeftToRight"/>
+                    <TextBox Header="Java Executable"
+                             PlaceholderText="java or full javaw.exe path"
+                             FlowDirection="LeftToRight"/>
+                    <TextBox Header="Village Name"
+                             Text="My Village"/>
+                </StackPanel>
+            </Border>
+
+            <Border Padding="22" CornerRadius="16" BorderThickness="1"
+                    BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}">
+                <StackPanel Spacing="7">
+                    <TextBlock Text="About" FontSize="19" FontWeight="SemiBold"/>
+                    <TextBlock Text="Villager Launcher 2.2.2"/>
+                    <TextBlock x:Name="VillagerOsText"
+                               Text="Villager OS 1.0"
+                               Opacity="0.7"/>
+                    <TextBlock Text="C# · WinUI 3 · x64"
+                               Opacity="0.55"/>
+                </StackPanel>
+            </Border>
+
+            <Button Content="Save Settings"
+                    HorizontalAlignment="Left"
+                    Padding="20,9"/>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

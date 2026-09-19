@@ -1,0 +1,72 @@
+
+<Page
+    x:Class="villagerlauncher.Pages.ModsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Grid Padding="30" RowSpacing="16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <TextBlock Text="Mods" FontSize="32" FontWeight="SemiBold"/>
+                <TextBlock Text="Installed mods and discovery live on their own page now."
+                           Opacity="0.6"/>
+            </StackPanel>
+            <Button Grid.Column="1" Content="Browse Modrinth" VerticalAlignment="Center"/>
+        </Grid>
+
+        <Grid Grid.Row="1" ColumnSpacing="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="180"/>
+                <ColumnDefinition Width="180"/>
+            </Grid.ColumnDefinitions>
+            <TextBox PlaceholderText="Search installed mods"/>
+            <ComboBox Grid.Column="1" SelectedIndex="0">
+                <ComboBoxItem Content="All loaders"/>
+                <ComboBoxItem Content="Fabric"/>
+                <ComboBoxItem Content="Forge"/>
+                <ComboBoxItem Content="NeoForge"/>
+            </ComboBox>
+            <ComboBox Grid.Column="2" SelectedIndex="0">
+                <ComboBoxItem Content="All states"/>
+                <ComboBoxItem Content="Enabled"/>
+                <ComboBoxItem Content="Disabled"/>
+                <ComboBoxItem Content="Needs attention"/>
+            </ComboBox>
+        </Grid>
+
+        <Grid Grid.Row="2" ColumnSpacing="14">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.3*"/>
+                <ColumnDefinition Width="0.7*"/>
+            </Grid.ColumnDefinitions>
+            <Border Padding="20" CornerRadius="16" BorderThickness="1"
+                    BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}">
+                <StackPanel Spacing="9">
+                    <TextBlock Text="Installed Mods" FontSize="19" FontWeight="SemiBold"/>
+                    <TextBlock Text="The mod scanner will populate this list."
+                               Opacity="0.65"/>
+                </StackPanel>
+            </Border>
+            <Border Grid.Column="1" Padding="20" CornerRadius="16" BorderThickness="1"
+                    BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}">
+                <StackPanel Spacing="8">
+                    <TextBlock Text="Compatibility" FontSize="19" FontWeight="SemiBold"/>
+                    <TextBlock Text="Select a mod to see loader, version, dependencies, and conflicts."
+                               TextWrapping="Wrap"
+                               Opacity="0.65"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</Page>

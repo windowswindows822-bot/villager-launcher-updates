@@ -1,0 +1,40 @@
+
+VILLAGER LAUNCHER 2.2.2 — C# + WINUI 3 MIGRATION
+
+This installer generated a full WinUI launcher shell and core services.
+
+GitHub update source:
+https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/version.json
+
+For compiled C# updates, your GitHub version.json can optionally include:
+- download_url or installer_url
+- sha256
+
+If download_url is missing, the Update button still checks GitHub and opens
+the repository instead of trying to replace a Python source file.
+
+Generated systems:
+- Modern left NavigationView
+- Home dashboard
+- Play/profile/version validation
+- Versions
+- Mods
+- Modpacks/resource packs/shaders
+- Worlds
+- Servers
+- News + GitHub updater
+- Tools + diagnostics
+- Repair All with backups
+- GPT-friendly log export
+- Settings
+- English/Arabic RTL direction
+- Startup video support (Assets/villagernews.mp4)
+- Existing settings/profile JSON compatibility
+
+IMPORTANT:
+The C# build preserves the old launch validation behavior. A complete authenticated
+Minecraft Java launch pipeline is a separate subsystem because Microsoft/Minecraft
+authentication, libraries, assets, natives and classpath construction must be implemented
+correctly rather than faked.
+
+Keep your old Python launcher as a backup until you are satisfied with the migration.

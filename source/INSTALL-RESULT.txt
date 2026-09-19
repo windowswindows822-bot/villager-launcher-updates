@@ -1,0 +1,24 @@
+﻿Villager Launcher 2.2.2 - WinUI Installer
+
+Installed:
+- MainWindow.xaml
+- MainWindow.xaml.cs
+
+Created:
+- Assets
+- Pages
+- Services
+- Models
+- Backups
+
+Your previous MainWindow/App files were backed up to:
+C:\Users\mtras\Documents\Villager Launcher\villagerlauncher\villagerlauncher\Backups\Before_2.2.2_20260913_161018
+
+Next:
+1. Go back to Visual Studio.
+2. Save/reload files if Visual Studio asks.
+3. Press F5.
+4. The new Villager Launcher starter UI should open.
+
+Important:
+This is the WinUI migration shell. Existing Python launcher features will be ported incrementally.

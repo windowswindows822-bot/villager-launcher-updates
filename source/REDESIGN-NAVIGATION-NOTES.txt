@@ -1,0 +1,37 @@
+
+VILLAGER LAUNCHER — TRUE PAGE NAVIGATION REDESIGN
+
+Architecture:
+MainWindow
+  -> NavigationView
+  -> Frame
+  -> completely different Page for every destination
+
+The dashboard does NOT remain visible when you select another destination.
+Only the NavigationView shell remains, which is normal app navigation.
+
+Pages generated:
+Home
+Play
+Profiles
+Versions
+Mods
+Modpacks
+Worlds
+Servers
+News
+Tools
+Settings
+Ideas Lab
+
+Ideas Lab:
+500 searchable redesign ideas
+20 categories
+25 ideas per category
+
+GitHub:
+NewsPage checks:
+https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/version.json
+
+This redesign intentionally separates UI architecture from deeper Minecraft launch logic.
+Once the navigation and visual direction are approved, the existing services can be connected page-by-page.

@@ -1,0 +1,4010 @@
+[
+  {
+    "id": 1001,
+    "sourceNumber": 1000,
+    "title": "Performance tools center",
+    "category": "JAVA / PERFORMANCE",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1002,
+    "sourceNumber": 1001,
+    "title": "Minecraft profiles",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1003,
+    "sourceNumber": 1002,
+    "title": "Launcher profiles",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1004,
+    "sourceNumber": 1003,
+    "title": "Profile creation",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1005,
+    "sourceNumber": 1004,
+    "title": "Profile deletion",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1006,
+    "sourceNumber": 1005,
+    "title": "Profile duplication",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1007,
+    "sourceNumber": 1006,
+    "title": "Profile cloning",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1008,
+    "sourceNumber": 1007,
+    "title": "Profile renaming",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1009,
+    "sourceNumber": 1008,
+    "title": "Profile backup",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1010,
+    "sourceNumber": 1009,
+    "title": "Profile restore",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1011,
+    "sourceNumber": 1010,
+    "title": "Profile import",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1012,
+    "sourceNumber": 1011,
+    "title": "Profile export",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1013,
+    "sourceNumber": 1012,
+    "title": "Profile icons",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1014,
+    "sourceNumber": 1013,
+    "title": "Profile colors",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1015,
+    "sourceNumber": 1014,
+    "title": "Profile tags",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1016,
+    "sourceNumber": 1015,
+    "title": "Profile notes",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1017,
+    "sourceNumber": 1016,
+    "title": "Profile descriptions",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1018,
+    "sourceNumber": 1017,
+    "title": "Profile favorites",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1019,
+    "sourceNumber": 1018,
+    "title": "Profile search",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1020,
+    "sourceNumber": 1019,
+    "title": "Profile filtering",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1021,
+    "sourceNumber": 1020,
+    "title": "Profile sorting",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1022,
+    "sourceNumber": 1021,
+    "title": "Profile version assignment",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1023,
+    "sourceNumber": 1022,
+    "title": "Profile Java assignment",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1024,
+    "sourceNumber": 1023,
+    "title": "Profile memory assignment",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1025,
+    "sourceNumber": 1024,
+    "title": "Profile mod loader assignment",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1026,
+    "sourceNumber": 1025,
+    "title": "Profile mods",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1027,
+    "sourceNumber": 1026,
+    "title": "Profile modpacks",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1028,
+    "sourceNumber": 1027,
+    "title": "Profile worlds",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1029,
+    "sourceNumber": 1028,
+    "title": "Profile servers",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1030,
+    "sourceNumber": 1029,
+    "title": "Profile resource packs",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1031,
+    "sourceNumber": 1030,
+    "title": "Profile shaders",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1032,
+    "sourceNumber": 1031,
+    "title": "Profile JVM arguments",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1033,
+    "sourceNumber": 1032,
+    "title": "Profile game arguments",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1034,
+    "sourceNumber": 1033,
+    "title": "Profile resolution",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1035,
+    "sourceNumber": 1034,
+    "title": "Profile fullscreen mode",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1036,
+    "sourceNumber": 1035,
+    "title": "Profile launch behavior",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1037,
+    "sourceNumber": 1036,
+    "title": "Profile backup behavior",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1038,
+    "sourceNumber": 1037,
+    "title": "Profile logging behavior",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1039,
+    "sourceNumber": 1038,
+    "title": "Profile diagnostics",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1040,
+    "sourceNumber": 1039,
+    "title": "Profile launch history",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1041,
+    "sourceNumber": 1040,
+    "title": "Profile crash history",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1042,
+    "sourceNumber": 1041,
+    "title": "Profile playtime",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1043,
+    "sourceNumber": 1042,
+    "title": "Profile launch count",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1044,
+    "sourceNumber": 1043,
+    "title": "Profile last-used time",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1045,
+    "sourceNumber": 1044,
+    "title": "Profile creation time",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1046,
+    "sourceNumber": 1045,
+    "title": "Profile storage usage",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1047,
+    "sourceNumber": 1046,
+    "title": "Profile integrity check",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1048,
+    "sourceNumber": 1047,
+    "title": "Profile repair",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1049,
+    "sourceNumber": 1048,
+    "title": "Profile migration",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1050,
+    "sourceNumber": 1049,
+    "title": "Profile compatibility check",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1051,
+    "sourceNumber": 1050,
+    "title": "Profile comparison",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1052,
+    "sourceNumber": 1051,
+    "title": "Profile quick launch",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1053,
+    "sourceNumber": 1052,
+    "title": "Profile context menu",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1054,
+    "sourceNumber": 1053,
+    "title": "Profile export report",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1055,
+    "sourceNumber": 1054,
+    "title": "Profile diagnostic report",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1056,
+    "sourceNumber": 1055,
+    "title": "Profile backup history",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1057,
+    "sourceNumber": 1056,
+    "title": "Profile restore history",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1058,
+    "sourceNumber": 1057,
+    "title": "Profile change history",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1059,
+    "sourceNumber": 1058,
+    "title": "Profile reset",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1060,
+    "sourceNumber": 1059,
+    "title": "Profile settings reset",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1061,
+    "sourceNumber": 1060,
+    "title": "Profile theme",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1062,
+    "sourceNumber": 1061,
+    "title": "Profile language",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1063,
+    "sourceNumber": 1062,
+    "title": "Profile sidebar preference",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1064,
+    "sourceNumber": 1063,
+    "title": "Profile dashboard preference",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1065,
+    "sourceNumber": 1064,
+    "title": "Profile startup preference",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1066,
+    "sourceNumber": 1065,
+    "title": "Profile notification preference",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1067,
+    "sourceNumber": 1066,
+    "title": "Profile update preference",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1068,
+    "sourceNumber": 1067,
+    "title": "Profile download preference",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1069,
+    "sourceNumber": 1068,
+    "title": "Profile error handling preference",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1070,
+    "sourceNumber": 1069,
+    "title": "Profile log location",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1071,
+    "sourceNumber": 1070,
+    "title": "Profile backup location",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1072,
+    "sourceNumber": 1071,
+    "title": "Profile custom launch icon",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1073,
+    "sourceNumber": 1072,
+    "title": "Profile custom loading screen",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1074,
+    "sourceNumber": 1073,
+    "title": "Profile custom description",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1075,
+    "sourceNumber": 1074,
+    "title": "Profile custom color",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1076,
+    "sourceNumber": 1075,
+    "title": "Profile custom banner",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1077,
+    "sourceNumber": 1076,
+    "title": "Profile custom background",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1078,
+    "sourceNumber": 1077,
+    "title": "Profile custom sound",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1079,
+    "sourceNumber": 1078,
+    "title": "Profile custom status message",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1080,
+    "sourceNumber": 1079,
+    "title": "Profile activity",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1081,
+    "sourceNumber": 1080,
+    "title": "Profile statistics",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1082,
+    "sourceNumber": 1081,
+    "title": "Profile achievements",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1083,
+    "sourceNumber": 1082,
+    "title": "Profile milestones",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1084,
+    "sourceNumber": 1083,
+    "title": "Profile session records",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1085,
+    "sourceNumber": 1084,
+    "title": "Profile recent activity",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1086,
+    "sourceNumber": 1085,
+    "title": "Profile favorites",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1087,
+    "sourceNumber": 1086,
+    "title": "Profile pinned profiles",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1088,
+    "sourceNumber": 1087,
+    "title": "Profile archive",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1089,
+    "sourceNumber": 1088,
+    "title": "Profile restore archive",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1090,
+    "sourceNumber": 1089,
+    "title": "Profile duplicate detection",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1091,
+    "sourceNumber": 1090,
+    "title": "Profile orphan detection",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1092,
+    "sourceNumber": 1091,
+    "title": "Profile broken detection",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1093,
+    "sourceNumber": 1092,
+    "title": "Profile diagnostics",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1094,
+    "sourceNumber": 1093,
+    "title": "Profile repair center",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1095,
+    "sourceNumber": 1094,
+    "title": "Profile manager",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1096,
+    "sourceNumber": 1095,
+    "title": "Profile center",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1097,
+    "sourceNumber": 1096,
+    "title": "Personalization manager",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1098,
+    "sourceNumber": 1097,
+    "title": "Personalization backup",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1099,
+    "sourceNumber": 1098,
+    "title": "Personalization restore",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1100,
+    "sourceNumber": 1099,
+    "title": "Personalization export",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1101,
+    "sourceNumber": 1100,
+    "title": "Personalization center",
+    "category": "PROFILES / PERSONALIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1102,
+    "sourceNumber": 1101,
+    "title": "News center",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1103,
+    "sourceNumber": 1102,
+    "title": "Update announcements",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1104,
+    "sourceNumber": 1103,
+    "title": "What's New",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1105,
+    "sourceNumber": 1104,
+    "title": "Release history",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1106,
+    "sourceNumber": 1105,
+    "title": "Current launcher version",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1107,
+    "sourceNumber": 1106,
+    "title": "Update available indicator",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1108,
+    "sourceNumber": 1107,
+    "title": "Update download",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1109,
+    "sourceNumber": 1108,
+    "title": "Update progress",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1110,
+    "sourceNumber": 1109,
+    "title": "Update cancellation",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1111,
+    "sourceNumber": 1110,
+    "title": "Update retry",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1112,
+    "sourceNumber": 1111,
+    "title": "Update verification",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1113,
+    "sourceNumber": 1112,
+    "title": "Update failure recovery",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1114,
+    "sourceNumber": 1113,
+    "title": "Update backup",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1115,
+    "sourceNumber": 1114,
+    "title": "Update rollback",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1116,
+    "sourceNumber": 1115,
+    "title": "Previous-version recovery",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1117,
+    "sourceNumber": 1116,
+    "title": "Update logs",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1118,
+    "sourceNumber": 1117,
+    "title": "Update diagnostics",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1119,
+    "sourceNumber": 1118,
+    "title": "Update history",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1120,
+    "sourceNumber": 1119,
+    "title": "Download history",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1121,
+    "sourceNumber": 1120,
+    "title": "Activity center",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1122,
+    "sourceNumber": 1121,
+    "title": "Launcher activity",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1123,
+    "sourceNumber": 1122,
+    "title": "Minecraft activity",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1124,
+    "sourceNumber": 1123,
+    "title": "Mod activity",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1125,
+    "sourceNumber": 1124,
+    "title": "Modpack activity",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1126,
+    "sourceNumber": 1125,
+    "title": "World activity",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1127,
+    "sourceNumber": 1126,
+    "title": "Server activity",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1128,
+    "sourceNumber": 1127,
+    "title": "Backup activity",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1129,
+    "sourceNumber": 1128,
+    "title": "Repair activity",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1130,
+    "sourceNumber": 1129,
+    "title": "Diagnostic activity",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1131,
+    "sourceNumber": 1130,
+    "title": "Java activity",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1132,
+    "sourceNumber": 1131,
+    "title": "Error activity",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1133,
+    "sourceNumber": 1132,
+    "title": "Warning activity",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1134,
+    "sourceNumber": 1133,
+    "title": "Success activity",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1135,
+    "sourceNumber": 1134,
+    "title": "Download activity",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1136,
+    "sourceNumber": 1135,
+    "title": "Installation activity",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1137,
+    "sourceNumber": 1136,
+    "title": "Removal activity",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1138,
+    "sourceNumber": 1137,
+    "title": "Restore activity",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1139,
+    "sourceNumber": 1138,
+    "title": "Export activity",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1140,
+    "sourceNumber": 1139,
+    "title": "Import activity",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1141,
+    "sourceNumber": 1140,
+    "title": "Activity timestamps",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1142,
+    "sourceNumber": 1141,
+    "title": "Activity filtering",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1143,
+    "sourceNumber": 1142,
+    "title": "Activity sorting",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1144,
+    "sourceNumber": 1143,
+    "title": "Activity search",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1145,
+    "sourceNumber": 1144,
+    "title": "Activity clearing",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1146,
+    "sourceNumber": 1145,
+    "title": "Activity export",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1147,
+    "sourceNumber": 1146,
+    "title": "Notification center",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1148,
+    "sourceNumber": 1147,
+    "title": "Update notifications",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1149,
+    "sourceNumber": 1148,
+    "title": "Backup notifications",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1150,
+    "sourceNumber": 1149,
+    "title": "Error notifications",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1151,
+    "sourceNumber": 1150,
+    "title": "Repair notifications",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1152,
+    "sourceNumber": 1151,
+    "title": "Download notifications",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1153,
+    "sourceNumber": 1152,
+    "title": "Minecraft notifications",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1154,
+    "sourceNumber": 1153,
+    "title": "Server notifications",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1155,
+    "sourceNumber": 1154,
+    "title": "Mod notifications",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1156,
+    "sourceNumber": 1155,
+    "title": "Modpack notifications",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1157,
+    "sourceNumber": 1156,
+    "title": "Java notifications",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1158,
+    "sourceNumber": 1157,
+    "title": "Storage notifications",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1159,
+    "sourceNumber": 1158,
+    "title": "Compatibility notifications",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1160,
+    "sourceNumber": 1159,
+    "title": "Notification settings",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1161,
+    "sourceNumber": 1160,
+    "title": "Notification history",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1162,
+    "sourceNumber": 1161,
+    "title": "Notification clearing",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1163,
+    "sourceNumber": 1162,
+    "title": "News categories",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1164,
+    "sourceNumber": 1163,
+    "title": "News filtering",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1165,
+    "sourceNumber": 1164,
+    "title": "News search",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1166,
+    "sourceNumber": 1165,
+    "title": "News bookmarks",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1167,
+    "sourceNumber": 1166,
+    "title": "News favorites",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1168,
+    "sourceNumber": 1167,
+    "title": "News read/unread state",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1169,
+    "sourceNumber": 1168,
+    "title": "News timestamps",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1170,
+    "sourceNumber": 1169,
+    "title": "News source information",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1171,
+    "sourceNumber": 1170,
+    "title": "Release notes viewer",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1172,
+    "sourceNumber": 1171,
+    "title": "Changelog viewer",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1173,
+    "sourceNumber": 1172,
+    "title": "Version comparison",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1174,
+    "sourceNumber": 1173,
+    "title": "Update size",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1175,
+    "sourceNumber": 1174,
+    "title": "Update progress speed",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1176,
+    "sourceNumber": 1175,
+    "title": "Update ETA",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1177,
+    "sourceNumber": 1176,
+    "title": "Update verification status",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1178,
+    "sourceNumber": 1177,
+    "title": "Update install status",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1179,
+    "sourceNumber": 1178,
+    "title": "Update restart notification",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1180,
+    "sourceNumber": 1179,
+    "title": "Update success notification",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1181,
+    "sourceNumber": 1180,
+    "title": "Update failure notification",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1182,
+    "sourceNumber": 1181,
+    "title": "Update repair wizard",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1183,
+    "sourceNumber": 1182,
+    "title": "Update rollback wizard",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1184,
+    "sourceNumber": 1183,
+    "title": "Update backup wizard",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1185,
+    "sourceNumber": 1184,
+    "title": "Update cleanup",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1186,
+    "sourceNumber": 1185,
+    "title": "Update cache cleanup",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1187,
+    "sourceNumber": 1186,
+    "title": "Old update file cleanup",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1188,
+    "sourceNumber": 1187,
+    "title": "Update integrity check",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1189,
+    "sourceNumber": 1188,
+    "title": "Update metadata validation",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1190,
+    "sourceNumber": 1189,
+    "title": "Update source validation",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1191,
+    "sourceNumber": 1190,
+    "title": "Update configuration validation",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1192,
+    "sourceNumber": 1191,
+    "title": "Update troubleshooting",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1193,
+    "sourceNumber": 1192,
+    "title": "Update diagnostic report",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1194,
+    "sourceNumber": 1193,
+    "title": "Update export report",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1195,
+    "sourceNumber": 1194,
+    "title": "News activity shortcuts",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1196,
+    "sourceNumber": 1195,
+    "title": "Activity shortcuts",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1197,
+    "sourceNumber": 1196,
+    "title": "Notification shortcuts",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1198,
+    "sourceNumber": 1197,
+    "title": "News center manager",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1199,
+    "sourceNumber": 1198,
+    "title": "Activity manager",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1200,
+    "sourceNumber": 1199,
+    "title": "Notification manager",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1201,
+    "sourceNumber": 1200,
+    "title": "News & activity center",
+    "category": "NEWS / ACTIVITY / UPDATES",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1202,
+    "sourceNumber": 1201,
+    "title": "Error Fixer",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1203,
+    "sourceNumber": 1202,
+    "title": "Repair All",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1204,
+    "sourceNumber": 1203,
+    "title": "Automatic diagnostics",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1205,
+    "sourceNumber": 1204,
+    "title": "Manual diagnostics",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1206,
+    "sourceNumber": 1205,
+    "title": "Error categorization",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1207,
+    "sourceNumber": 1206,
+    "title": "Error history",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1208,
+    "sourceNumber": 1207,
+    "title": "Error search",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1209,
+    "sourceNumber": 1208,
+    "title": "Error filtering",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1210,
+    "sourceNumber": 1209,
+    "title": "Error sorting",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1211,
+    "sourceNumber": 1210,
+    "title": "Error timestamps",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1212,
+    "sourceNumber": 1211,
+    "title": "Error severity",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1213,
+    "sourceNumber": 1212,
+    "title": "Error subsystem",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1214,
+    "sourceNumber": 1213,
+    "title": "Error explanation",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1215,
+    "sourceNumber": 1214,
+    "title": "Error recommendations",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1216,
+    "sourceNumber": 1215,
+    "title": "Error traceback viewer",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1217,
+    "sourceNumber": 1216,
+    "title": "Error copy",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1218,
+    "sourceNumber": 1217,
+    "title": "Error export",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1219,
+    "sourceNumber": 1218,
+    "title": "Diagnostic report",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1220,
+    "sourceNumber": 1219,
+    "title": "Diagnostic report export",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1221,
+    "sourceNumber": 1220,
+    "title": "Launcher log viewer",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1222,
+    "sourceNumber": 1221,
+    "title": "Launcher log search",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1223,
+    "sourceNumber": 1222,
+    "title": "Launcher log filtering",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1224,
+    "sourceNumber": 1223,
+    "title": "Launcher log sorting",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1225,
+    "sourceNumber": 1224,
+    "title": "Launcher log timestamps",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1226,
+    "sourceNumber": 1225,
+    "title": "Launcher log levels",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1227,
+    "sourceNumber": 1226,
+    "title": "Save launcher log",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1228,
+    "sourceNumber": 1227,
+    "title": "Save error log",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1229,
+    "sourceNumber": 1228,
+    "title": "Save diagnostic log",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1230,
+    "sourceNumber": 1229,
+    "title": "Save crash log",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1231,
+    "sourceNumber": 1230,
+    "title": "Save launch log",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1232,
+    "sourceNumber": 1231,
+    "title": "Save repair log",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1233,
+    "sourceNumber": 1232,
+    "title": "Save update log",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1234,
+    "sourceNumber": 1233,
+    "title": "Save Java log",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1235,
+    "sourceNumber": 1234,
+    "title": "Save Minecraft log",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1236,
+    "sourceNumber": 1235,
+    "title": "Save mod log",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1237,
+    "sourceNumber": 1236,
+    "title": "Save modpack log",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1238,
+    "sourceNumber": 1237,
+    "title": "Save server log",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1239,
+    "sourceNumber": 1238,
+    "title": "GPT-friendly log format",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1240,
+    "sourceNumber": 1239,
+    "title": "Clean diagnostic export",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1241,
+    "sourceNumber": 1240,
+    "title": "Remove secrets from logs",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1242,
+    "sourceNumber": 1241,
+    "title": "Remove tokens from logs",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1243,
+    "sourceNumber": 1242,
+    "title": "Remove passwords from logs",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1244,
+    "sourceNumber": 1243,
+    "title": "Remove private paths where appropriate",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1245,
+    "sourceNumber": 1244,
+    "title": "Log filename templates",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1246,
+    "sourceNumber": 1245,
+    "title": "Log folder selection",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1247,
+    "sourceNumber": 1246,
+    "title": "Open log folder",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1248,
+    "sourceNumber": 1247,
+    "title": "Copy log",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1249,
+    "sourceNumber": 1248,
+    "title": "Share log through normal file sharing",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1250,
+    "sourceNumber": 1249,
+    "title": "Diagnostic summary",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1251,
+    "sourceNumber": 1250,
+    "title": "Technical diagnostic summary",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1252,
+    "sourceNumber": 1251,
+    "title": "User-friendly diagnostic summary",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1253,
+    "sourceNumber": 1252,
+    "title": "Automatic repair suggestions",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1254,
+    "sourceNumber": 1253,
+    "title": "Safe repair mode",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1255,
+    "sourceNumber": 1254,
+    "title": "Repair backup",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1256,
+    "sourceNumber": 1255,
+    "title": "Repair rollback",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1257,
+    "sourceNumber": 1256,
+    "title": "Repair verification",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1258,
+    "sourceNumber": 1257,
+    "title": "Repair history",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1259,
+    "sourceNumber": 1258,
+    "title": "Repair status",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1260,
+    "sourceNumber": 1259,
+    "title": "Repair success report",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1261,
+    "sourceNumber": 1260,
+    "title": "Repair failure report",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1262,
+    "sourceNumber": 1261,
+    "title": "Repair partial-success report",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1263,
+    "sourceNumber": 1262,
+    "title": "Missing-file repair",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1264,
+    "sourceNumber": 1263,
+    "title": "Missing-folder repair",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1265,
+    "sourceNumber": 1264,
+    "title": "Broken-path repair",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1266,
+    "sourceNumber": 1265,
+    "title": "Invalid-JSON repair",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1267,
+    "sourceNumber": 1266,
+    "title": "Invalid-config repair",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1268,
+    "sourceNumber": 1267,
+    "title": "Broken-profile repair",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1269,
+    "sourceNumber": 1268,
+    "title": "Broken-version repair",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1270,
+    "sourceNumber": 1269,
+    "title": "Broken-mod repair",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1271,
+    "sourceNumber": 1270,
+    "title": "Broken-modpack repair",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1272,
+    "sourceNumber": 1271,
+    "title": "Broken-world repair",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1273,
+    "sourceNumber": 1272,
+    "title": "Broken-server repair",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1274,
+    "sourceNumber": 1273,
+    "title": "Broken-Java repair",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1275,
+    "sourceNumber": 1274,
+    "title": "Broken-update repair",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1276,
+    "sourceNumber": 1275,
+    "title": "Missing-library repair",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1277,
+    "sourceNumber": 1276,
+    "title": "Missing-asset repair",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1278,
+    "sourceNumber": 1277,
+    "title": "Missing-native repair",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1279,
+    "sourceNumber": 1278,
+    "title": "Corrupted-file detection",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1280,
+    "sourceNumber": 1279,
+    "title": "Corrupted-file repair",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1281,
+    "sourceNumber": 1280,
+    "title": "Duplicate-file detection",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1282,
+    "sourceNumber": 1281,
+    "title": "Orphan-file detection",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1283,
+    "sourceNumber": 1282,
+    "title": "Orphan-config detection",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1284,
+    "sourceNumber": 1283,
+    "title": "Invalid-path detection",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1285,
+    "sourceNumber": 1284,
+    "title": "Permission diagnostics",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1286,
+    "sourceNumber": 1285,
+    "title": "Network diagnostics",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1287,
+    "sourceNumber": 1286,
+    "title": "Download diagnostics",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1288,
+    "sourceNumber": 1287,
+    "title": "Storage diagnostics",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1289,
+    "sourceNumber": 1288,
+    "title": "Disk-space diagnostics",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1290,
+    "sourceNumber": 1289,
+    "title": "Launcher startup diagnostics",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1291,
+    "sourceNumber": 1290,
+    "title": "WinUI diagnostics",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1292,
+    "sourceNumber": 1291,
+    "title": "Arabic diagnostics",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1293,
+    "sourceNumber": 1292,
+    "title": "RTL diagnostics",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1294,
+    "sourceNumber": 1293,
+    "title": "Settings diagnostics",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1295,
+    "sourceNumber": 1294,
+    "title": "Theme diagnostics",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1296,
+    "sourceNumber": 1295,
+    "title": "Java diagnostics",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1297,
+    "sourceNumber": 1296,
+    "title": "Minecraft diagnostics",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1298,
+    "sourceNumber": 1297,
+    "title": "Full launcher health scan",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1299,
+    "sourceNumber": 1298,
+    "title": "Recovery center",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1300,
+    "sourceNumber": 1299,
+    "title": "Emergency safe mode",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1301,
+    "sourceNumber": 1300,
+    "title": "Error Fixer center",
+    "category": "ERROR FIXER / LOGS / RECOVERY",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1302,
+    "sourceNumber": 1301,
+    "title": "Light theme",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1303,
+    "sourceNumber": 1302,
+    "title": "Dark theme",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1304,
+    "sourceNumber": 1303,
+    "title": "System theme",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1305,
+    "sourceNumber": 1304,
+    "title": "Windows 11 theme",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1306,
+    "sourceNumber": 1305,
+    "title": "Windows 10 theme",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1307,
+    "sourceNumber": 1306,
+    "title": "Windows 7-inspired theme",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1308,
+    "sourceNumber": 1307,
+    "title": "Aero-inspired theme",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1309,
+    "sourceNumber": 1308,
+    "title": "Minecraft theme",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1310,
+    "sourceNumber": 1309,
+    "title": "Grass-block theme",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1311,
+    "sourceNumber": 1310,
+    "title": "Villager theme",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1312,
+    "sourceNumber": 1311,
+    "title": "Emerald theme",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1313,
+    "sourceNumber": 1312,
+    "title": "Diamond theme",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1314,
+    "sourceNumber": 1313,
+    "title": "Nether theme",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1315,
+    "sourceNumber": 1314,
+    "title": "End theme",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1316,
+    "sourceNumber": 1315,
+    "title": "Cave theme",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1317,
+    "sourceNumber": 1316,
+    "title": "Ocean theme",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1318,
+    "sourceNumber": 1317,
+    "title": "Plains theme",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1319,
+    "sourceNumber": 1318,
+    "title": "Snow theme",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1320,
+    "sourceNumber": 1319,
+    "title": "Desert theme",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1321,
+    "sourceNumber": 1320,
+    "title": "Forest theme",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1322,
+    "sourceNumber": 1321,
+    "title": "Classic launcher theme",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1323,
+    "sourceNumber": 1322,
+    "title": "Retro computer theme",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1324,
+    "sourceNumber": 1323,
+    "title": "Technical theme",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1325,
+    "sourceNumber": 1324,
+    "title": "Terminal theme",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1326,
+    "sourceNumber": 1325,
+    "title": "Minimal theme",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1327,
+    "sourceNumber": 1326,
+    "title": "Clean white theme",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1328,
+    "sourceNumber": 1327,
+    "title": "Blue Windows theme",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1329,
+    "sourceNumber": 1328,
+    "title": "Green Villager theme",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1330,
+    "sourceNumber": 1329,
+    "title": "Purple theme",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1331,
+    "sourceNumber": 1330,
+    "title": "Cyan theme",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1332,
+    "sourceNumber": 1331,
+    "title": "Red theme",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1333,
+    "sourceNumber": 1332,
+    "title": "Orange theme",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1334,
+    "sourceNumber": 1333,
+    "title": "Yellow theme",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1335,
+    "sourceNumber": 1334,
+    "title": "Pink theme",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1336,
+    "sourceNumber": 1335,
+    "title": "Custom accent color",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1337,
+    "sourceNumber": 1336,
+    "title": "Custom background color",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1338,
+    "sourceNumber": 1337,
+    "title": "Custom card color",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1339,
+    "sourceNumber": 1338,
+    "title": "Custom sidebar color",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1340,
+    "sourceNumber": 1339,
+    "title": "Custom button color",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1341,
+    "sourceNumber": 1340,
+    "title": "Custom text color",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1342,
+    "sourceNumber": 1341,
+    "title": "Custom icon color",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1343,
+    "sourceNumber": 1342,
+    "title": "Custom border color",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1344,
+    "sourceNumber": 1343,
+    "title": "Custom hover color",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1345,
+    "sourceNumber": 1344,
+    "title": "Custom selected color",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1346,
+    "sourceNumber": 1345,
+    "title": "Theme preview",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1347,
+    "sourceNumber": 1346,
+    "title": "Theme gallery",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1348,
+    "sourceNumber": 1347,
+    "title": "Theme search",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1349,
+    "sourceNumber": 1348,
+    "title": "Theme favorites",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1350,
+    "sourceNumber": 1349,
+    "title": "Theme import",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1351,
+    "sourceNumber": 1350,
+    "title": "Theme export",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1352,
+    "sourceNumber": 1351,
+    "title": "Theme backup",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1353,
+    "sourceNumber": 1352,
+    "title": "Theme restore",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1354,
+    "sourceNumber": 1353,
+    "title": "Theme reset",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1355,
+    "sourceNumber": 1354,
+    "title": "Theme duplication",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1356,
+    "sourceNumber": 1355,
+    "title": "Theme editing",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1357,
+    "sourceNumber": 1356,
+    "title": "Theme naming",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1358,
+    "sourceNumber": 1357,
+    "title": "Theme descriptions",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1359,
+    "sourceNumber": 1358,
+    "title": "Theme custom icons",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1360,
+    "sourceNumber": 1359,
+    "title": "Theme custom backgrounds",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1361,
+    "sourceNumber": 1360,
+    "title": "Theme custom banners",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1362,
+    "sourceNumber": 1361,
+    "title": "Theme custom logos",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1363,
+    "sourceNumber": 1362,
+    "title": "Theme custom loading screen",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1364,
+    "sourceNumber": 1363,
+    "title": "Theme custom startup appearance",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1365,
+    "sourceNumber": 1364,
+    "title": "Theme custom dashboard",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1366,
+    "sourceNumber": 1365,
+    "title": "Theme custom sidebar",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1367,
+    "sourceNumber": 1366,
+    "title": "Theme custom buttons",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1368,
+    "sourceNumber": 1367,
+    "title": "Theme custom cards",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1369,
+    "sourceNumber": 1368,
+    "title": "Theme custom dialogs",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1370,
+    "sourceNumber": 1369,
+    "title": "Theme custom notifications",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1371,
+    "sourceNumber": 1370,
+    "title": "Theme custom progress bars",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1372,
+    "sourceNumber": 1371,
+    "title": "Theme custom progress rings",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1373,
+    "sourceNumber": 1372,
+    "title": "Theme custom animations",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1374,
+    "sourceNumber": 1373,
+    "title": "Theme animation speed",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1375,
+    "sourceNumber": 1374,
+    "title": "Theme transparency",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1376,
+    "sourceNumber": 1375,
+    "title": "Theme corner radius",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1377,
+    "sourceNumber": 1376,
+    "title": "Theme font",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1378,
+    "sourceNumber": 1377,
+    "title": "Theme UI scale",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1379,
+    "sourceNumber": 1378,
+    "title": "Theme icon style",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1380,
+    "sourceNumber": 1379,
+    "title": "Theme spacing",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1381,
+    "sourceNumber": 1380,
+    "title": "Theme density",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1382,
+    "sourceNumber": 1381,
+    "title": "Theme light/dark switching",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1383,
+    "sourceNumber": 1382,
+    "title": "Theme scheduled switching",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1384,
+    "sourceNumber": 1383,
+    "title": "Theme system-sync",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1385,
+    "sourceNumber": 1384,
+    "title": "Theme per-profile",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1386,
+    "sourceNumber": 1385,
+    "title": "Theme per-Minecraft-version",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1387,
+    "sourceNumber": 1386,
+    "title": "Theme per-modpack",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1388,
+    "sourceNumber": 1387,
+    "title": "Theme per-session",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1389,
+    "sourceNumber": 1388,
+    "title": "Theme seasonal themes",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1390,
+    "sourceNumber": 1389,
+    "title": "Theme holiday themes",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1391,
+    "sourceNumber": 1390,
+    "title": "Theme rare themes",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1392,
+    "sourceNumber": 1391,
+    "title": "Theme secret themes",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1393,
+    "sourceNumber": 1392,
+    "title": "Theme unlocks",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1394,
+    "sourceNumber": 1393,
+    "title": "Theme achievements",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1395,
+    "sourceNumber": 1394,
+    "title": "Theme easter eggs",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1396,
+    "sourceNumber": 1395,
+    "title": "Theme history",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1397,
+    "sourceNumber": 1396,
+    "title": "Theme diagnostics",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1398,
+    "sourceNumber": 1397,
+    "title": "Theme repair",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1399,
+    "sourceNumber": 1398,
+    "title": "Theme manager",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1400,
+    "sourceNumber": 1399,
+    "title": "Theme shortcuts",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1401,
+    "sourceNumber": 1400,
+    "title": "Theme center",
+    "category": "THEMES / VISUAL CUSTOMIZATION",
+    "batch": 3,
+    "isHidden": false
+  },
+  {
+    "id": 1402,
+    "sourceNumber": 1401,
+    "title": "Hidden Villager OS entry",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1403,
+    "sourceNumber": 1402,
+    "title": "Keep Villager OS out of main menu",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1404,
+    "sourceNumber": 1403,
+    "title": "Keep Villager OS out of News",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1405,
+    "sourceNumber": 1404,
+    "title": "Keep Villager OS out of What's New",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1406,
+    "sourceNumber": 1405,
+    "title": "Keep Villager OS out of release notes",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1407,
+    "sourceNumber": 1406,
+    "title": "Put Villager OS only in Settings",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1408,
+    "sourceNumber": 1407,
+    "title": "Villager OS version 1.0",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1409,
+    "sourceNumber": 1408,
+    "title": "Villager OS entry is clickable",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1410,
+    "sourceNumber": 1409,
+    "title": "Five-click activation",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1411,
+    "sourceNumber": 1410,
+    "title": "No visible click counter",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1412,
+    "sourceNumber": 1411,
+    "title": "No Easter Egg label",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1413,
+    "sourceNumber": 1412,
+    "title": "No hint about five clicks",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1414,
+    "sourceNumber": 1413,
+    "title": "Fifth click activates the Easter egg",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1415,
+    "sourceNumber": 1414,
+    "title": "Play assets/s4.mp3",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1416,
+    "sourceNumber": 1415,
+    "title": "Handle missing S4 audio safely",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1417,
+    "sourceNumber": 1416,
+    "title": "Don't play audio before activation",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1418,
+    "sourceNumber": 1417,
+    "title": "Hidden activation animation",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1419,
+    "sourceNumber": 1418,
+    "title": "Hidden OS glow",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1420,
+    "sourceNumber": 1419,
+    "title": "Hidden icon animation",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1421,
+    "sourceNumber": 1420,
+    "title": "Hidden system message",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1422,
+    "sourceNumber": 1421,
+    "title": "Secret discovery state",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1423,
+    "sourceNumber": 1422,
+    "title": "Local discovery state",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1424,
+    "sourceNumber": 1423,
+    "title": "Offline Easter egg",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1425,
+    "sourceNumber": 1424,
+    "title": "Easter egg replay",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1426,
+    "sourceNumber": 1425,
+    "title": "Hidden Easter egg statistics",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1427,
+    "sourceNumber": 1426,
+    "title": "Hidden discovery timestamp",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1428,
+    "sourceNumber": 1427,
+    "title": "Hidden developer Easter egg",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1429,
+    "sourceNumber": 1428,
+    "title": "Secret Villager OS build number",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1430,
+    "sourceNumber": 1429,
+    "title": "Secret OS history",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1431,
+    "sourceNumber": 1430,
+    "title": "Secret OS changelog",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1432,
+    "sourceNumber": 1431,
+    "title": "Secret OS boot screen",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1433,
+    "sourceNumber": 1432,
+    "title": "Secret OS loading animation",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1434,
+    "sourceNumber": 1433,
+    "title": "Secret OS terminal",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1435,
+    "sourceNumber": 1434,
+    "title": "Secret OS diagnostic screen",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1436,
+    "sourceNumber": 1435,
+    "title": "Secret OS command",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1437,
+    "sourceNumber": 1436,
+    "title": "Hidden command palette command",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1438,
+    "sourceNumber": 1437,
+    "title": "Secret villager counter",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1439,
+    "sourceNumber": 1438,
+    "title": "Hidden villager achievement",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1440,
+    "sourceNumber": 1439,
+    "title": "Rare villager message",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1441,
+    "sourceNumber": 1440,
+    "title": "Rare startup message",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1442,
+    "sourceNumber": 1441,
+    "title": "Rare loading message",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1443,
+    "sourceNumber": 1442,
+    "title": "Rare error message",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1444,
+    "sourceNumber": 1443,
+    "title": "Rare update message",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1445,
+    "sourceNumber": 1444,
+    "title": "Rare Minecraft message",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1446,
+    "sourceNumber": 1445,
+    "title": "Hidden grass-block animation",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1447,
+    "sourceNumber": 1446,
+    "title": "Hidden Minecraft icon animation",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1448,
+    "sourceNumber": 1447,
+    "title": "Hidden emerald animation",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1449,
+    "sourceNumber": 1448,
+    "title": "Hidden diamond animation",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1450,
+    "sourceNumber": 1449,
+    "title": "Hidden redstone animation",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1451,
+    "sourceNumber": 1450,
+    "title": "Hidden villager sound",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1452,
+    "sourceNumber": 1451,
+    "title": "Hidden Minecraft-style sound",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1453,
+    "sourceNumber": 1452,
+    "title": "Hidden Windows nostalgia screen",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1454,
+    "sourceNumber": 1453,
+    "title": "Hidden Windows 7 nostalgia reference",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1455,
+    "sourceNumber": 1454,
+    "title": "Hidden Vista nostalgia reference",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1456,
+    "sourceNumber": 1455,
+    "title": "Hidden Samsung nostalgia reference",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1457,
+    "sourceNumber": 1456,
+    "title": "Hidden Android nostalgia reference",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1458,
+    "sourceNumber": 1457,
+    "title": "Hidden Minecraft nostalgia reference",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1459,
+    "sourceNumber": 1458,
+    "title": "Hidden retro-PC reference",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1460,
+    "sourceNumber": 1459,
+    "title": "Hidden technical mode",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1461,
+    "sourceNumber": 1460,
+    "title": "Hidden developer mode",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1462,
+    "sourceNumber": 1461,
+    "title": "Fake diagnostic screen",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1463,
+    "sourceNumber": 1462,
+    "title": "Fake BIOS-style screen",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1464,
+    "sourceNumber": 1463,
+    "title": "Fake terminal screen",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1465,
+    "sourceNumber": 1464,
+    "title": "Fake system information screen",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1466,
+    "sourceNumber": 1465,
+    "title": "Secret build information",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1467,
+    "sourceNumber": 1466,
+    "title": "Secret credits interaction",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1468,
+    "sourceNumber": 1467,
+    "title": "Hidden old-version list",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1469,
+    "sourceNumber": 1468,
+    "title": "Hidden launcher history",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1470,
+    "sourceNumber": 1469,
+    "title": "Hidden Villager Launcher timeline",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1471,
+    "sourceNumber": 1470,
+    "title": "Hidden generation history",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1472,
+    "sourceNumber": 1471,
+    "title": "Hidden major-version history",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1473,
+    "sourceNumber": 1472,
+    "title": "Hidden 2.x.x history",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1474,
+    "sourceNumber": 1473,
+    "title": "Secret 3.0.0 teaser",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1475,
+    "sourceNumber": 1474,
+    "title": "Secret future-version teaser",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1476,
+    "sourceNumber": 1475,
+    "title": "Rare startup animation",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1477,
+    "sourceNumber": 1476,
+    "title": "Rare dashboard animation",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1478,
+    "sourceNumber": 1477,
+    "title": "Rare loading animation",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1479,
+    "sourceNumber": 1478,
+    "title": "Rare News animation",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1480,
+    "sourceNumber": 1479,
+    "title": "Rare Error Fixer animation",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1481,
+    "sourceNumber": 1480,
+    "title": "Rare Settings animation",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1482,
+    "sourceNumber": 1481,
+    "title": "Rare theme animation",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1483,
+    "sourceNumber": 1482,
+    "title": "Hidden theme unlock",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1484,
+    "sourceNumber": 1483,
+    "title": "Hidden theme combination",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1485,
+    "sourceNumber": 1484,
+    "title": "Secret keyboard shortcut",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1486,
+    "sourceNumber": 1485,
+    "title": "Secret mouse interaction",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1487,
+    "sourceNumber": 1486,
+    "title": "Secret icon interaction",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1488,
+    "sourceNumber": 1487,
+    "title": "Secret logo interaction",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1489,
+    "sourceNumber": 1488,
+    "title": "Secret title-bar interaction",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1490,
+    "sourceNumber": 1489,
+    "title": "Secret sidebar interaction",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1491,
+    "sourceNumber": 1490,
+    "title": "Secret version interaction",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1492,
+    "sourceNumber": 1491,
+    "title": "Secret About interaction",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1493,
+    "sourceNumber": 1492,
+    "title": "Secret Credits interaction",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1494,
+    "sourceNumber": 1493,
+    "title": "Hidden \"Master Easter Egg\"",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1495,
+    "sourceNumber": 1494,
+    "title": "Master Easter Egg combines multiple discoveries",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1496,
+    "sourceNumber": 1495,
+    "title": "Master Easter Egg uses Villager OS",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1497,
+    "sourceNumber": 1496,
+    "title": "Master Easter Egg uses five-click activation",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1498,
+    "sourceNumber": 1497,
+    "title": "Master Easter Egg uses S4 audio",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1499,
+    "sourceNumber": 1498,
+    "title": "Master Easter Egg remains undocumented",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1500,
+    "sourceNumber": 1499,
+    "title": "Master Easter Egg remains absent from News",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  },
+  {
+    "id": 1501,
+    "sourceNumber": 1500,
+    "title": "Master Easter Egg remains absent from What's New",
+    "category": "EASTER EGGS / HIDDEN FEATURES",
+    "batch": 3,
+    "isHidden": true
+  }
+]

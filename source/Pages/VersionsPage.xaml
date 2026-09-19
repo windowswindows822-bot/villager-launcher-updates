@@ -1,0 +1,52 @@
+
+<Page
+    x:Class="villagerlauncher.Pages.VersionsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Grid Padding="30" RowSpacing="16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel>
+            <TextBlock Text="Versions" FontSize="32" FontWeight="SemiBold"/>
+            <TextBlock Text="Installed releases, snapshots, modded versions, and maintenance."
+                       Opacity="0.6"/>
+        </StackPanel>
+
+        <Grid Grid.Row="1" ColumnSpacing="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="180"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBox PlaceholderText="Search versions"/>
+            <ComboBox Grid.Column="1" SelectedIndex="0">
+                <ComboBoxItem Content="All types"/>
+                <ComboBoxItem Content="Release"/>
+                <ComboBoxItem Content="Snapshot"/>
+                <ComboBoxItem Content="Modded"/>
+            </ComboBox>
+            <Button Grid.Column="2" Content="Install Version"/>
+        </Grid>
+
+        <Border Grid.Row="2"
+                Padding="18"
+                CornerRadius="16"
+                BorderThickness="1"
+                BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}">
+            <StackPanel Spacing="12">
+                <TextBlock Text="Installed Versions"
+                           FontSize="19"
+                           FontWeight="SemiBold"/>
+                <TextBlock Text="No version scan has been connected to this redesigned page yet."
+                           Opacity="0.65"/>
+                <Button Content="Open versions folder"
+                        HorizontalAlignment="Left"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>
