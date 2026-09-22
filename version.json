@@ -3,9 +3,9 @@
     "beta":  true,
     "download_url":  "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/releases/2.2.4/VillagerLauncher-2.2.4-Updater.exe",
     "installer_url":  "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/releases/2.2.4/VillagerLauncher-2.2.4-Updater.exe",
-    "sha256":  "2B90E7D5C397085B9AA07C50ACB61BF2E1B8131854DEC1127E97033207BDCB55",
+    "sha256":  "CBBC90B96D6EB042A2414D3D10EF310414DD2ED15CC6025784D8AD3CD4764556",
     "package_url":  "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/releases/2.2.4/VillagerLauncher-2.2.4.zip",
-    "package_sha256":  "CB9CE25366B8988AA5D3492973E13F2FB2C477CAEC2E261B3DA72B438F3543BF",
+    "package_sha256":  "794BCAE452625D6EF57CFD17FBD3AEE21846B280CF53B5AAF99269D18C6D9BD1",
     "whats_new":  {
                       "Added":  [
                                     "Villager Launcher 2.2.4 update package",
@@ -29,7 +29,11 @@
                                     "Old launcher files are replaced safely while a backup is kept",
                                     "Fixed updater file-lock issue that could stop update verification at 65 percent",
                                     "Fixed updater file-lock issue that could stop installation near 77 percent",
-                                    "Updater now waits and retries when WinUI or Windows App SDK files are still locked"
+                                    "Updater no longer overwrites live launcher files around 75 percent",
+                                    "2.2.4 is prepared in a clean next folder and swapped in only after the old launcher closes",
+                                    "Folder swap automatically restores the previous launcher if installation fails",
+                                    "Development builds are no longer overwritten inside bin Debug or bin Release",
+                                    "When launched from Visual Studio output, 2.2.4 installs to LocalAppData VillagerLauncher App instead"
                                 ],
                       "Removed":  [
 
