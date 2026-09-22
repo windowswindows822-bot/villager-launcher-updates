@@ -3,9 +3,9 @@
     "beta":  true,
     "download_url":  "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/releases/2.2.4/VillagerLauncher-2.2.4-Updater.exe",
     "installer_url":  "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/releases/2.2.4/VillagerLauncher-2.2.4-Updater.exe",
-    "sha256":  "E4320DD44F9B77F580ECDFFCE0A90BE85B5AE7900A0996C43A1AA5FDBC8C7002",
+    "sha256":  "1F1B44C5E843A5872B7E2584CE0AD343977A225FDE6955F8EE77F54DD445C748",
     "package_url":  "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/releases/2.2.4/VillagerLauncher-2.2.4.zip",
-    "package_sha256":  "3C06CA05A8D08B16CE85CB836A5AD9A9A1B5F8005CD11AF4448B6E087BAF7501",
+    "package_sha256":  "9F891C10B73275AF31CA3F11BF0B5C3B494230AC02636942D2239812E94BD97F",
     "whats_new":  {
                       "Added":  [
                                     "Villager Launcher 2.2.4 update package",
@@ -34,6 +34,9 @@
                                     "Updater removes the old launcher runtime files and installs 2.2.4 into the same folder",
                                     "Updater no longer restores the old version after a successful update",
                                     "Villager Launcher automatically restarts into 2.2.4 when updating finishes",
+                                    "Added Theme Studio with custom glass type, transparency, Acrylic strength, tint, photo backgrounds and live preview",
+                                    "Added Theme Studio import/export, backup, undo, search, categories and low-performance mode",
+                                    "Added 30 Theme Studio ideas to the 2.2.4 feature registry with implementation status",
                                     "Development builds are no longer overwritten inside bin Debug or bin Release",
                                     "When launched from Visual Studio output, 2.2.4 installs to LocalAppData VillagerLauncher App instead"
                                 ],
