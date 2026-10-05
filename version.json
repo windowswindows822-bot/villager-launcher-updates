@@ -1,47 +1,20 @@
 {
-    "version":  "2.2.4",
-    "beta":  true,
-    "download_url":  "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/releases/2.2.4/VillagerLauncher-2.2.4-Updater.exe",
-    "installer_url":  "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/releases/2.2.4/VillagerLauncher-2.2.4-Updater.exe",
-    "sha256":  "1F1B44C5E843A5872B7E2584CE0AD343977A225FDE6955F8EE77F54DD445C748",
-    "package_url":  "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/releases/2.2.4/VillagerLauncher-2.2.4.zip",
-    "package_sha256":  "9F891C10B73275AF31CA3F11BF0B5C3B494230AC02636942D2239812E94BD97F",
-    "whats_new":  {
-                      "Added":  [
-                                    "Villager Launcher 2.2.4 update package",
-                                    "Dedicated updater window",
-                                    "100 rotating random villager facts while updating",
-                                    "Live download and installation progress",
-                                    "Automatic launcher file backup before replacement",
-                                    "100-theme working theme engine with Apply button and saved selection",
-                                    "Aero Glass theme",
-                                    "All existing 2.2.3 feature registry entries carried into 2.2.4",
-                                    "1500-item master feature pool carried into 2.2.4 when present"
-                                ],
-                      "Changed":  [
-                                      "Launcher version updated from 2.2.3 to 2.2.4",
-                                      "Updater now uses a real downloadable update package",
-                                      "At 50 percent the updater shows Installing system - Removing old system",
-                                      "Theme Gallery now applies the selected theme instead of previewing only"
-                                  ],
-                      "Fixed":  [
-                                    "Updater package now verifies SHA-256 before installation",
-                                    "Old launcher files are replaced safely while a backup is kept",
-                                    "Fixed updater file-lock issue that could stop update verification at 65 percent",
-                                    "Fixed updater file-lock issue that could stop installation near 77 percent",
-                                    "Updater no longer overwrites live launcher files around 75 percent",
-                                    "2.2.4 is prepared in a clean next folder and swapped in only after the old launcher closes",
-                                    "Updater removes the old launcher runtime files and installs 2.2.4 into the same folder",
-                                    "Updater no longer restores the old version after a successful update",
-                                    "Villager Launcher automatically restarts into 2.2.4 when updating finishes",
-                                    "Added Theme Studio with custom glass type, transparency, Acrylic strength, tint, photo backgrounds and live preview",
-                                    "Added Theme Studio import/export, backup, undo, search, categories and low-performance mode",
-                                    "Added 30 Theme Studio ideas to the 2.2.4 feature registry with implementation status",
-                                    "Development builds are no longer overwritten inside bin Debug or bin Release",
-                                    "When launched from Visual Studio output, 2.2.4 installs to LocalAppData VillagerLauncher App instead"
-                                ],
-                      "Removed":  [
-
-                                  ]
-                  }
+    "version":  "2.2.5",
+    "download_url":  "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/releases/2.2.5/VillagerLauncher-2.2.5-Updater.exe",
+    "installer_url":  "https://raw.githubusercontent.com/windowswindows822-bot/villager-launcher-updates/main/releases/2.2.5/VillagerLauncher-2.2.5-Updater.exe",
+    "sha256":  "68B4CB2F3982BB1D101B0E2551125468356E82AA8F61E274694726B701267507",
+    "notes":  [
+                  "Living Villager Home dashboard",
+                  "Persistent launcher-created Minecraft instances",
+                  "Theme Studio 2 with VILLAGER SPY glass test",
+                  "Top Themes button",
+                  "Updater closes Villager Launcher processes before showing its UI",
+                  "UserData preserved across launcher updates",
+                  "Expanded 2.2.5 feature and idea registry",
+                  "Launcher asks for your display name instead of reading Windows username",
+                  "Blocked-word validation added to player display names",
+                  "Git publishing uses repository-local GitHub noreply metadata",
+                  "Added the full 200-idea Villager Launcher expansion pack",
+                  "Added WinUI 3 MediaPlayerElement local video playback foundation"
+              ]
 }
